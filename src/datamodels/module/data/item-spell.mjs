@@ -1,6 +1,6 @@
-import BoilerplateItemBase from "./base-item.mjs";
+import FASERIPItemBase from "./base-item.mjs";
 
-export default class BoilerplateSpell extends BoilerplateItemBase {
+export default class FASERIPSpell extends FASERIPItemBase {
 
   static defineSchema() {
     const fields = foundry.data.fields;

@@ -1,3 +1,3 @@
-import BoilerplateItemBase from "./base-item.mjs";
+import FASERIPItemBase from "./base-item.mjs";
 
-export default class BoilerplateFeature extends BoilerplateItemBase {}
+export default class FASERIPFeature extends FASERIPItemBase {}

@@ -1,16 +1,16 @@
 {
-  "name": "boilerplate",
+  "name": "faserip",
   "version": "2.0.0",
-  "description": "CSS compiler for the Boilerplate system",
+  "description": "CSS compiler for the FASERIP system",
   "scripts": {
-    "build": "sass src/scss/boilerplate.scss css/boilerplate.css --style=expanded --no-source-map",
-    "watch": "sass src/scss/boilerplate.scss css/boilerplate.css --style=expanded --source-map --watch",
-    "generate": "node src/generate-boilerplate-system.mjs"
+    "build": "sass src/scss/faserip.scss css/faserip.css --style=expanded --no-source-map",
+    "watch": "sass src/scss/faserip.scss css/faserip.css --style=expanded --source-map --watch",
+    "generate": "node src/generate-faserip-system.mjs"
   },
   "browserslist": [
     "last 3 versions"
   ],
-  "author": "Asacolips",
+  "author": "Worlds of Wonder Games",
   "license": "MIT",
   "private": true,
   "devDependencies": {

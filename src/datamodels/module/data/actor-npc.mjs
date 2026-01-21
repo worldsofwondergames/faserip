@@ -1,6 +1,6 @@
-import BoilerplateActorBase from "./base-actor.mjs";
+import FASERIPActorBase from "./base-actor.mjs";
 
-export default class BoilerplateNPC extends BoilerplateActorBase {
+export default class FASERIPNPC extends FASERIPActorBase {
 
   static defineSchema() {
     const fields = foundry.data.fields;

@@ -1,6 +1,6 @@
-import BoilerplateDataModel from "./base-model.mjs";
+import FASERIPDataModel from "./base-model.mjs";
 
-export default class BoilerplateItemBase extends BoilerplateDataModel {
+export default class FASERIPItemBase extends FASERIPDataModel {
 
   static defineSchema() {
     const fields = foundry.data.fields;

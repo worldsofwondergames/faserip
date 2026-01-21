@@ -24,23 +24,33 @@
         }
       },
       "abilities": {
-        "str": {
-          "value": 10
+        "fighting": {
+          "value": 6,
+          "rank": "Typical"
         },
-        "dex": {
-          "value": 10
+        "agility": {
+          "value": 6,
+          "rank": "Typical"
         },
-        "con": {
-          "value": 10
+        "strength": {
+          "value": 6,
+          "rank": "Typical"
         },
-        "int": {
-          "value": 10
+        "endurance": {
+          "value": 6,
+          "rank": "Typical"
         },
-        "wis": {
-          "value": 10
+        "reason": {
+          "value": 6,
+          "rank": "Typical"
         },
-        "cha": {
-          "value": 10
+        "intuition": {
+          "value": 6,
+          "rank": "Typical"
+        },
+        "psyche": {
+          "value": 6,
+          "rank": "Typical"
         }
       }
     },
@@ -50,24 +60,25 @@
     }
   },
   "Item": {
-    "types": ["item", "feature", "spell"],
+    "types": ["power", "talent", "resource"],
     "templates": {
       "base": {
         "description": ""
       }
     },
-    "item": {
+    "power": {
+      "templates": ["base"],
+      "rank": "Typical",
+      "powerType": ""
+    },
+    "talent": {
+      "templates": ["base"],
+      "category": ""
+    },
+    "resource": {
       "templates": ["base"],
       "quantity": 1,
-      "weight": 0,
-      "formula": "d20 + @str.mod + ceil(@lvl / 2)"
-    },
-    "feature": {
-      "templates": ["base"]
-    },
-    "spell": {
-      "templates": ["base"],
-      "spellLevel": 1
+      "cost": 0
     }
   }
 }

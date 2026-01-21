@@ -1,9 +1,9 @@
 // Import document classes.
-import { BoilerplateActor } from './documents/actor.mjs';
-import { BoilerplateItem } from './documents/item.mjs';
+import { FASERIPActor } from './documents/actor.mjs';
+import { FASERIPItem } from './documents/item.mjs';
 // Import sheet classes.
-import { BoilerplateActorSheet } from './sheets/actor-sheet.mjs';
-import { BoilerplateItemSheet } from './sheets/item-sheet.mjs';
+import { FASERIPActorSheet } from './sheets/actor-sheet.mjs';
+import { FASERIPItemSheet } from './sheets/item-sheet.mjs';
 // Import helper/utility classes and constants.
 import { preloadHandlebarsTemplates } from './helpers/templates.mjs';
 import { BOILERPLATE } from './helpers/config.mjs';
@@ -17,9 +17,9 @@ import * as models from './data/_module.mjs';
 Hooks.once('init', function () {
   // Add utility classes to the global game object so that they're more easily
   // accessible in global contexts.
-  game.boilerplate = {
-    BoilerplateActor,
-    BoilerplateItem,
+  game.faserip = {
+    FASERIPActor,
+    FASERIPItem,
     rollItemMacro,
   };
 
@@ -36,20 +36,20 @@ Hooks.once('init', function () {
   };
 
   // Define custom Document and DataModel classes
-  CONFIG.Actor.documentClass = BoilerplateActor;
+  CONFIG.Actor.documentClass = FASERIPActor;
 
   // Note that you don't need to declare a DataModel
   // for the base actor/item classes - they are included
   // with the Character/NPC as part of super.defineSchema()
   CONFIG.Actor.dataModels = {
-    character: models.BoilerplateCharacter,
-    npc: models.BoilerplateNPC
+    character: models.FASERIPCharacter,
+    npc: models.FASERIPNPC
   }
-  CONFIG.Item.documentClass = BoilerplateItem;
+  CONFIG.Item.documentClass = FASERIPItem;
   CONFIG.Item.dataModels = {
-    item: models.BoilerplateItem,
-    feature: models.BoilerplateFeature,
-    spell: models.BoilerplateSpell
+    item: models.FASERIPItem,
+    feature: models.FASERIPFeature,
+    spell: models.FASERIPSpell
   }
 
   // Active Effects are never copied to the Actor,
@@ -59,12 +59,12 @@ Hooks.once('init', function () {
 
   // Register sheet application classes
   Actors.unregisterSheet('core', ActorSheet);
-  Actors.registerSheet('boilerplate', BoilerplateActorSheet, {
+  Actors.registerSheet('faserip', FASERIPActorSheet, {
     makeDefault: true,
     label: 'BOILERPLATE.SheetLabels.Actor',
   });
   Items.unregisterSheet('core', ItemSheet);
-  Items.registerSheet('boilerplate', BoilerplateItemSheet, {
+  Items.registerSheet('faserip', FASERIPItemSheet, {
     makeDefault: true,
     label: 'BOILERPLATE.SheetLabels.Item',
   });
@@ -114,7 +114,7 @@ async function createItemMacro(data, slot) {
   const item = await Item.fromDropData(data);
 
   // Create the macro command using the uuid.
-  const command = `game.boilerplate.rollItemMacro("${data.uuid}");`;
+  const command = `game.faserip.rollItemMacro("${data.uuid}");`;
   let macro = game.macros.find(
     (m) => m.name === item.name && m.command === command
   );
@@ -124,7 +124,7 @@ async function createItemMacro(data, slot) {
       type: 'script',
       img: item.img,
       command: command,
-      flags: { 'boilerplate.itemMacro': true },
+      flags: { 'faserip.itemMacro': true },
     });
   }
   game.user.assignHotbarMacro(macro, slot);

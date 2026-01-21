@@ -1,82 +1,145 @@
-# Boilerplate System
+# FASERIP System for Foundry VTT
 
 ![Foundry v11](https://img.shields.io/badge/foundry-v11-green)
 
-This system is a boilerplate system that you can use as a starting point for building your own custom systems. It's similar to Simple World-building, but has examples of creating attributes in code rather than dynamically through the UI.
+An implementation of the FASERIP (Marvel Super Heroes) game system for Foundry Virtual Tabletop.
 
-## Usage
+## About FASERIP
 
-There are two ways to get started: using the Boilerplate system generator command or manually renaming and updating files.
+FASERIP is a superhero role-playing game system based on the classic Marvel Super Heroes RPG. The system uses a simple percentile-based resolution mechanic with the Universal Results Table to determine the outcome of actions.
 
-Regardless of which method you choose, think carefully about your system's name. Your system's package name when submitted to Foundry must be formatted like `alphanumeric-lowercase`, and it must be unique. Check the Foundry systems package list for conflicts before committing to a name!
+## Core Game Mechanics
 
-> **Data Models**
->
-> If you would like to use DataModel classes instead of the older template.json configuration, you'll need to use the `npm run generate` command described below and choose to enable them when asked. DataModels are currently an optional feature, and are only availabe in the generator CLI due to that.
+### The Seven Attributes
 
-### Generator
+Every character in FASERIP has seven primary attributes that define their capabilities:
 
-This system includes a generator CLI in `package.json`. To use it, you must have [node.js](https://nodejs.org) installed, and it's recommended that you install node 20 or later.
+- **Fighting (F)** - Combat skill and hand-to-hand prowess
+- **Agility (A)** - Dexterity, reflexes, and coordination
+- **Strength (S)** - Physical power and muscle
+- **Endurance (E)** - Stamina, health, and resistance to damage
+- **Reason (R)** - Intelligence and logic
+- **Intuition (I)** - Awareness and willpower
+- **Psyche (P)** - Mental and psychic power
 
-> **Python Generator**
-> 
-> If you would rather use Python than node, there’s an excellent Python-based generator created by Cussa at https://github.com/Cussa/fvtt-boilerplate-initializator. Give it a shot!
+### The Rank System
 
-Once you have npm installed, you can run the following in your terminal or command prompt:
+Each attribute is assigned a rank that determines both its numerical value and its effectiveness:
+
+| Rank | Value | Description |
+|------|-------|-------------|
+| Feeble | 2 | Well below human average |
+| Poor | 4 | Below human average |
+| Typical | 6 | Human average |
+| Good | 10 | Above human average |
+| Excellent | 20 | Peak human capability |
+| Remarkable | 30 | Low superhuman level |
+| Incredible | 40 | Mid superhuman level |
+| Amazing | 50 | High superhuman level |
+| Monstrous | 75 | Very high superhuman level |
+| Unearthly | 100 | Cosmic level power |
+
+Higher ranks include Shift X, Shift Y, Shift Z, and Class 1000+.
+
+### Universal Results Table
+
+Actions are resolved by rolling percentile dice (d100) and comparing the result against a column determined by the character's relevant attribute rank. The table provides different levels of success:
+
+- **White** - Failure
+- **Green** - Marginal Success
+- **Yellow** - Standard Success
+- **Red** - Exceptional Success
+
+### Character Types
+
+- **Characters** - Player characters with full attribute arrays and customization
+- **NPCs** - Non-player characters for villains, allies, and extras
+
+### Item Types
+
+- **Powers** - Superhuman abilities and special capabilities
+- **Talents** - Learned skills and professional expertise
+- **Resources** - Equipment, wealth, and contacts
+
+## Installation
+
+### Method 1: Manifest URL (Recommended when published)
+
+1. In Foundry VTT, go to "Game Systems"
+2. Click "Install System"
+3. Paste the manifest URL: `https://github.com/worldsofwondergames/faserip/releases/latest/download/system.json`
+4. Click "Install"
+
+### Method 2: Manual Installation
+
+1. Download the latest release from the [Releases page](https://github.com/worldsofwondergames/faserip/releases)
+2. Extract the ZIP file to your Foundry VTT `Data/systems` folder
+3. Restart Foundry VTT
+4. Create a new world and select "FASERIP" as the game system
+
+## Features
+
+- Full implementation of the seven FASERIP attributes
+- Character and NPC actor types
+- Powers, Talents, and Resources item types
+- DataModel architecture for extensibility
+- Responsive character sheets
+- Support for Foundry VTT v11+
+
+## Development
+
+This system is built using the Foundry VTT system boilerplate with DataModels enabled.
+
+### Building from Source
 
 ```bash
+# Install dependencies
 npm install
-npm run generate
+
+# Build CSS from SCSS
+npm run build
+
+# Watch for changes during development
+npm run watch
 ```
 
-Your terminal should prompt you to name your system. Read the instructions carefully, the letter case and special characters in each question matter for correct system generation.
+## Sheet Layout Helper Classes
 
-Once the generator completes, it will output your system to `build/<your-system-name>`, where `<your-system-name>` is the package name you supplied during the prompt.
+This system includes helpful CSS classes for laying out your sheets:
 
-Copy this directory over to your Foundry systems directory and start coding!
+- `flexcol`: Lays out child elements vertically
+- `flexrow`: Lays out child elements horizontally
+- `flex-center`: Centers items and text
+- `flex-between`: Places space between items
+- `flex-group-center`: Add border, padding, and center items
+- `flex-group-left`: Add border, padding, and left align items
+- `flex-group-right`: Add border, padding, and right align items
+- `grid`: When combined with `grid-Ncol`, creates grid layouts
+- `grid-Ncol`: Replace N with 1-12 for column count
 
-### Manual Replacement
+## Contributing
 
-Before installing this system, you should rename any files that have `boilerplate` in their filename to use whatever machine-safe name your system needs, such as `adnd2e` if you were building a system for 2nd edition Advanced Dungeons & Dragons. In addition, you should search through the files for `boilerplate` and `Boilerplate` and do the same for those, replacing them with appropriate names for your system.
+Contributions are welcome! Please feel free to submit issues or pull requests on the [GitHub repository](https://github.com/worldsofwondergames/faserip).
 
-The `name` property in your `system.json` file is your system's package name. This need to be formatted `alphanumeric-lowercase`, and it must also match the foldername you use for your system.
+## Getting Help
 
-### Vue 3 Boilerplate
+- [Official Foundry VTT Discord](https://discord.gg/foundryvtt) - #system-development channel
+- [Knowledge Base](https://foundryvtt.com/kb/)
+- [API Documentation](https://foundryvtt.com/api/)
 
-**NOTE: The Vue 3 version is currently outdated and considered an advanced usage of Foundry due to it being a custom renderer. Only try it out if you _really_ like Vue and are feeling dangerous!**
+## License
 
-Alternatively, there's another build of this system that supports using Vue 3 components (ES module build target) for character sheet templates.
+This project is licensed under the terms specified in [LICENSE.txt](LICENSE.txt).
 
-Head over to the [Vue3Boilerplate System](https://gitlab.com/asacolips-projects/foundry-mods/vue3boilerplate) repo if you're interested in using Vue!
+## Credits
 
-### Getting Help
+- **System Development**: Worlds of Wonder Games
+- **Built on**: [Foundry VTT Boilerplate](https://github.com/asacolips-projects/boilerplate) by Asacolips
 
-Check out the [Official Foundry VTT Discord](https://discord.gg/foundryvtt)! The #system-development channel has helpful pins and is a good place to ask questions about any part of the foundry application.
+## Support
 
-For more static references, the [Knowledge Base](https://foundryvtt.com/kb/) and [API Documentation](https://foundryvtt.com/api/) provide different levels of detail. For the most detail, you can find the client side code in your foundry installation location. Classes are documented in individual files under `resources/app/client` and `resources/app/common`, and the code is collated into a single file at `resources/app/public/scripts/foundry.js`.
+For issues, questions, or suggestions, please visit the [GitHub Issues page](https://github.com/worldsofwondergames/faserip/issues).
 
-#### Tutorial
+---
 
-For much more information on how to use this system as a starting point for making your own, see the [full tutorial on the Foundry Wiki](https://foundryvtt.wiki/en/development/guides/SD-tutorial)!
-
-Note: Tutorial may be out of date, so look out for the Foundry compatibility badge at the top of each page.
-
-## Sheet Layout
-
-This system includes a handful of helper CSS classes to help you lay out your sheets if you're not comfortable diving into CSS fully. Those are:
-
-- `flexcol`: Included by Foundry itself, this lays out the child elements of whatever element you place this on vertically.
-- `flexrow`: Included by Foundry itself, this lays out the child elements of whatever element you place this on horizontally.
-- `flex-center`: When used on something that's using flexrow or flexcol, this will center the items and text.
-- `flex-between`: When used on something that's using flexrow or flexcol, this will attempt to place space between the items. Similar to "justify" in word processors.
-- `flex-group-center`: Add a border, padding, and center all items.
-- `flex-group-left`: Add a border, padding, and left align all items.
-- `flex-group-right`: Add a border, padding, and right align all items.
-- `grid`: When combined with the `grid-Ncol` classes, this will lay out child elements in a grid.
-- `grid-Ncol`: Replace `N` with any number from 1-12, such as `grid-3col`. When combined with `grid`, this will layout child elements in a grid with a number of columns equal to the number specified.
-
-## Compiling the CSS
-
-This repo includes both CSS for the theme and SCSS source files. If you're new to CSS, it's probably easier to just work in those files directly and delete the SCSS directory. If you're interested in using a CSS preprocessor to add support for nesting, variables, and more, you can run `npm install` in this directory to install the dependencies for the scss compiler. After that, just run `npm run build` to compile the SCSS and start a process that watches for new changes.
-
-![image](http://mattsmith.in/images/boilerplate.png)
+*FASERIP is based on the Marvel Super Heroes role-playing game. This is a fan-made implementation and is not officially affiliated with Marvel or Disney.*

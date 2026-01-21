@@ -102,26 +102,26 @@ class SystemGenerator {
   /**
    * Replace file contents.
    *
-   * Replace refercnes to 'boilerplate', 'Boilerplate', and 'BOILERPLATE'
+   * Replace refercnes to 'faserip', 'FASERIP', and 'BOILERPLATE'
    * in files copied over to the build directory.
    */
   replaceFileContents() {
     // Set patterns to iterate over later.
     const replacements = [
       {
-        pattern: new RegExp(/game\.boilerplate/g),
+        pattern: new RegExp(/game\.faserip/g),
         replacement: `game.${this.propName}`
       },
       {
-        pattern: new RegExp(/flags\.boilerplate/g),
+        pattern: new RegExp(/flags\.faserip/g),
         replacement: `flags.${this.propName}`
       },
       {
-        pattern: 'boilerplate',
+        pattern: 'faserip',
         replacement: this.packageName
       },
       {
-        pattern: 'Boilerplate',
+        pattern: 'FASERIP',
         replacement: this.className
       },
       {
@@ -132,7 +132,7 @@ class SystemGenerator {
 
     // Update title in system.json.
     replace({
-      regex: 'Boilerplate',
+      regex: 'FASERIP',
       replacement: this.titleName,
       paths: [`./build/${this.packageName}/system.json`],
       silent: true
@@ -158,15 +158,15 @@ class SystemGenerator {
   /**
    * Rename files.
    *
-   * Rename files that had boilerplate in their name, such as
-   * css/boilerplate.css.
+   * Rename files that had faserip in their name, such as
+   * css/faserip.css.
    */
   renameFiles() {
-    glob(`build/${this.packageName}/**/*boilerplate*.*`).then(files => {
+    glob(`build/${this.packageName}/**/*faserip*.*`).then(files => {
       files.forEach(oldPath => {
         const file = path.basename(oldPath);
         const directory = path.dirname(oldPath);
-        fs.rename(oldPath, `${directory}/${file.replaceAll('boilerplate', this.packageName)}`, (err) => {
+        fs.rename(oldPath, `${directory}/${file.replaceAll('faserip', this.packageName)}`, (err) => {
           if (err) throw err;
         });
       })
@@ -183,7 +183,7 @@ class SystemGenerator {
    */
   cleanPackageJson() {
     // Remove unneeded files.
-    fs.rmSync(`build/${this.packageName}/src/generate-boilerplate-system.mjs`);
+    fs.rmSync(`build/${this.packageName}/src/generate-faserip-system.mjs`);
     fs.rmSync(`build/${this.packageName}/package-lock.json`);
 
     // Load package.json so that we can remove dev dependencies.
@@ -254,13 +254,13 @@ inquirer
     // Clean out our build directory.
     generator.cleanBuildDir();
 
-    // Glob Boilerplate's files so that we can process them.
+    // Glob FASERIP's files so that we can process them.
     glob('*', {ignore: ['node_modules/**'] }).then(files => {
       // Copy all files into the build dir.
       generator.copyFiles(files);
-      // Replace boilerplate name mentions in files.
+      // Replace faserip name mentions in files.
       generator.replaceFileContents();
-      // Rename files that had boilerplate in their name.
+      // Rename files that had faserip in their name.
       generator.renameFiles();
       // Remove generator files and update package.json.
       generator.cleanPackageJson();
