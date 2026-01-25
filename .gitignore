@@ -2,6 +2,10 @@
 .idea/
 .vs/
 
+# Claude Code
+.claude/
+.history/
+
 # Node Modules
 node_modules/
 npm-debug.log
