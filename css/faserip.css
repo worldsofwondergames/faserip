@@ -812,8 +812,7 @@
 }
 
 .feat-roll-form .preview {
-  display: flex;
-  flex-direction: column;
+  display: block;
   background: #f5f5f5;
   padding: 6px 10px;
   border: 1px solid #ddd;
@@ -823,6 +822,7 @@
 
 .feat-roll-form .preview-row {
   display: flex;
+  width: 100%;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -839,6 +839,12 @@
   text-transform: uppercase;
   color: #333;
   margin-bottom: 0;
+  text-align: left;
+}
+
+.feat-roll-form .preview-row .effective-rank,
+.feat-roll-form .preview-row .required-color {
+  text-align: right;
 }
 
 .feat-roll-form .effective-rank {
