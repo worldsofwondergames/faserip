@@ -749,27 +749,28 @@
    FEAT Roll Dialog
    ======================================== */
 
-.faserip.feat-dialog {
-  background: #ffffff;
-}
-
-.faserip.feat-dialog .window-header {
+/* Crimson header for all FASERIP windows */
+.faserip .window-header {
   background: var(--faserip-red);
   border-bottom: 2px solid #5c0000;
 }
 
-.faserip.feat-dialog .window-header .window-title {
+.faserip .window-header .window-title {
   color: #ffffff;
 }
 
-.faserip.feat-dialog .window-header .header-button,
-.faserip.feat-dialog .window-header .close {
+.faserip .window-header .header-button,
+.faserip .window-header .close {
   color: #ffffff;
 }
 
-.faserip.feat-dialog .window-header .header-button:hover,
-.faserip.feat-dialog .window-header .close:hover {
+.faserip .window-header .header-button:hover,
+.faserip .window-header .close:hover {
   color: #ffcccc;
+}
+
+.faserip.feat-dialog {
+  background: #ffffff;
 }
 
 .faserip.feat-dialog .window-content {
@@ -804,8 +805,10 @@
 
 .feat-roll-form .ability-display .ability-info {
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   color: var(--faserip-red);
+  text-align: right;
+  flex: 0 0 180px;
 }
 
 .feat-roll-form .preview {
@@ -818,9 +821,10 @@
 
 .feat-roll-form .preview-row {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .feat-roll-form .preview-row:last-child {
@@ -828,9 +832,12 @@
 }
 
 .feat-roll-form .preview-row label {
-  font-size: 11px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #333;
   margin-bottom: 0;
+  flex: 0 0 auto;
 }
 
 .feat-roll-form .effective-rank {
