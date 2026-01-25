@@ -812,6 +812,8 @@
 }
 
 .feat-roll-form .preview {
+  display: flex;
+  flex-direction: column;
   background: #f5f5f5;
   padding: 10px;
   border: 1px solid #ddd;
