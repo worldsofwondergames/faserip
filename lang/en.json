@@ -1,22 +1,141 @@
 {
-  "BOILERPLATE": {
+  "FASERIP": {
     "Ability": {
-      "Str": { "long": "Strength", "abbr": "str" },
-      "Con": { "long": "Constitution", "abbr": "con" },
-      "Dex": { "long": "Dexterity", "abbr": "dex" },
-      "Int": { "long": "Intelligence", "abbr": "int" },
-      "Wis": { "long": "Wisdom", "abbr": "wis" },
-      "Cha": { "long": "Charisma", "abbr": "cha" }
+      "Fighting": { "long": "Fighting", "abbr": "F" },
+      "Agility": { "long": "Agility", "abbr": "A" },
+      "Strength": { "long": "Strength", "abbr": "S" },
+      "Endurance": { "long": "Endurance", "abbr": "E" },
+      "Reason": { "long": "Reason", "abbr": "R" },
+      "Intuition": { "long": "Intuition", "abbr": "I" },
+      "Psyche": { "long": "Psyche", "abbr": "P" }
+    },
+    "Rank": {
+      "Shift0": "Shift 0",
+      "Feeble": "Feeble",
+      "Poor": "Poor",
+      "Typical": "Typical",
+      "Good": "Good",
+      "Excellent": "Excellent",
+      "Remarkable": "Remarkable",
+      "Incredible": "Incredible",
+      "Amazing": "Amazing",
+      "Monstrous": "Monstrous",
+      "Unearthly": "Unearthly",
+      "ShiftX": "Shift X",
+      "ShiftY": "Shift Y",
+      "ShiftZ": "Shift Z",
+      "Class1000": "Class 1000",
+      "Class3000": "Class 3000",
+      "Class5000": "Class 5000",
+      "Beyond": "Beyond"
+    },
+    "Origin": {
+      "AlteredHuman": "Altered Human",
+      "Mutant": "Mutant",
+      "HighTech": "High Technology",
+      "Robot": "Robot",
+      "Alien": "Alien",
+      "Magic": "Magic",
+      "Birthright": "Birthright"
+    },
+    "Result": {
+      "White": "White - Failure",
+      "Green": "Green - Success",
+      "Yellow": "Yellow - Greater Success",
+      "Red": "Red - Extraordinary Success"
+    },
+    "Attack": {
+      "Blunt": "Blunt",
+      "Edged": "Edged",
+      "Shooting": "Shooting",
+      "Energy": "Energy",
+      "Force": "Force",
+      "Grappling": "Grappling",
+      "Charging": "Charging"
+    },
+    "AttackResult": {
+      "Miss": "Miss",
+      "Hit": "Hit",
+      "Slam": "Slam",
+      "Stun": "Stun",
+      "Kill": "Kill",
+      "Bullseye": "Bullseye",
+      "Partial": "Partial Hold",
+      "Full": "Full Hold",
+      "Escape": "Escape"
+    },
+    "Talent": {
+      "Category": {
+        "Weapon": "Weapon Skills",
+        "Fighting": "Fighting Skills",
+        "Professional": "Professional Skills",
+        "Scientific": "Scientific Skills",
+        "Mystic": "Mystic & Mental Skills",
+        "Other": "Other Talents"
+      }
+    },
+    "Equipment": {
+      "Type": {
+        "Weapon": "Weapon",
+        "Armor": "Armor",
+        "Vehicle": "Vehicle",
+        "Gear": "Gear"
+      }
+    },
+    "Weapon": {
+      "AttackType": {
+        "Shooting": "Shooting",
+        "Energy": "Energy",
+        "Force": "Force",
+        "Edged": "Edged",
+        "Blunt": "Blunt",
+        "Throwing": "Throwing",
+        "Grappling": "Grappling"
+      }
+    },
+    "Secondary": {
+      "Health": "Health",
+      "Karma": "Karma",
+      "Resources": "Resources",
+      "Popularity": "Popularity"
+    },
+    "Sheet": {
+      "Powers": "Powers",
+      "Talents": "Talents",
+      "Equipment": "Equipment",
+      "Contacts": "Contacts",
+      "Biography": "Biography",
+      "Effects": "Effects",
+      "Origin": "Origin",
+      "Identity": "Identity",
+      "Base": "Base of Operations",
+      "KarmaPool": "Karma Pool"
+    },
+    "Power": {
+      "Rank": "Power Rank",
+      "Type": "Power Type",
+      "Range": "Range",
+      "Duration": "Duration",
+      "Stunts": "Stunts",
+      "AddStunt": "Add Stunt"
+    },
+    "Stunt": {
+      "Name": "Stunt Name",
+      "Mastered": "Mastered",
+      "Attempts": "Attempts"
+    },
+    "Contact": {
+      "Relationship": "Relationship",
+      "Resources": "Contact Resources"
+    },
+    "Roll": {
+      "FEAT": "FEAT Roll",
+      "AbilityCheck": "{ability} Check",
+      "PowerCheck": "{power} Check"
     },
     "SheetLabels": {
       "Actor": "FASERIP Actor Sheet",
       "Item": "FASERIP Item Sheet"
-    },
-    "Item": {
-      "Spell": {
-        "SpellLVL": "Level {level} Spells",
-        "AddLVL": "Add LVL {level}"
-      }
     },
     "Effect": {
       "Source": "Source",
@@ -29,13 +148,18 @@
 
   "TYPES": {
     "Actor": {
-      "character": "Character",
-      "npc": "NPC"
+      "hero": "Hero",
+      "villain": "Villain",
+      "entity": "Entity",
+      "animal": "Animal",
+      "alien": "Alien",
+      "supportingCast": "Supporting Cast"
     },
     "Item": {
-      "item": "Item",
-      "feature": "Feature",
-      "spell": "Spell"
+      "power": "Power",
+      "talent": "Talent",
+      "equipment": "Equipment",
+      "contact": "Contact"
     }
   }
 }

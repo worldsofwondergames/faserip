@@ -1,0 +1,124 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+
+  {{!-- Item Sheet Header --}}
+  <header class="sheet-header flexrow">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="50" width="50"/>
+    <div class="header-fields flexcol">
+      <h1 class="charname">
+        <input name="name" type="text" value="{{item.name}}" placeholder="Equipment Name"/>
+      </h1>
+      <div class="flexrow">
+        <div class="form-group">
+          <label>Type</label>
+          <select name="system.equipmentType">
+            {{#each config.equipmentTypes as |label key|}}
+            <option value="{{key}}" {{#if (eq key ../system.equipmentType)}}selected{{/if}}>{{localize label}}</option>
+            {{/each}}
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Material Strength</label>
+          <input type="text" name="system.material" value="{{system.material}}" placeholder="Typical"/>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="stats">Stats</a>
+    <a class="item" data-tab="effects">{{localize "FASERIP.Sheet.Effects"}}</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- Description Tab --}}
+    <div class="tab description" data-group="primary" data-tab="description">
+      <div class="form-group">
+        <label>Cost Rank</label>
+        <input type="text" name="system.cost" value="{{system.cost}}" placeholder="Typical"/>
+      </div>
+      {{editor enrichedDescription target="system.description" engine="prosemirror" button=true editable=editable}}
+    </div>
+
+    {{!-- Stats Tab --}}
+    <div class="tab stats" data-group="primary" data-tab="stats">
+
+      {{!-- Weapon Stats --}}
+      <fieldset class="equipment-stats weapon-stats">
+        <legend>Weapon Stats</legend>
+        <div class="grid grid-2col">
+          <div class="form-group">
+            <label>Damage</label>
+            <input type="number" name="system.weapon.damage" value="{{system.weapon.damage}}" data-dtype="Number"/>
+            <span>({{rankAbbr system.weapon.damage}})</span>
+          </div>
+          <div class="form-group">
+            <label>Attack Type</label>
+            <select name="system.weapon.attackType">
+              {{#each config.weaponAttackTypes as |label key|}}
+              <option value="{{key}}" {{#if (eq key ../system.weapon.attackType)}}selected{{/if}}>{{localize label}}</option>
+              {{/each}}
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Range</label>
+            <input type="text" name="system.weapon.range" value="{{system.weapon.range}}" placeholder="Typical"/>
+          </div>
+          <div class="form-group">
+            <label>Rate</label>
+            <input type="number" name="system.weapon.rate" value="{{system.weapon.rate}}" data-dtype="Number"/>
+          </div>
+        </div>
+      </fieldset>
+
+      {{!-- Armor Stats --}}
+      <fieldset class="equipment-stats armor-stats">
+        <legend>Armor Stats</legend>
+        <div class="grid grid-2col">
+          <div class="form-group">
+            <label>Protection</label>
+            <input type="number" name="system.armor.protection" value="{{system.armor.protection}}" data-dtype="Number"/>
+            <span>({{rankAbbr system.armor.protection}})</span>
+          </div>
+          <div class="form-group">
+            <label>Armor Type</label>
+            <input type="text" name="system.armor.armorType" value="{{system.armor.armorType}}" placeholder="Body Armor, Force Field, etc."/>
+          </div>
+        </div>
+      </fieldset>
+
+      {{!-- Vehicle Stats --}}
+      <fieldset class="equipment-stats vehicle-stats">
+        <legend>Vehicle Stats</legend>
+        <div class="grid grid-2col">
+          <div class="form-group">
+            <label>Control</label>
+            <input type="text" name="system.vehicle.control" value="{{system.vehicle.control}}" placeholder="Typical"/>
+          </div>
+          <div class="form-group">
+            <label>Speed</label>
+            <input type="text" name="system.vehicle.speed" value="{{system.vehicle.speed}}" placeholder="Good"/>
+          </div>
+          <div class="form-group">
+            <label>Body</label>
+            <input type="text" name="system.vehicle.body" value="{{system.vehicle.body}}" placeholder="Good"/>
+          </div>
+          <div class="form-group">
+            <label>Protection</label>
+            <input type="text" name="system.vehicle.protection" value="{{system.vehicle.protection}}" placeholder="Poor"/>
+          </div>
+        </div>
+      </fieldset>
+
+    </div>
+
+    {{!-- Effects Tab --}}
+    <div class="tab effects" data-group="primary" data-tab="effects">
+      {{> "systems/faserip/templates/item/parts/item-effects.hbs"}}
+    </div>
+
+  </section>
+</form>

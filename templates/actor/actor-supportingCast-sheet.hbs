@@ -1,0 +1,114 @@
+<form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
+
+  {{!-- Sheet Header --}}
+  <header class="sheet-header">
+    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+      <div class="char-info-grid">
+        <div class="form-group" style="grid-column: span 2">
+          <label>Role</label>
+          <input type="text" name="system.role" value="{{system.role}}" placeholder="Bystander, Contact, Employer, etc."/>
+        </div>
+        <div class="form-group">
+          <label>Occupation</label>
+          <input type="text" name="system.identity.occupation" value="{{system.identity.occupation}}" placeholder="Occupation"/>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {{!-- Rank Reference Bar --}}
+  <div class="rank-reference-bar">
+    <div class="rank-cell"><span class="rank-name">Feeble</span><span class="rank-value">2</span></div>
+    <div class="rank-cell"><span class="rank-name">Poor</span><span class="rank-value">4</span></div>
+    <div class="rank-cell"><span class="rank-name">Typical</span><span class="rank-value">6</span></div>
+    <div class="rank-cell"><span class="rank-name">Good</span><span class="rank-value">10</span></div>
+    <div class="rank-cell"><span class="rank-name">Excellent</span><span class="rank-value">20</span></div>
+    <div class="rank-cell"><span class="rank-name">Remarkable</span><span class="rank-value">30</span></div>
+    <div class="rank-cell"><span class="rank-name">Incredible</span><span class="rank-value">40</span></div>
+    <div class="rank-cell"><span class="rank-name">Amazing</span><span class="rank-value">50</span></div>
+    <div class="rank-cell"><span class="rank-name">Monstrous</span><span class="rank-value">75</span></div>
+    <div class="rank-cell"><span class="rank-name">Unearthly</span><span class="rank-value">100</span></div>
+    <div class="rank-cell"><span class="rank-name">Shift X</span><span class="rank-value">150</span></div>
+    <div class="rank-cell"><span class="rank-name">Shift Y</span><span class="rank-value">200</span></div>
+    <div class="rank-cell"><span class="rank-name">Shift Z</span><span class="rank-value">500</span></div>
+  </div>
+
+  {{!-- Main Abilities Section --}}
+  <section class="abilities-section">
+    {{!-- Abilities Table --}}
+    <div class="abilities-table-container">
+      <table class="abilities-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Rank</th>
+            <th>Value</th>
+            <th class="col-green">Green</th>
+            <th class="col-yellow">Yellow</th>
+            <th class="col-red">Red</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each system.abilities as |ability key|}}
+          <tr>
+            <td class="ability-name rollable" data-roll-type="ability" data-ability="{{key}}">
+              {{localize (lookup @root.config.abilities key)}}
+            </td>
+            <td class="rank-display">{{ability.abbr}}</td>
+            <td class="value-cell">
+              <div class="value-adjust">
+                <a class="adjust-btn minus" data-field="system.abilities.{{key}}.value" data-delta="-1"><i class="fas fa-minus"></i></a>
+                <input type="number" class="ability-value" name="system.abilities.{{key}}.value"
+                       value="{{ability.value}}" data-dtype="Number" data-ability="{{key}}"/>
+                <a class="adjust-btn plus" data-field="system.abilities.{{key}}.value" data-delta="1"><i class="fas fa-plus"></i></a>
+              </div>
+            </td>
+            <td class="feat-green">{{ability.feat.green}}</td>
+            <td class="feat-yellow">{{ability.feat.yellow}}</td>
+            <td class="feat-red">{{ability.feat.red}}</td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+
+    {{!-- Secondary Stats Panel --}}
+    <div class="secondary-stats-panel">
+      <div class="stat-box health-box">
+        <span class="stat-label">Health</span>
+        <span class="stat-formula">F + A + S + E</span>
+        <div class="stat-value">
+          <input type="number" name="system.health.value" value="{{system.health.value}}" data-dtype="Number"/>
+          <span>/</span>
+          <span class="stat-max">{{system.health.max}}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="notes">Notes</a>
+    <a class="item" data-tab="biography">Biography</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- Notes Tab --}}
+    <div class="tab notes" data-group="primary" data-tab="notes">
+      <div class="form-group">
+        <label>Notes</label>
+        <textarea name="system.notes" rows="10" style="width:100%">{{system.notes}}</textarea>
+      </div>
+    </div>
+
+    {{!-- Biography Tab --}}
+    <div class="tab biography" data-group="primary" data-tab="biography">
+      {{editor enrichedBiography target="system.biography" engine="prosemirror" button=true editable=editable}}
+    </div>
+
+  </section>
+</form>

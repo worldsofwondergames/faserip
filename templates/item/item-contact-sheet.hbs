@@ -1,0 +1,53 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+
+  {{!-- Item Sheet Header --}}
+  <header class="sheet-header flexrow">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="50" width="50"/>
+    <div class="header-fields flexcol">
+      <h1 class="charname">
+        <input name="name" type="text" value="{{item.name}}" placeholder="Contact Name"/>
+      </h1>
+      <div class="flexrow">
+        <div class="form-group">
+          <label>Contact Type</label>
+          <input type="text" name="system.contactType" value="{{system.contactType}}" placeholder="Professional, Political, etc."/>
+        </div>
+        <div class="form-group">
+          <label>{{localize "FASERIP.Contact.Resources"}}</label>
+          <input type="text" name="system.resources" value="{{system.resources}}" placeholder="Typical"/>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="effects">{{localize "FASERIP.Sheet.Effects"}}</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- Description Tab --}}
+    <div class="tab description" data-group="primary" data-tab="description">
+      <div class="grid grid-2col">
+        <div class="form-group">
+          <label>{{localize "FASERIP.Contact.Relationship"}}</label>
+          <input type="text" name="system.relationship" value="{{system.relationship}}" placeholder="Friend, Professional, etc."/>
+        </div>
+        <div class="form-group">
+          <label>Availability</label>
+          <input type="text" name="system.availability" value="{{system.availability}}" placeholder="Always, Sometimes, Rarely"/>
+        </div>
+      </div>
+      {{editor enrichedDescription target="system.description" engine="prosemirror" button=true editable=editable}}
+    </div>
+
+    {{!-- Effects Tab --}}
+    <div class="tab effects" data-group="primary" data-tab="effects">
+      {{> "systems/faserip/templates/item/parts/item-effects.hbs"}}
+    </div>
+
+  </section>
+</form>

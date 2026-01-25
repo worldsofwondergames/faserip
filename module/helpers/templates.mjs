@@ -5,11 +5,20 @@
  */
 export const preloadHandlebarsTemplates = async function () {
   return loadTemplates([
-    // Actor partials.
-    'systems/faserip/templates/actor/parts/actor-features.hbs',
-    'systems/faserip/templates/actor/parts/actor-items.hbs',
-    'systems/faserip/templates/actor/parts/actor-spells.hbs',
+    // Actor sheet templates
+    'systems/faserip/templates/actor/actor-hero-sheet.hbs',
+    'systems/faserip/templates/actor/actor-villain-sheet.hbs',
+    'systems/faserip/templates/actor/actor-entity-sheet.hbs',
+    'systems/faserip/templates/actor/actor-animal-sheet.hbs',
+    'systems/faserip/templates/actor/actor-alien-sheet.hbs',
+    'systems/faserip/templates/actor/actor-supportingCast-sheet.hbs',
+    // Actor partials
     'systems/faserip/templates/actor/parts/actor-effects.hbs',
+    // Item sheet templates
+    'systems/faserip/templates/item/item-power-sheet.hbs',
+    'systems/faserip/templates/item/item-talent-sheet.hbs',
+    'systems/faserip/templates/item/item-equipment-sheet.hbs',
+    'systems/faserip/templates/item/item-contact-sheet.hbs',
     // Item partials
     'systems/faserip/templates/item/parts/item-effects.hbs',
   ]);

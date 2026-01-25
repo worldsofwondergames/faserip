@@ -6,7 +6,8 @@ import { FASERIPActorSheet } from './sheets/actor-sheet.mjs';
 import { FASERIPItemSheet } from './sheets/item-sheet.mjs';
 // Import helper/utility classes and constants.
 import { preloadHandlebarsTemplates } from './helpers/templates.mjs';
-import { BOILERPLATE } from './helpers/config.mjs';
+import { FASERIP } from './helpers/config.mjs';
+import { valueToRankAbbr, valueToRankKey } from './helpers/faserip-utils.mjs';
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -22,15 +23,16 @@ Hooks.once('init', function () {
   };
 
   // Add custom constants for configuration.
-  CONFIG.BOILERPLATE = BOILERPLATE;
+  CONFIG.FASERIP = FASERIP;
 
   /**
    * Set an initiative formula for the system
+   * FASERIP uses 1d10 + Intuition rank value
    * @type {String}
    */
   CONFIG.Combat.initiative = {
-    formula: '1d20 + @abilities.dex.mod',
-    decimals: 2,
+    formula: '1d10 + @abilities.intuition.value',
+    decimals: 0,
   };
 
   // Define custom Document classes
@@ -46,13 +48,16 @@ Hooks.once('init', function () {
   Actors.unregisterSheet('core', ActorSheet);
   Actors.registerSheet('faserip', FASERIPActorSheet, {
     makeDefault: true,
-    label: 'BOILERPLATE.SheetLabels.Actor',
+    label: 'FASERIP.SheetLabels.Actor',
   });
   Items.unregisterSheet('core', ItemSheet);
   Items.registerSheet('faserip', FASERIPItemSheet, {
     makeDefault: true,
-    label: 'BOILERPLATE.SheetLabels.Item',
+    label: 'FASERIP.SheetLabels.Item',
   });
+
+  // Register Handlebars helpers
+  _registerHandlebarsHelpers();
 
   // Preload Handlebars templates.
   return preloadHandlebarsTemplates();
@@ -62,10 +67,70 @@ Hooks.once('init', function () {
 /*  Handlebars Helpers                          */
 /* -------------------------------------------- */
 
-// If you need to add Handlebars helpers, here is a useful example:
-Handlebars.registerHelper('toLowerCase', function (str) {
-  return str.toLowerCase();
-});
+function _registerHandlebarsHelpers() {
+  // Convert string to lowercase
+  Handlebars.registerHelper('toLowerCase', function (str) {
+    return str.toLowerCase();
+  });
+
+  // Convert a numeric value to its rank abbreviation
+  Handlebars.registerHelper('rankAbbr', function (value) {
+    return valueToRankAbbr(value);
+  });
+
+  // Convert a numeric value to its rank key
+  Handlebars.registerHelper('rankKey', function (value) {
+    return valueToRankKey(value);
+  });
+
+  // Format a value with its rank abbreviation
+  Handlebars.registerHelper('formatRank', function (value) {
+    const abbr = valueToRankAbbr(value);
+    return `${abbr} (${value})`;
+  });
+
+  // Check if two values are equal
+  Handlebars.registerHelper('eq', function (a, b) {
+    return a === b;
+  });
+
+  // Lookup a value in the FASERIP config
+  Handlebars.registerHelper('lookup', function (obj, key) {
+    return obj?.[key];
+  });
+
+  // Get localized rank name from rank key
+  Handlebars.registerHelper('rankName', function (rankKey) {
+    const rank = FASERIP.ranks[rankKey];
+    if (rank) {
+      return game.i18n.localize(rank.label);
+    }
+    return rankKey;
+  });
+
+  // Iterate over FASERIP abilities
+  Handlebars.registerHelper('eachAbility', function (abilities, options) {
+    let result = '';
+    const abilityOrder = ['fighting', 'agility', 'strength', 'endurance', 'reason', 'intuition', 'psyche'];
+    for (const key of abilityOrder) {
+      if (abilities[key]) {
+        result += options.fn({ key, ...abilities[key] });
+      }
+    }
+    return result;
+  });
+
+  // Get CSS class for result color
+  Handlebars.registerHelper('resultColorClass', function (color) {
+    const classes = {
+      white: 'feat-white',
+      green: 'feat-green',
+      yellow: 'feat-yellow',
+      red: 'feat-red',
+    };
+    return classes[color] || 'feat-white';
+  });
+}
 
 /* -------------------------------------------- */
 /*  Ready Hook                                  */

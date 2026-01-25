@@ -1,0 +1,51 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+
+  {{!-- Item Sheet Header --}}
+  <header class="sheet-header flexrow">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="50" width="50"/>
+    <div class="header-fields flexcol">
+      <h1 class="charname">
+        <input name="name" type="text" value="{{item.name}}" placeholder="Talent Name"/>
+      </h1>
+      <div class="flexrow">
+        <div class="form-group">
+          <label>Category</label>
+          <select name="system.category">
+            {{#each config.talentCategories as |label key|}}
+            <option value="{{key}}" {{#if (eq key ../system.category)}}selected{{/if}}>{{localize label}}</option>
+            {{/each}}
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Bonus</label>
+          <input type="text" name="system.bonus" value="{{system.bonus}}" placeholder="+1CS"/>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="effects">{{localize "FASERIP.Sheet.Effects"}}</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- Description Tab --}}
+    <div class="tab description" data-group="primary" data-tab="description">
+      <div class="form-group">
+        <label>Requirements</label>
+        <input type="text" name="system.requirements" value="{{system.requirements}}" placeholder="Any prerequisites"/>
+      </div>
+      {{editor enrichedDescription target="system.description" engine="prosemirror" button=true editable=editable}}
+    </div>
+
+    {{!-- Effects Tab --}}
+    <div class="tab effects" data-group="primary" data-tab="effects">
+      {{> "systems/faserip/templates/item/parts/item-effects.hbs"}}
+    </div>
+
+  </section>
+</form>

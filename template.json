@@ -1,66 +1,179 @@
 {
   "Actor": {
-    "types": ["character", "npc"],
+    "types": ["hero", "villain", "entity", "animal", "alien", "supportingCast"],
     "templates": {
       "base": {
-        "health": {
-          "value": 10,
-          "min": 0,
-          "max": 10
-        },
-        "power": {
-          "value": 5,
-          "min": 0,
-          "max": 5
-        },
         "biography": ""
-      }
-    },
-    "character": {
-      "templates": ["base"],
-      "attributes": {
-        "level": {
-          "value": 1
-        }
       },
       "abilities": {
-        "fighting": {
+        "abilities": {
+          "fighting": {
+            "value": 6,
+            "rank": "typical"
+          },
+          "agility": {
+            "value": 6,
+            "rank": "typical"
+          },
+          "strength": {
+            "value": 6,
+            "rank": "typical"
+          },
+          "endurance": {
+            "value": 6,
+            "rank": "typical"
+          },
+          "reason": {
+            "value": 6,
+            "rank": "typical"
+          },
+          "intuition": {
+            "value": 6,
+            "rank": "typical"
+          },
+          "psyche": {
+            "value": 6,
+            "rank": "typical"
+          }
+        }
+      },
+      "secondary": {
+        "health": {
+          "value": 24,
+          "max": 24
+        },
+        "karma": {
+          "value": 18,
+          "max": 18
+        },
+        "resources": {
           "value": 6,
-          "rank": "Typical"
+          "rank": "typical"
+        },
+        "popularity": {
+          "value": 10
+        }
+      }
+    },
+    "hero": {
+      "templates": ["base", "abilities", "secondary"],
+      "origin": "",
+      "identity": {
+        "realName": "",
+        "secret": true,
+        "occupation": "",
+        "legalStatus": "",
+        "base": "",
+        "groupAffiliations": ""
+      },
+      "karmaBank": 0
+    },
+    "villain": {
+      "templates": ["base", "abilities", "secondary"],
+      "origin": "",
+      "identity": {
+        "realName": "",
+        "secret": true,
+        "occupation": "",
+        "legalStatus": "",
+        "base": "",
+        "groupAffiliations": ""
+      },
+      "karmaBank": 0
+    },
+    "entity": {
+      "templates": ["base", "abilities", "secondary"],
+      "entityType": "",
+      "immunities": "",
+      "specialRules": ""
+    },
+    "animal": {
+      "templates": ["base"],
+      "abilities": {
+        "fighting": {
+          "value": 4,
+          "rank": "poor"
         },
         "agility": {
           "value": 6,
-          "rank": "Typical"
+          "rank": "typical"
         },
         "strength": {
-          "value": 6,
-          "rank": "Typical"
+          "value": 4,
+          "rank": "poor"
         },
         "endurance": {
           "value": 6,
-          "rank": "Typical"
+          "rank": "typical"
+        },
+        "reason": {
+          "value": 0,
+          "rank": "shift0"
+        },
+        "intuition": {
+          "value": 4,
+          "rank": "poor"
+        },
+        "psyche": {
+          "value": 0,
+          "rank": "shift0"
+        }
+      },
+      "health": {
+        "value": 20,
+        "max": 20
+      },
+      "animalType": "",
+      "habitat": ""
+    },
+    "alien": {
+      "templates": ["base", "abilities", "secondary"],
+      "species": "",
+      "homeworld": "",
+      "speciesTraits": ""
+    },
+    "supportingCast": {
+      "templates": ["base"],
+      "abilities": {
+        "fighting": {
+          "value": 4,
+          "rank": "poor"
+        },
+        "agility": {
+          "value": 4,
+          "rank": "poor"
+        },
+        "strength": {
+          "value": 4,
+          "rank": "poor"
+        },
+        "endurance": {
+          "value": 4,
+          "rank": "poor"
         },
         "reason": {
           "value": 6,
-          "rank": "Typical"
+          "rank": "typical"
         },
         "intuition": {
           "value": 6,
-          "rank": "Typical"
+          "rank": "typical"
         },
         "psyche": {
           "value": 6,
-          "rank": "Typical"
+          "rank": "typical"
         }
-      }
-    },
-    "npc": {
-      "templates": ["base"],
-      "cr": 0
+      },
+      "health": {
+        "value": 16,
+        "max": 16
+      },
+      "role": "",
+      "notes": ""
     }
   },
   "Item": {
-    "types": ["power", "talent", "resource"],
+    "types": ["power", "talent", "equipment", "contact"],
     "templates": {
       "base": {
         "description": ""
@@ -68,17 +181,49 @@
     },
     "power": {
       "templates": ["base"],
-      "rank": "Typical",
-      "powerType": ""
+      "rank": "typical",
+      "value": 6,
+      "powerType": "",
+      "range": "",
+      "duration": "",
+      "stunts": []
     },
     "talent": {
       "templates": ["base"],
-      "category": ""
+      "category": "other",
+      "bonus": "+1CS",
+      "requirements": ""
     },
-    "resource": {
+    "equipment": {
       "templates": ["base"],
-      "quantity": 1,
-      "cost": 0
+      "equipmentType": "gear",
+      "cost": "typical",
+      "material": "typical",
+      "weapon": {
+        "damage": 6,
+        "damageRank": "typical",
+        "range": "typical",
+        "attackType": "blunt",
+        "rate": 1
+      },
+      "armor": {
+        "protection": 6,
+        "protectionRank": "typical",
+        "armorType": ""
+      },
+      "vehicle": {
+        "control": "typical",
+        "speed": "typical",
+        "body": "typical",
+        "protection": "poor"
+      }
+    },
+    "contact": {
+      "templates": ["base"],
+      "contactType": "professional",
+      "resources": "typical",
+      "relationship": "",
+      "availability": ""
     }
   }
 }
