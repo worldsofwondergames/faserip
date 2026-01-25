@@ -750,25 +750,47 @@
    ======================================== */
 
 .faserip.feat-dialog {
-  background: var(--faserip-white-bg);
+  background: #ffffff;
+}
+
+.faserip.feat-dialog .window-header {
+  background: var(--faserip-red);
+  border-bottom: 2px solid #5c0000;
+}
+
+.faserip.feat-dialog .window-header .window-title {
+  color: #ffffff;
+}
+
+.faserip.feat-dialog .window-header .header-button,
+.faserip.feat-dialog .window-header .close {
+  color: #ffffff;
+}
+
+.faserip.feat-dialog .window-header .header-button:hover,
+.faserip.feat-dialog .window-header .close:hover {
+  color: #ffcccc;
 }
 
 .faserip.feat-dialog .window-content {
   padding: 10px;
+  background: #ffffff;
 }
 
 .feat-roll-form .form-group {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 12px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .feat-roll-form .form-group label {
   font-weight: 700;
-  font-size: 11px;
+  font-size: 12px;
   text-transform: uppercase;
-  margin-bottom: 4px;
   color: #333;
+  flex: 0 0 auto;
 }
 
 .feat-roll-form .form-group select {
@@ -777,13 +799,13 @@
   border-radius: 3px;
   font-size: 13px;
   background: white;
+  flex: 0 0 180px;
 }
 
 .feat-roll-form .ability-display .ability-info {
   font-weight: 700;
   font-size: 16px;
   color: var(--faserip-red);
-  padding: 4px 0;
 }
 
 .feat-roll-form .preview {
