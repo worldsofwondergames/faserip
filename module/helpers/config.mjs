@@ -92,44 +92,153 @@ FASERIP.resultColors = {
 };
 
 /**
- * Attack types and their result columns
+ * Action types from the Universal Table with their result columns
+ * Each action has: label, abbreviation, governing ability, and results for white/green/yellow/red
  */
-FASERIP.attackTypes = {
-  blunt: {
-    label: 'FASERIP.Attack.Blunt',
+FASERIP.actionTypes = {
+  bluntAttacks: {
+    label: 'FASERIP.Action.BluntAttacks',
+    abbr: 'BA',
     ability: 'fighting',
-    results: ['miss', 'hit', 'slam', 'stun']
+    results: { white: 'miss', green: 'hit', yellow: 'slam', red: 'stun' }
   },
-  edged: {
-    label: 'FASERIP.Attack.Edged',
+  edgedAttacks: {
+    label: 'FASERIP.Action.EdgedAttacks',
+    abbr: 'EA',
     ability: 'fighting',
-    results: ['miss', 'hit', 'stun', 'kill']
+    results: { white: 'miss', green: 'hit', yellow: 'stun', red: 'kill' }
   },
   shooting: {
-    label: 'FASERIP.Attack.Shooting',
+    label: 'FASERIP.Action.Shooting',
+    abbr: 'Sh',
     ability: 'agility',
-    results: ['miss', 'hit', 'bullseye', 'kill']
+    results: { white: 'miss', green: 'hit', yellow: 'bullseye', red: 'kill' }
+  },
+  throwingEdged: {
+    label: 'FASERIP.Action.ThrowingEdged',
+    abbr: 'TE',
+    ability: 'agility',
+    results: { white: 'miss', green: 'hit', yellow: 'stun', red: 'kill' }
+  },
+  throwingBlunt: {
+    label: 'FASERIP.Action.ThrowingBlunt',
+    abbr: 'TB',
+    ability: 'agility',
+    results: { white: 'miss', green: 'hit', yellow: 'stun', red: 'stun' }
   },
   energy: {
-    label: 'FASERIP.Attack.Energy',
+    label: 'FASERIP.Action.Energy',
+    abbr: 'En',
     ability: 'agility',
-    results: ['miss', 'hit', 'bullseye', 'kill']
+    results: { white: 'miss', green: 'hit', yellow: 'bullseye', red: 'kill' }
   },
   force: {
-    label: 'FASERIP.Attack.Force',
+    label: 'FASERIP.Action.Force',
+    abbr: 'Fo',
     ability: 'agility',
-    results: ['miss', 'hit', 'bullseye', 'stun']
+    results: { white: 'miss', green: 'hit', yellow: 'bullseye', red: 'stun' }
   },
   grappling: {
-    label: 'FASERIP.Attack.Grappling',
+    label: 'FASERIP.Action.Grappling',
+    abbr: 'Gp',
     ability: 'strength',
-    results: ['miss', 'partial', 'full', 'escape']
+    results: { white: 'miss', green: 'miss', yellow: 'partial', red: 'hold' }
+  },
+  grabbing: {
+    label: 'FASERIP.Action.Grabbing',
+    abbr: 'Gb',
+    ability: 'strength',
+    results: { white: 'miss', green: 'take', yellow: 'grab', red: 'hold' }
+  },
+  escaping: {
+    label: 'FASERIP.Action.Escaping',
+    abbr: 'Es',
+    ability: 'strength',
+    results: { white: 'miss', green: 'miss', yellow: 'escape', red: 'break' }
   },
   charging: {
-    label: 'FASERIP.Attack.Charging',
+    label: 'FASERIP.Action.Charging',
+    abbr: 'Ch',
     ability: 'endurance',
-    results: ['miss', 'hit', 'slam', 'stun']
+    results: { white: 'miss', green: 'hit', yellow: 'slam', red: 'stun' }
   },
+  dodging: {
+    label: 'FASERIP.Action.Dodging',
+    abbr: 'Do',
+    ability: 'agility',
+    results: { white: 'miss', green: 'minus2cs', yellow: 'minus4cs', red: 'minus6cs' }
+  },
+  evading: {
+    label: 'FASERIP.Action.Evading',
+    abbr: 'Ev',
+    ability: 'fighting',
+    results: { white: 'none', green: 'evasion', yellow: 'plus1cs', red: 'plus1cs' }
+  },
+  blocking: {
+    label: 'FASERIP.Action.Blocking',
+    abbr: 'Bl',
+    ability: 'strength',
+    results: { white: 'minus6cs', green: 'minus4cs', yellow: 'minus2cs', red: 'catch' }
+  },
+  catching: {
+    label: 'FASERIP.Action.Catching',
+    abbr: 'Ca',
+    ability: 'agility',
+    results: { white: 'autohit', green: 'miss', yellow: 'damage', red: 'catch' }
+  },
+  stun: {
+    label: 'FASERIP.Action.Stun',
+    abbr: 'St',
+    ability: 'endurance',
+    results: { white: '1to10', green: '1round', yellow: 'no', red: 'no' }
+  },
+  slam: {
+    label: 'FASERIP.Action.Slam',
+    abbr: 'Sl',
+    ability: 'endurance',
+    results: { white: 'grandSlam', green: '1area', yellow: 'stagger', red: 'no' }
+  },
+  kill: {
+    label: 'FASERIP.Action.Kill',
+    abbr: 'Ki',
+    ability: 'endurance',
+    results: { white: 'enLoss', green: 'enduranceSlam', yellow: 'no', red: 'no' }
+  },
+};
+
+/**
+ * Action result labels for localization
+ */
+FASERIP.actionResults = {
+  miss: 'FASERIP.ActionResult.Miss',
+  hit: 'FASERIP.ActionResult.Hit',
+  slam: 'FASERIP.ActionResult.Slam',
+  stun: 'FASERIP.ActionResult.Stun',
+  kill: 'FASERIP.ActionResult.Kill',
+  bullseye: 'FASERIP.ActionResult.Bullseye',
+  partial: 'FASERIP.ActionResult.Partial',
+  hold: 'FASERIP.ActionResult.Hold',
+  take: 'FASERIP.ActionResult.Take',
+  grab: 'FASERIP.ActionResult.Grab',
+  escape: 'FASERIP.ActionResult.Escape',
+  break: 'FASERIP.ActionResult.Break',
+  none: 'FASERIP.ActionResult.None',
+  evasion: 'FASERIP.ActionResult.Evasion',
+  minus2cs: 'FASERIP.ActionResult.Minus2CS',
+  minus4cs: 'FASERIP.ActionResult.Minus4CS',
+  minus6cs: 'FASERIP.ActionResult.Minus6CS',
+  plus1cs: 'FASERIP.ActionResult.Plus1CS',
+  catch: 'FASERIP.ActionResult.Catch',
+  autohit: 'FASERIP.ActionResult.Autohit',
+  damage: 'FASERIP.ActionResult.Damage',
+  '1to10': 'FASERIP.ActionResult.1to10',
+  '1round': 'FASERIP.ActionResult.1Round',
+  no: 'FASERIP.ActionResult.No',
+  grandSlam: 'FASERIP.ActionResult.GrandSlam',
+  '1area': 'FASERIP.ActionResult.1Area',
+  stagger: 'FASERIP.ActionResult.Stagger',
+  enLoss: 'FASERIP.ActionResult.EnLoss',
+  enduranceSlam: 'FASERIP.ActionResult.EnduranceSlam',
 };
 
 /**
