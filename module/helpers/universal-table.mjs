@@ -178,3 +178,115 @@ export function getResultDisplay(color) {
     cssClass: getResultColorClass(color),
   };
 }
+
+/**
+ * Apply column shift with proper clamping rules
+ * - Class 1000+ ranks cannot be shifted
+ * - Minimum is shift0, maximum is shiftZ for shiftable ranks
+ * @param {string} rankKey - The starting rank key
+ * @param {number} shift - Number of column shifts (-3 to +3)
+ * @returns {object} { effectiveRank, wasLimited, reason }
+ */
+export function applyColumnShiftWithLimits(rankKey, shift) {
+  const normalizedRank = normalizeRankKey(rankKey);
+  const currentIndex = FASERIP.rankOrder.indexOf(normalizedRank);
+
+  if (currentIndex === -1) {
+    console.warn(`FASERIP | Unknown rank for column shift: ${rankKey}`);
+    return { effectiveRank: normalizedRank, wasLimited: false, reason: null };
+  }
+
+  // Class 1000+ cannot be shifted
+  const classRanks = ['class1000', 'class3000', 'class5000', 'beyond'];
+  if (classRanks.includes(normalizedRank)) {
+    return {
+      effectiveRank: normalizedRank,
+      wasLimited: shift !== 0,
+      reason: shift !== 0 ? 'classRankNoShift' : null
+    };
+  }
+
+  // Shiftable ranks clamp between shift0 (index 0) and shiftZ (index 13)
+  const minIndex = 0;  // shift0
+  const maxIndex = 13; // shiftZ
+
+  let newIndex = currentIndex + shift;
+  let wasLimited = false;
+  let reason = null;
+
+  if (newIndex < minIndex) {
+    newIndex = minIndex;
+    wasLimited = true;
+    reason = 'minRankReached';
+  } else if (newIndex > maxIndex) {
+    newIndex = maxIndex;
+    wasLimited = true;
+    reason = 'maxShiftableRankReached';
+  }
+
+  return {
+    effectiveRank: FASERIP.rankOrder[newIndex],
+    wasLimited,
+    reason
+  };
+}
+
+/**
+ * Determine minimum required color based on intensity vs ability comparison
+ * @param {string} intensityRank - The intensity/difficulty rank key
+ * @param {string} effectiveRank - The character's effective ability rank after shifts
+ * @returns {string} Required color: 'green', 'yellow', 'red', or 'impossible'
+ */
+export function getRequiredColor(intensityRank, effectiveRank) {
+  const intensityIndex = FASERIP.rankOrder.indexOf(normalizeRankKey(intensityRank));
+  const abilityIndex = FASERIP.rankOrder.indexOf(normalizeRankKey(effectiveRank));
+
+  if (intensityIndex === -1 || abilityIndex === -1) {
+    console.warn(`FASERIP | Unknown rank in intensity comparison`);
+    return 'green';
+  }
+
+  const difference = abilityIndex - intensityIndex;
+
+  if (difference >= 1) return 'green';      // Ability > Intensity
+  if (difference === 0) return 'yellow';    // Ability = Intensity
+  if (difference >= -1) return 'red';       // Ability 1 rank below
+  return 'impossible';                       // Ability 2+ ranks below
+}
+
+/**
+ * Compare two colors and determine if result meets requirement
+ * @param {string} resultColor - The color obtained from the roll
+ * @param {string} requiredColor - The minimum color needed
+ * @returns {boolean} True if result meets or exceeds requirement
+ */
+export function meetsColorRequirement(resultColor, requiredColor) {
+  if (requiredColor === 'impossible') return false;
+
+  const colorOrder = FASERIP.colorOrder || ['white', 'green', 'yellow', 'red'];
+  const resultIndex = colorOrder.indexOf(resultColor);
+  const requiredIndex = colorOrder.indexOf(requiredColor);
+
+  return resultIndex >= requiredIndex;
+}
+
+/**
+ * Get action result text for a specific action and color
+ * @param {string} actionType - The action type key (e.g., 'bluntAttacks')
+ * @param {string} color - The result color
+ * @returns {object} { resultKey, localizedKey }
+ */
+export function getActionResult(actionType, color) {
+  const action = FASERIP.actionTypes?.[actionType];
+  if (!action) return { resultKey: null, localizedKey: null };
+
+  const resultKey = action.results[color];
+  if (!resultKey) return { resultKey: null, localizedKey: null };
+
+  const localizedKey = FASERIP.actionResults?.[resultKey];
+
+  return {
+    resultKey,
+    localizedKey: localizedKey || null
+  };
+}

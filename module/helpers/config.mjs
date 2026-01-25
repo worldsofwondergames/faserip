@@ -275,3 +275,21 @@ FASERIP.weaponAttackTypes = {
   throwing: 'FASERIP.Weapon.AttackType.Throwing',
   grappling: 'FASERIP.Weapon.AttackType.Grappling',
 };
+
+/**
+ * Map abilities to their associated action types from the Universal Table
+ */
+FASERIP.abilityActions = {
+  fighting: ['bluntAttacks', 'edgedAttacks', 'evading'],
+  agility: ['shooting', 'throwingEdged', 'throwingBlunt', 'energy', 'force', 'dodging', 'catching'],
+  strength: ['grappling', 'grabbing', 'escaping', 'blocking'],
+  endurance: ['charging', 'stun', 'slam', 'kill'],
+  reason: [],
+  intuition: [],
+  psyche: [],
+};
+
+/**
+ * Color order for success comparison (index-based)
+ */
+FASERIP.colorOrder = ['white', 'green', 'yellow', 'red'];

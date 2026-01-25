@@ -1,5 +1,5 @@
 import { calculateHealth, calculateKarma, valueToRankKey, valueToRankAbbr } from '../helpers/faserip-utils.mjs';
-import { getFeatResult, getResultDisplay, UNIVERSAL_TABLE, normalizeRankKey } from '../helpers/universal-table.mjs';
+import { getFeatResult, getResultDisplay, UNIVERSAL_TABLE, normalizeRankKey, applyColumnShiftWithLimits, getRequiredColor, meetsColorRequirement, getActionResult } from '../helpers/universal-table.mjs';
 
 /**
  * Extend the base Actor document for the FASERIP system.
@@ -187,6 +187,10 @@ export class FASERIPActor extends Actor {
    * Roll a FEAT check for an ability
    * @param {string} abilityKey - The ability to roll (fighting, agility, etc.)
    * @param {object} options - Additional options for the roll
+   * @param {string} options.actionType - The action type (e.g., 'bluntAttacks', 'other')
+   * @param {string|null} options.intensity - The intensity rank key, or null for no intensity check
+   * @param {number} options.columnShift - Column shift modifier (-3 to +3)
+   * @param {boolean} options._skipDialog - If true, skip the dialog
    * @returns {Promise<Roll>}
    */
   async rollAbility(abilityKey, options = {}) {
@@ -196,29 +200,93 @@ export class FASERIPActor extends Actor {
       return null;
     }
 
+    // If no actionType provided and dialog not skipped, show the dialog
+    if (options.actionType === undefined && !options._skipDialog) {
+      const { FEATRollDialog } = await import('../applications/feat-roll-dialog.mjs');
+      new FEATRollDialog(this, abilityKey).render(true);
+      return null;
+    }
+
     const rankKey = ability.rank || valueToRankKey(ability.value);
     const label = game.i18n.localize(`FASERIP.Ability.${abilityKey.charAt(0).toUpperCase() + abilityKey.slice(1)}.long`);
+
+    // Apply column shifts to get effective rank
+    const columnShift = options.columnShift || 0;
+    const shiftResult = applyColumnShiftWithLimits(rankKey, columnShift);
+    const effectiveRank = shiftResult.effectiveRank;
+    const effectiveRankData = CONFIG.FASERIP.ranks[effectiveRank];
+
+    // Determine required color if intensity is set
+    const hasIntensity = options.intensity && options.intensity !== 'none';
+    let requiredColor = 'green';
+    let isSuccess = true;
+
+    if (hasIntensity) {
+      requiredColor = getRequiredColor(options.intensity, effectiveRank);
+    }
 
     // Roll d100
     const roll = new Roll('1d100');
     await roll.evaluate();
 
-    // Determine result color
-    const resultColor = getFeatResult(roll.total, rankKey);
+    // Determine result color against effective rank
+    const resultColor = getFeatResult(roll.total, effectiveRank);
     const resultDisplay = getResultDisplay(resultColor);
+
+    // Check success if intensity is set
+    if (hasIntensity) {
+      isSuccess = meetsColorRequirement(resultColor, requiredColor);
+    }
+
+    // Get action-specific result text
+    let actionResultText = null;
+    let colorLabel = null;
+    const actionType = options.actionType || 'other';
+
+    if (actionType && actionType !== 'other') {
+      const actionResult = getActionResult(actionType, resultColor);
+      if (actionResult.localizedKey) {
+        actionResultText = game.i18n.localize(actionResult.localizedKey);
+      }
+      // Get simple color label for action results
+      colorLabel = game.i18n.localize(`FASERIP.Color.${resultColor.charAt(0).toUpperCase() + resultColor.slice(1)}`);
+    }
+
+    // Get intensity rank abbreviation
+    let intensityAbbr = null;
+    if (hasIntensity) {
+      const intensityRankData = CONFIG.FASERIP.ranks[options.intensity];
+      intensityAbbr = intensityRankData?.abbr || options.intensity;
+    }
+
+    // Get required color label
+    const requiredColorLabel = game.i18n.localize(`FASERIP.Color.${requiredColor.charAt(0).toUpperCase() + requiredColor.slice(1)}`);
 
     // Render the roll HTML
     const rollHTML = await roll.render();
 
-    // Create combined content with roll and color result
-    const content = `
-      <div class="faserip-roll">
-        ${rollHTML}
-        <div class="roll-result ${resultDisplay.cssClass}">
-          <span class="result-label">${game.i18n.localize(resultDisplay.label)}</span>
-        </div>
-      </div>
-    `;
+    // Determine if we should show additional details
+    const showDetails = columnShift !== 0 || hasIntensity;
+
+    // Render chat template
+    const content = await renderTemplate('systems/faserip/templates/chat/feat-roll-result.hbs', {
+      rollHTML,
+      resultColor,
+      resultLabel: game.i18n.localize(resultDisplay.label),
+      resultCssClass: resultDisplay.cssClass,
+      actionType,
+      actionResultText,
+      colorLabel,
+      isSuccess,
+      hasIntensity,
+      requiredColor,
+      requiredColorLabel,
+      effectiveRankAbbr: effectiveRankData?.abbr || effectiveRank,
+      intensity: options.intensity,
+      intensityAbbr,
+      columnShift,
+      showDetails
+    });
 
     // Create single chat message with roll and result
     await ChatMessage.create({

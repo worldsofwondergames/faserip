@@ -21,5 +21,9 @@ export const preloadHandlebarsTemplates = async function () {
     'systems/faserip/templates/item/item-contact-sheet.hbs',
     // Item partials
     'systems/faserip/templates/item/parts/item-effects.hbs',
+    // Dialog templates
+    'systems/faserip/templates/dialog/feat-roll-dialog.hbs',
+    // Chat templates
+    'systems/faserip/templates/chat/feat-roll-result.hbs',
   ]);
 };

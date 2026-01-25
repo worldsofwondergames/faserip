@@ -627,13 +627,29 @@
    FEAT Result Colors (Chat)
    ======================================== */
 
+.faserip-roll .roll-result-container {
+  margin-top: 12px;
+  text-align: center;
+}
+
 .faserip-roll .roll-result {
-  display: inline-block;
-  padding: 6px 16px;
-  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 4px;
   font-weight: bold;
   font-size: 14px;
   text-transform: uppercase;
+}
+
+.faserip-roll .roll-result .result-separator {
+  opacity: 0.7;
+}
+
+.faserip-roll .roll-result .result-action {
+  font-size: 13px;
 }
 
 .faserip-roll .roll-result.feat-white {
@@ -660,6 +676,51 @@
   border: 2px solid #5c0000;
 }
 
+.faserip-roll .roll-details {
+  margin-top: 8px;
+  font-size: 11px;
+  color: #666;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.faserip-roll .roll-details .detail-label {
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.faserip-roll .roll-success {
+  margin-top: 8px;
+  padding: 6px 12px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.faserip-roll .roll-success i {
+  margin-right: 4px;
+}
+
+.faserip-roll .roll-success.success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.faserip-roll .roll-success.failure {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.faserip-roll .required-info {
+  font-weight: normal;
+  margin-left: 8px;
+  opacity: 0.8;
+}
+
 /* ========================================
    Grid Utilities (scoped to faserip sheets)
    ======================================== */
@@ -682,4 +743,151 @@
   text-align: center;
   font-size: 11px;
   flex: 0 0 80px;
+}
+
+/* ========================================
+   FEAT Roll Dialog
+   ======================================== */
+
+.faserip.feat-dialog {
+  background: var(--faserip-white-bg);
+}
+
+.faserip.feat-dialog .window-content {
+  padding: 10px;
+}
+
+.feat-roll-form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.feat-roll-form .form-group label {
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.feat-roll-form .form-group select {
+  padding: 6px 8px;
+  border: 1px solid #999;
+  border-radius: 3px;
+  font-size: 13px;
+  background: white;
+}
+
+.feat-roll-form .ability-display .ability-info {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--faserip-red);
+  padding: 4px 0;
+}
+
+.feat-roll-form .preview {
+  background: #f5f5f5;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.feat-roll-form .preview-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.feat-roll-form .preview-row:last-child {
+  margin-bottom: 0;
+}
+
+.feat-roll-form .preview-row label {
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.feat-roll-form .effective-rank {
+  font-weight: 700;
+  font-size: 14px;
+  padding: 2px 10px;
+  background: #e0e0e0;
+  border-radius: 3px;
+}
+
+.feat-roll-form .required-color {
+  font-weight: 700;
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.feat-roll-form .required-color.feat-green {
+  background: var(--faserip-green);
+  color: white;
+}
+
+.feat-roll-form .required-color.feat-yellow {
+  background: var(--faserip-yellow);
+  color: black;
+}
+
+.feat-roll-form .required-color.feat-red {
+  background: var(--faserip-red);
+  color: white;
+}
+
+.feat-roll-form .required-color.feat-impossible {
+  background: #333;
+  color: white;
+}
+
+.feat-roll-form .shift-warning {
+  margin-top: 8px;
+  padding: 4px 8px;
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffc107;
+  border-radius: 3px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.feat-roll-form .form-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.feat-roll-form button {
+  padding: 8px 16px;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 13px;
+}
+
+.feat-roll-form .roll-feat {
+  background: var(--faserip-red);
+  color: white;
+  border: none;
+}
+
+.feat-roll-form .roll-feat:hover {
+  background: var(--faserip-red-light);
+}
+
+.feat-roll-form .cancel {
+  background: #e0e0e0;
+  color: #333;
+  border: 1px solid #999;
+}
+
+.feat-roll-form .cancel:hover {
+  background: #d0d0d0;
 }

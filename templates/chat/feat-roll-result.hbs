@@ -1,0 +1,43 @@
+<div class="faserip-roll">
+  {{{rollHTML}}}
+
+  <div class="roll-result-container">
+    <div class="roll-result {{resultCssClass}}">
+      {{#if actionResultText}}
+        <span class="result-color">{{colorLabel}}</span>
+        <span class="result-separator">-</span>
+        <span class="result-action">{{actionResultText}}</span>
+      {{else}}
+        <span class="result-label">{{resultLabel}}</span>
+      {{/if}}
+    </div>
+
+    {{#if showDetails}}
+    <div class="roll-details">
+      {{#if (ne columnShift 0)}}
+      <span class="detail-item">
+        <span class="detail-label">{{localize "FASERIP.Chat.Shift"}}:</span>
+        <span class="detail-value">{{#if (gt columnShift 0)}}+{{/if}}{{columnShift}} ({{effectiveRankAbbr}})</span>
+      </span>
+      {{/if}}
+      {{#if intensity}}
+      <span class="detail-item">
+        <span class="detail-label">{{localize "FASERIP.Chat.Intensity"}}:</span>
+        <span class="detail-value">{{intensityAbbr}}</span>
+      </span>
+      {{/if}}
+    </div>
+    {{/if}}
+
+    {{#if hasIntensity}}
+    <div class="roll-success {{#if isSuccess}}success{{else}}failure{{/if}}">
+      {{#if isSuccess}}
+        <i class="fas fa-check"></i> {{localize "FASERIP.Chat.Success"}}
+      {{else}}
+        <i class="fas fa-times"></i> {{localize "FASERIP.Chat.Failure"}}
+      {{/if}}
+      <span class="required-info">({{localize "FASERIP.Chat.Needed"}}: {{requiredColorLabel}})</span>
+    </div>
+    {{/if}}
+  </div>
+</div>

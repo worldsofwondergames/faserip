@@ -62,7 +62,39 @@
       "Catching": "Catching",
       "Stun": "Stun?",
       "Slam": "Slam?",
-      "Kill": "Kill?"
+      "Kill": "Kill?",
+      "Other": "Other (Generic FEAT)"
+    },
+    "Dialog": {
+      "FEATRoll": "FEAT Roll",
+      "Ability": "Ability",
+      "ActionType": "Action Type",
+      "Intensity": "Intensity",
+      "ColumnShift": "Column Shift",
+      "EffectiveRank": "Effective Rank",
+      "RequiredResult": "Required Result",
+      "Roll": "Roll",
+      "NoIntensity": "None (Any color succeeds)"
+    },
+    "Color": {
+      "White": "White",
+      "Green": "Green",
+      "Yellow": "Yellow",
+      "Red": "Red",
+      "Impossible": "Impossible"
+    },
+    "Chat": {
+      "EffectiveRank": "Effective Rank",
+      "Shift": "Shift",
+      "Success": "Success",
+      "Failure": "Failure",
+      "Needed": "Needed",
+      "Intensity": "vs"
+    },
+    "Shift": {
+      "ClassRankNoShift": "Class 1000+ ranks cannot be column shifted",
+      "MinRankReached": "Minimum rank (Shift 0) reached",
+      "MaxShiftableRankReached": "Maximum shiftable rank (Shift Z) reached"
     },
     "ActionResult": {
       "Miss": "Miss",
