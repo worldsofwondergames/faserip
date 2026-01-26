@@ -265,6 +265,20 @@ FASERIP.equipmentTypes = {
 };
 
 /**
+ * Vehicle types
+ */
+FASERIP.vehicleTypes = {
+  road: 'FASERIP.Vehicle.Type.Road',
+  offRoad: 'FASERIP.Vehicle.Type.OffRoad',
+  railed: 'FASERIP.Vehicle.Type.Railed',
+  gev: 'FASERIP.Vehicle.Type.GEV',
+  air: 'FASERIP.Vehicle.Type.Air',
+  space: 'FASERIP.Vehicle.Type.Space',
+  water: 'FASERIP.Vehicle.Type.Water',
+  sub: 'FASERIP.Vehicle.Type.Sub',
+};
+
+/**
  * Ammunition round types
  */
 FASERIP.roundTypes = {

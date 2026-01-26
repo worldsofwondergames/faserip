@@ -218,10 +218,13 @@
         "armorType": ""
       },
       "vehicle": {
+        "vehicleType": "road",
         "control": "typical",
         "speed": "typical",
         "body": "typical",
-        "protection": "poor"
+        "protection": "poor",
+        "compartmentalized": false,
+        "weapons": ""
       },
       "ammunition": {
         "weaponClass": "",

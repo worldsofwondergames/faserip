@@ -151,6 +151,23 @@
       "Cost": "Cost",
       "Material": "Material"
     },
+    "Vehicle": {
+      "Type": {
+        "Road": "Road",
+        "OffRoad": "Off-Road",
+        "Railed": "Railed",
+        "GEV": "GEV",
+        "Air": "Air",
+        "Space": "Space",
+        "Water": "Water",
+        "Sub": "Submersible"
+      },
+      "Control": "Control",
+      "Speed": "Speed",
+      "Body": "Body",
+      "Protection": "Protection",
+      "Weapons": "Weapons"
+    },
     "Ammunition": {
       "WeaponClass": "Weapon Class",
       "Rounds": "Rounds",

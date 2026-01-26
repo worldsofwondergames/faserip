@@ -48,13 +48,20 @@
       "path": "packs/ammunition.db",
       "type": "Item",
       "system": "faserip"
+    },
+    {
+      "name": "vehicles",
+      "label": "Vehicles",
+      "path": "packs/vehicles.db",
+      "type": "Item",
+      "system": "faserip"
     }
   ],
   "packFolders": [
     {
       "name": "FASERIP Equipment",
       "sorting": "a",
-      "packs": ["weapons", "ammunition"]
+      "packs": ["weapons", "ammunition", "vehicles"]
     }
   ],
   "socket": false,
