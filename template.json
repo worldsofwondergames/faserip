@@ -204,7 +204,8 @@
         "damageRank": "typical",
         "range": "typical",
         "attackType": "blunt",
-        "rate": 1
+        "rate": 1,
+        "shots": 0
       },
       "armor": {
         "protection": 6,
@@ -216,6 +217,11 @@
         "speed": "typical",
         "body": "typical",
         "protection": "poor"
+      },
+      "ammunition": {
+        "weaponClass": "",
+        "rounds": 0,
+        "roundType": "standard"
       }
     },
     "contact": {

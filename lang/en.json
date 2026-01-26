@@ -142,7 +142,27 @@
         "Weapon": "Weapon",
         "Armor": "Armor",
         "Vehicle": "Vehicle",
-        "Gear": "Gear"
+        "Gear": "Gear",
+        "Ammunition": "Ammunition"
+      },
+      "Shots": "Shots",
+      "Rate": "Rate",
+      "Range": "Range",
+      "Cost": "Cost",
+      "Material": "Material"
+    },
+    "Ammunition": {
+      "WeaponClass": "Weapon Class",
+      "Rounds": "Rounds",
+      "RoundType": {
+        "Label": "Round Type",
+        "Standard": "Standard",
+        "ArmorPiercing": "Armor Piercing",
+        "Tracer": "Tracer",
+        "Incendiary": "Incendiary",
+        "Explosive": "Explosive",
+        "Rubber": "Rubber",
+        "Energy": "Energy Cell"
       }
     },
     "Weapon": {

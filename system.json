@@ -34,8 +34,29 @@
       "path": "lang/en.json"
     }
   ],
-  "packs": [],
-  "packFolders": [],
+  "packs": [
+    {
+      "name": "weapons",
+      "label": "Weapons",
+      "path": "packs/weapons.db",
+      "type": "Item",
+      "system": "faserip"
+    },
+    {
+      "name": "ammunition",
+      "label": "Ammunition",
+      "path": "packs/ammunition.db",
+      "type": "Item",
+      "system": "faserip"
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "FASERIP Equipment",
+      "sorting": "a",
+      "packs": ["weapons", "ammunition"]
+    }
+  ],
   "socket": false,
   "manifest": "https://github.com/worldsofwondergames/faserip/releases/latest/download/system.json",
   "download": "https://github.com/worldsofwondergames/faserip/releases/latest/download/faserip.zip",

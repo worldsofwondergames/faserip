@@ -261,6 +261,20 @@ FASERIP.equipmentTypes = {
   armor: 'FASERIP.Equipment.Type.Armor',
   vehicle: 'FASERIP.Equipment.Type.Vehicle',
   gear: 'FASERIP.Equipment.Type.Gear',
+  ammunition: 'FASERIP.Equipment.Type.Ammunition',
+};
+
+/**
+ * Ammunition round types
+ */
+FASERIP.roundTypes = {
+  standard: 'FASERIP.Ammunition.RoundType.Standard',
+  armorPiercing: 'FASERIP.Ammunition.RoundType.ArmorPiercing',
+  tracer: 'FASERIP.Ammunition.RoundType.Tracer',
+  incendiary: 'FASERIP.Ammunition.RoundType.Incendiary',
+  explosive: 'FASERIP.Ammunition.RoundType.Explosive',
+  rubber: 'FASERIP.Ammunition.RoundType.Rubber',
+  energy: 'FASERIP.Ammunition.RoundType.Energy',
 };
 
 /**
