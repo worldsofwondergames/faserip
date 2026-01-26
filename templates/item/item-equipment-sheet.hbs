@@ -85,10 +85,10 @@
             <label>Damage</label>
             {{#if editable}}
             <input type="number" name="system.weapon.damage" value="{{system.weapon.damage}}" data-dtype="Number"/>
-            {{else}}
-            <span class="field-value">{{system.weapon.damage}}</span>
-            {{/if}}
             <span>({{rankAbbr system.weapon.damage}})</span>
+            {{else}}
+            <span class="field-value">{{system.weapon.damage}} ({{rankAbbr system.weapon.damage}})</span>
+            {{/if}}
           </div>
           <div class="form-group">
             <label>Attack Type</label>
@@ -136,10 +136,10 @@
             <label>Protection</label>
             {{#if editable}}
             <input type="number" name="system.armor.protection" value="{{system.armor.protection}}" data-dtype="Number"/>
-            {{else}}
-            <span class="field-value">{{system.armor.protection}}</span>
-            {{/if}}
             <span>({{rankAbbr system.armor.protection}})</span>
+            {{else}}
+            <span class="field-value">{{system.armor.protection}} ({{rankAbbr system.armor.protection}})</span>
+            {{/if}}
           </div>
           <div class="form-group">
             <label>Armor Type</label>

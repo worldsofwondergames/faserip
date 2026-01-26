@@ -955,3 +955,15 @@
 .faserip.item .sheet-tabs {
   border-top: none;
 }
+
+/* Description content styling when not editable */
+.faserip .editor-content {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  padding: 8px;
+}
+
+/* Remove border from editor when sheet is not editable */
+.faserip.item:not(.editable) .editor {
+  border: none;
+}
