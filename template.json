@@ -200,12 +200,17 @@
       "cost": "typical",
       "material": "typical",
       "weapon": {
+        "category": "ranged",
         "damage": 6,
         "damageRank": "typical",
         "range": "typical",
-        "attackType": "blunt",
+        "attackType": "shooting",
         "rate": 1,
-        "shots": 0
+        "shots": "6",
+        "price": 3,
+        "tags": [],
+        "stunIntensity": "",
+        "notes": ""
       },
       "armor": {
         "protection": 6,

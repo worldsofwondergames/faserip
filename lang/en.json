@@ -158,14 +158,30 @@
         "Label": "Round Type",
         "Standard": "Standard",
         "ArmorPiercing": "Armor Piercing",
-        "Tracer": "Tracer",
-        "Incendiary": "Incendiary",
-        "Explosive": "Explosive",
-        "Rubber": "Rubber",
-        "Energy": "Energy Cell"
+        "Mercy": "Mercy Shot",
+        "Rubber": "Rubber Shot",
+        "Explosive": "Explosive Shot",
+        "Canister": "Canister Shot",
+        "Gyrojet": "Gyro-jet",
+        "HeatSeeker": "Heat-Seeker",
+        "PowerPack": "Power Pack"
+      },
+      "RoundDescription": {
+        "ArmorPiercing": "Reduces target Body Armor by 2 CS for hitting and damage. No effect on force fields.",
+        "Mercy": "Remarkable Intensity knock-out drug. If damage inflicted, target knocked out for 1-10 rounds.",
+        "Rubber": "Inflicts slugfest damage instead of shooting damage. Ignore Slam results.",
+        "Explosive": "Inflicts additional explosive damage.",
+        "Canister": "Smoke (Excellent Intensity), Explosive (double damage to target area, normal to adjacent), or Incendiary (fire burns 1-10 rounds).",
+        "HeatSeeker": "Seeks hottest source in line to target. No range penalty. Gyro-Jet Pistol only."
       }
     },
     "Weapon": {
+      "Category": {
+        "Ranged": "Ranged",
+        "Melee": "Melee",
+        "Thrown": "Thrown",
+        "Other": "Other"
+      },
       "AttackType": {
         "Shooting": "Shooting",
         "Energy": "Energy",
@@ -174,7 +190,31 @@
         "Blunt": "Blunt",
         "Throwing": "Throwing",
         "Grappling": "Grappling"
-      }
+      },
+      "Tag": {
+        "OneHanded": "One-handed",
+        "TwoHanded": "Two-handed",
+        "Illegal": "Illegal",
+        "Military": "Military",
+        "PowerPack": "Power Pack",
+        "Bursts": "Bursts",
+        "Scatters": "Scatters",
+        "TwoMenToFire": "Two Men to Fire",
+        "Stationary": "Stationary"
+      },
+      "TagDescription": {
+        "OneHanded": "The weapon can be fired one-handed without penalty",
+        "Illegal": "Possession of this weapon outside of certain authorized groups is a misdemeanor",
+        "Military": "Possession of this weapon outside of the military and certain authorized groups is a crime (Other Crime)",
+        "PowerPack": "This weapon operates from a power pack, as opposed to using standard ammunition",
+        "Bursts": "This weapon may affect multiple adjacent targets",
+        "Scatters": "This weapon affects all within one area of the target",
+        "TwoMenToFire": "Two persons are required to fire this weapon effectively. One may fire, with the result of the firing rate being halved and a -2CS to hit",
+        "Stationary": "This weapon does not move, but it can turn in place"
+      },
+      "Price": "Price",
+      "StunIntensity": "Stun Intensity",
+      "Notes": "Notes"
     },
     "Secondary": {
       "Health": "Health",

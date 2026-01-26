@@ -270,11 +270,23 @@ FASERIP.equipmentTypes = {
 FASERIP.roundTypes = {
   standard: 'FASERIP.Ammunition.RoundType.Standard',
   armorPiercing: 'FASERIP.Ammunition.RoundType.ArmorPiercing',
-  tracer: 'FASERIP.Ammunition.RoundType.Tracer',
-  incendiary: 'FASERIP.Ammunition.RoundType.Incendiary',
-  explosive: 'FASERIP.Ammunition.RoundType.Explosive',
+  mercy: 'FASERIP.Ammunition.RoundType.Mercy',
   rubber: 'FASERIP.Ammunition.RoundType.Rubber',
-  energy: 'FASERIP.Ammunition.RoundType.Energy',
+  explosive: 'FASERIP.Ammunition.RoundType.Explosive',
+  canister: 'FASERIP.Ammunition.RoundType.Canister',
+  gyrojet: 'FASERIP.Ammunition.RoundType.Gyrojet',
+  heatSeeker: 'FASERIP.Ammunition.RoundType.HeatSeeker',
+  powerPack: 'FASERIP.Ammunition.RoundType.PowerPack',
+};
+
+/**
+ * Weapon categories
+ */
+FASERIP.weaponCategories = {
+  ranged: 'FASERIP.Weapon.Category.Ranged',
+  melee: 'FASERIP.Weapon.Category.Melee',
+  thrown: 'FASERIP.Weapon.Category.Thrown',
+  other: 'FASERIP.Weapon.Category.Other',
 };
 
 /**
@@ -288,6 +300,21 @@ FASERIP.weaponAttackTypes = {
   blunt: 'FASERIP.Weapon.AttackType.Blunt',
   throwing: 'FASERIP.Weapon.AttackType.Throwing',
   grappling: 'FASERIP.Weapon.AttackType.Grappling',
+};
+
+/**
+ * Weapon property tags
+ */
+FASERIP.weaponTags = {
+  oneHanded: 'FASERIP.Weapon.Tag.OneHanded',
+  twoHanded: 'FASERIP.Weapon.Tag.TwoHanded',
+  illegal: 'FASERIP.Weapon.Tag.Illegal',
+  military: 'FASERIP.Weapon.Tag.Military',
+  powerPack: 'FASERIP.Weapon.Tag.PowerPack',
+  bursts: 'FASERIP.Weapon.Tag.Bursts',
+  scatters: 'FASERIP.Weapon.Tag.Scatters',
+  twoMenToFire: 'FASERIP.Weapon.Tag.TwoMenToFire',
+  stationary: 'FASERIP.Weapon.Tag.Stationary',
 };
 
 /**
