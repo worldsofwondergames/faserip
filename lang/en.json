@@ -143,13 +143,82 @@
         "Armor": "Armor",
         "Vehicle": "Vehicle",
         "Gear": "Gear",
-        "Ammunition": "Ammunition"
+        "Ammunition": "Ammunition",
+        "Building": "Building",
+        "RoomPackage": "Room Package"
       },
       "Shots": "Shots",
       "Rate": "Rate",
       "Range": "Range",
       "Cost": "Cost",
       "Material": "Material"
+    },
+    "Building": {
+      "Type": {
+        "Label": "Building Type",
+        "Apartment": "Apartment",
+        "House": "House",
+        "Manor": "Manor",
+        "Mansion": "Mansion",
+        "Cottage": "Cottage",
+        "Office": "Office",
+        "Storefront": "Storefront",
+        "OfficeBuilding": "Office Building",
+        "Brownstone": "Brownstone",
+        "Warehouse": "Warehouse",
+        "Factory": "Factory"
+      },
+      "Size": {
+        "Label": "Size",
+        "Small": "Small",
+        "MidSized": "Mid-Sized",
+        "Large": "Large",
+        "Deluxe": "Deluxe"
+      },
+      "SizeDescription": {
+        "Small": "1-2 heroes, 2-3 areas/rooms",
+        "MidSized": "2-3 heroes, up to 5 areas/rooms",
+        "Large": "10+ areas spread over two floors",
+        "Deluxe": "20+ areas spread over 3+ floors"
+      },
+      "RentCost": "Rent Cost",
+      "BuyCost": "Buy Cost",
+      "Rooms": "Rooms"
+    },
+    "RoomPackage": {
+      "Type": {
+        "Label": "Package Type",
+        "Living": "Living",
+        "Information": "Information",
+        "Training": "Training & Recreation",
+        "Technical": "Technical",
+        "Vehicle": "Vehicle",
+        "Security": "Security",
+        "Special": "Special"
+      },
+      "Upgrade": {
+        "Label": "Upgrade Level",
+        "Base": "Base",
+        "Excellent": "Excellent",
+        "Remarkable": "Remarkable",
+        "Incredible": "Incredible",
+        "Amazing": "Amazing"
+      },
+      "BaseCost": "Base Cost",
+      "RoomsOccupied": "Rooms Occupied"
+    },
+    "Gear": {
+      "Type": {
+        "Label": "Gear Type",
+        "Tool": "Tool",
+        "Vision": "Vision Equipment",
+        "Safety": "Safety Equipment",
+        "Restraint": "Restraint",
+        "Accessory": "Accessory",
+        "Service": "Service"
+      },
+      "Effect": "Effect",
+      "Intensity": "Intensity"
     },
     "Vehicle": {
       "Type": {

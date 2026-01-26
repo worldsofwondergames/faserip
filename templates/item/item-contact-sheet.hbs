@@ -14,7 +14,12 @@
         </div>
         <div class="form-group">
           <label>{{localize "FASERIP.Contact.Resources"}}</label>
-          <input type="text" name="system.resources" value="{{system.resources}}" placeholder="Typical"/>
+          <select name="system.resources">
+            <option value="">—</option>
+            {{#each config.ranks as |rankData key|}}
+            <option value="{{key}}" {{#if (eq key ../system.resources)}}selected{{/if}}>{{localize rankData.label}}</option>
+            {{/each}}
+          </select>
         </div>
       </div>
     </div>

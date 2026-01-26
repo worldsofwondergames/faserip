@@ -18,7 +18,12 @@
         </div>
         <div class="form-group">
           <label>Material Strength</label>
-          <input type="text" name="system.material" value="{{system.material}}" placeholder="Typical"/>
+          <select name="system.material">
+            <option value="">—</option>
+            {{#each config.ranks as |rankData key|}}
+            <option value="{{key}}" {{#if (eq key ../system.material)}}selected{{/if}}>{{localize rankData.label}}</option>
+            {{/each}}
+          </select>
         </div>
       </div>
     </div>
@@ -38,7 +43,12 @@
     <div class="tab description" data-group="primary" data-tab="description">
       <div class="form-group">
         <label>Cost Rank</label>
-        <input type="text" name="system.cost" value="{{system.cost}}" placeholder="Typical"/>
+        <select name="system.cost">
+          <option value="">—</option>
+          {{#each config.ranks as |rankData key|}}
+          <option value="{{key}}" {{#if (eq key ../system.cost)}}selected{{/if}}>{{localize rankData.label}}</option>
+          {{/each}}
+        </select>
       </div>
       {{editor enrichedDescription target="system.description" engine="prosemirror" button=true editable=editable}}
     </div>
@@ -47,6 +57,7 @@
     <div class="tab stats" data-group="primary" data-tab="stats">
 
       {{!-- Weapon Stats --}}
+      {{#if (eq system.equipmentType "weapon")}}
       <fieldset class="equipment-stats weapon-stats">
         <legend>Weapon Stats</legend>
         <div class="grid grid-2col">
@@ -65,7 +76,12 @@
           </div>
           <div class="form-group">
             <label>Range</label>
-            <input type="text" name="system.weapon.range" value="{{system.weapon.range}}" placeholder="Typical"/>
+            <select name="system.weapon.range">
+              <option value="">—</option>
+              {{#each config.ranks as |rankData key|}}
+              <option value="{{key}}" {{#if (eq key ../system.weapon.range)}}selected{{/if}}>{{localize rankData.label}}</option>
+              {{/each}}
+            </select>
           </div>
           <div class="form-group">
             <label>Rate</label>
@@ -73,8 +89,10 @@
           </div>
         </div>
       </fieldset>
+      {{/if}}
 
       {{!-- Armor Stats --}}
+      {{#if (eq system.equipmentType "armor")}}
       <fieldset class="equipment-stats armor-stats">
         <legend>Armor Stats</legend>
         <div class="grid grid-2col">
@@ -89,29 +107,192 @@
           </div>
         </div>
       </fieldset>
+      {{/if}}
 
       {{!-- Vehicle Stats --}}
+      {{#if (eq system.equipmentType "vehicle")}}
       <fieldset class="equipment-stats vehicle-stats">
         <legend>Vehicle Stats</legend>
         <div class="grid grid-2col">
           <div class="form-group">
             <label>Control</label>
-            <input type="text" name="system.vehicle.control" value="{{system.vehicle.control}}" placeholder="Typical"/>
+            <select name="system.vehicle.control">
+              <option value="">—</option>
+              {{#each config.ranks as |rankData key|}}
+              <option value="{{key}}" {{#if (eq key ../system.vehicle.control)}}selected{{/if}}>{{localize rankData.label}}</option>
+              {{/each}}
+            </select>
           </div>
           <div class="form-group">
             <label>Speed</label>
-            <input type="text" name="system.vehicle.speed" value="{{system.vehicle.speed}}" placeholder="Good"/>
+            <select name="system.vehicle.speed">
+              <option value="">—</option>
+              {{#each config.ranks as |rankData key|}}
+              <option value="{{key}}" {{#if (eq key ../system.vehicle.speed)}}selected{{/if}}>{{localize rankData.label}}</option>
+              {{/each}}
+            </select>
           </div>
           <div class="form-group">
             <label>Body</label>
-            <input type="text" name="system.vehicle.body" value="{{system.vehicle.body}}" placeholder="Good"/>
+            <select name="system.vehicle.body">
+              <option value="">—</option>
+              {{#each config.ranks as |rankData key|}}
+              <option value="{{key}}" {{#if (eq key ../system.vehicle.body)}}selected{{/if}}>{{localize rankData.label}}</option>
+              {{/each}}
+            </select>
           </div>
           <div class="form-group">
             <label>Protection</label>
-            <input type="text" name="system.vehicle.protection" value="{{system.vehicle.protection}}" placeholder="Poor"/>
+            <select name="system.vehicle.protection">
+              <option value="">—</option>
+              {{#each config.ranks as |rankData key|}}
+              <option value="{{key}}" {{#if (eq key ../system.vehicle.protection)}}selected{{/if}}>{{localize rankData.label}}</option>
+              {{/each}}
+            </select>
           </div>
         </div>
       </fieldset>
+      {{/if}}
+
+      {{!-- Building Stats --}}
+      {{#if (eq system.equipmentType "building")}}
+      <fieldset class="equipment-stats building-stats">
+        <legend>{{localize "FASERIP.Equipment.Type.Building"}} Stats</legend>
+        <div class="grid grid-2col">
+          <div class="form-group">
+            <label>{{localize "FASERIP.Building.Type.Label"}}</label>
+            <select name="system.building.buildingType">
+              {{#each config.buildingTypes as |label key|}}
+              <option value="{{key}}" {{#if (eq key ../system.building.buildingType)}}selected{{/if}}>{{localize label}}</option>
+              {{/each}}
+            </select>
+          </div>
+          <div class="form-group">
+            <label>{{localize "FASERIP.Building.Size.Label"}}</label>
+            <select name="system.building.size">
+              {{#each config.buildingSizes as |label key|}}
+              <option value="{{key}}" {{#if (eq key ../system.building.size)}}selected{{/if}}>{{localize label}}</option>
+              {{/each}}
+            </select>
+          </div>
+          <div class="form-group">
+            <label>{{localize "FASERIP.Building.RentCost"}}</label>
+            <select name="system.building.rentCost">
+              <option value="">—</option>
+              {{#each config.ranks as |rankData key|}}
+              <option value="{{key}}" {{#if (eq key ../system.building.rentCost)}}selected{{/if}}>{{localize rankData.label}}</option>
+              {{/each}}
+            </select>
+          </div>
+          <div class="form-group">
+            <label>{{localize "FASERIP.Building.BuyCost"}}</label>
+            <select name="system.building.buyCost">
+              <option value="">—</option>
+              {{#each config.ranks as |rankData key|}}
+              <option value="{{key}}" {{#if (eq key ../system.building.buyCost)}}selected{{/if}}>{{localize rankData.label}}</option>
+              {{/each}}
+            </select>
+          </div>
+          <div class="form-group">
+            <label>{{localize "FASERIP.Building.Rooms"}}</label>
+            <input type="number" name="system.building.rooms" value="{{system.building.rooms}}" data-dtype="Number"/>
+          </div>
+        </div>
+      </fieldset>
+      {{/if}}
+
+      {{!-- Room Package Stats --}}
+      {{#if (eq system.equipmentType "roomPackage")}}
+      <fieldset class="equipment-stats roompackage-stats">
+        <legend>{{localize "FASERIP.Equipment.Type.RoomPackage"}} Stats</legend>
+        <div class="grid grid-2col">
+          <div class="form-group">
+            <label>{{localize "FASERIP.RoomPackage.Type.Label"}}</label>
+            <select name="system.roomPackage.packageType">
+              {{#each config.roomPackageTypes as |label key|}}
+              <option value="{{key}}" {{#if (eq key ../system.roomPackage.packageType)}}selected{{/if}}>{{localize label}}</option>
+              {{/each}}
+            </select>
+          </div>
+          <div class="form-group">
+            <label>{{localize "FASERIP.RoomPackage.Upgrade.Label"}}</label>
+            <select name="system.roomPackage.upgradeLevel">
+              {{#each config.roomPackageUpgrades as |label key|}}
+              <option value="{{key}}" {{#if (eq key ../system.roomPackage.upgradeLevel)}}selected{{/if}}>{{localize label}}</option>
+              {{/each}}
+            </select>
+          </div>
+          <div class="form-group">
+            <label>{{localize "FASERIP.RoomPackage.BaseCost"}}</label>
+            <select name="system.roomPackage.baseCost">
+              <option value="">—</option>
+              {{#each config.ranks as |rankData key|}}
+              <option value="{{key}}" {{#if (eq key ../system.roomPackage.baseCost)}}selected{{/if}}>{{localize rankData.label}}</option>
+              {{/each}}
+            </select>
+          </div>
+          <div class="form-group">
+            <label>{{localize "FASERIP.RoomPackage.RoomsOccupied"}}</label>
+            <input type="number" name="system.roomPackage.roomsOccupied" value="{{system.roomPackage.roomsOccupied}}" data-dtype="Number"/>
+          </div>
+        </div>
+      </fieldset>
+      {{/if}}
+
+      {{!-- Gear Stats --}}
+      {{#if (eq system.equipmentType "gear")}}
+      <fieldset class="equipment-stats gear-stats">
+        <legend>{{localize "FASERIP.Equipment.Type.Gear"}} Stats</legend>
+        <div class="grid grid-2col">
+          <div class="form-group">
+            <label>{{localize "FASERIP.Gear.Type.Label"}}</label>
+            <select name="system.gear.gearType">
+              {{#each config.gearTypes as |label key|}}
+              <option value="{{key}}" {{#if (eq key ../system.gear.gearType)}}selected{{/if}}>{{localize label}}</option>
+              {{/each}}
+            </select>
+          </div>
+          <div class="form-group">
+            <label>{{localize "FASERIP.Gear.Intensity"}}</label>
+            <select name="system.gear.intensity">
+              <option value="">—</option>
+              {{#each config.ranks as |rankData key|}}
+              <option value="{{key}}" {{#if (eq key ../system.gear.intensity)}}selected{{/if}}>{{localize rankData.label}}</option>
+              {{/each}}
+            </select>
+          </div>
+          <div class="form-group full-width">
+            <label>{{localize "FASERIP.Gear.Effect"}}</label>
+            <input type="text" name="system.gear.effect" value="{{system.gear.effect}}" placeholder="Effect description"/>
+          </div>
+        </div>
+      </fieldset>
+      {{/if}}
+
+      {{!-- Ammunition Stats --}}
+      {{#if (eq system.equipmentType "ammunition")}}
+      <fieldset class="equipment-stats ammunition-stats">
+        <legend>{{localize "FASERIP.Equipment.Type.Ammunition"}} Stats</legend>
+        <div class="grid grid-2col">
+          <div class="form-group">
+            <label>{{localize "FASERIP.Ammunition.WeaponClass"}}</label>
+            <input type="text" name="system.ammunition.weaponClass" value="{{system.ammunition.weaponClass}}" placeholder="Handgun"/>
+          </div>
+          <div class="form-group">
+            <label>{{localize "FASERIP.Ammunition.Rounds"}}</label>
+            <input type="number" name="system.ammunition.rounds" value="{{system.ammunition.rounds}}" data-dtype="Number"/>
+          </div>
+          <div class="form-group">
+            <label>{{localize "FASERIP.Ammunition.RoundType.Label"}}</label>
+            <select name="system.ammunition.roundType">
+              {{#each config.roundTypes as |label key|}}
+              <option value="{{key}}" {{#if (eq key ../system.ammunition.roundType)}}selected{{/if}}>{{localize label}}</option>
+              {{/each}}
+            </select>
+          </div>
+        </div>
+      </fieldset>
+      {{/if}}
 
     </div>
 

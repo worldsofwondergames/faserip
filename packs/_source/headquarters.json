@@ -1,0 +1,488 @@
+[
+  {
+    "name": "1 BR Apartment",
+    "type": "equipment",
+    "img": "icons/svg/tower.svg",
+    "system": {
+      "description": "<p>A small one-bedroom apartment suitable for 1-2 heroes with 2-3 areas of space. Material strength is Good (walls and floors).</p>",
+      "equipmentType": "building",
+      "cost": "feeble",
+      "material": "good",
+      "building": {
+        "buildingType": "apartment",
+        "size": "small",
+        "rentCost": "feeble",
+        "buyCost": "excellent",
+        "rooms": 1
+      }
+    }
+  },
+  {
+    "name": "2 BR Apartment",
+    "type": "equipment",
+    "img": "icons/svg/tower.svg",
+    "system": {
+      "description": "<p>A small two-bedroom apartment suitable for 1-2 heroes with 2-3 areas of space. Material strength is Good.</p>",
+      "equipmentType": "building",
+      "cost": "poor",
+      "material": "good",
+      "building": {
+        "buildingType": "apartment",
+        "size": "small",
+        "rentCost": "poor",
+        "buyCost": "excellent",
+        "rooms": 2
+      }
+    }
+  },
+  {
+    "name": "3 BR Apartment",
+    "type": "equipment",
+    "img": "icons/svg/tower.svg",
+    "system": {
+      "description": "<p>A small three-bedroom apartment suitable for 1-2 heroes with 2-3 areas of space. Material strength is Good.</p>",
+      "equipmentType": "building",
+      "cost": "good",
+      "material": "good",
+      "building": {
+        "buildingType": "apartment",
+        "size": "small",
+        "rentCost": "good",
+        "buyCost": "remarkable",
+        "rooms": 3
+      }
+    }
+  },
+  {
+    "name": "Cottage (2 rooms)",
+    "type": "equipment",
+    "img": "icons/svg/house.svg",
+    "system": {
+      "description": "<p>A small cottage with 2 rooms, suitable for 1-2 heroes. Material strength is Poor.</p>",
+      "equipmentType": "building",
+      "cost": "poor",
+      "material": "poor",
+      "building": {
+        "buildingType": "cottage",
+        "size": "small",
+        "rentCost": "poor",
+        "buyCost": "good",
+        "rooms": 2
+      }
+    }
+  },
+  {
+    "name": "Small House (4 room)",
+    "type": "equipment",
+    "img": "icons/svg/house.svg",
+    "system": {
+      "description": "<p>A small 4-room house suitable for 1-2 heroes. Material strength is Typical.</p>",
+      "equipmentType": "building",
+      "cost": "typical",
+      "material": "typical",
+      "building": {
+        "buildingType": "house",
+        "size": "small",
+        "rentCost": "typical",
+        "buyCost": "excellent",
+        "rooms": 4
+      }
+    }
+  },
+  {
+    "name": "Medium House (8 room)",
+    "type": "equipment",
+    "img": "icons/svg/house.svg",
+    "system": {
+      "description": "<p>A mid-sized 8-room house suitable for 2-3 heroes with up to 5 areas. Material strength is Typical.</p>",
+      "equipmentType": "building",
+      "cost": "typical",
+      "material": "typical",
+      "building": {
+        "buildingType": "house",
+        "size": "midSized",
+        "rentCost": "typical",
+        "buyCost": "remarkable",
+        "rooms": 8
+      }
+    }
+  },
+  {
+    "name": "Large House (12 room)",
+    "type": "equipment",
+    "img": "icons/svg/house.svg",
+    "system": {
+      "description": "<p>A mid-sized 12-room house suitable for 2-3 heroes. Material strength is Good.</p>",
+      "equipmentType": "building",
+      "cost": "excellent",
+      "material": "good",
+      "building": {
+        "buildingType": "house",
+        "size": "midSized",
+        "rentCost": "excellent",
+        "buyCost": "incredible",
+        "rooms": 12
+      }
+    }
+  },
+  {
+    "name": "Small Manor (18 room)",
+    "type": "equipment",
+    "img": "icons/svg/castle.svg",
+    "system": {
+      "description": "<p>A large 18-room manor with 10+ areas spread over two floors. Material strength is Excellent.</p>",
+      "equipmentType": "building",
+      "cost": "remarkable",
+      "material": "excellent",
+      "building": {
+        "buildingType": "manor",
+        "size": "large",
+        "rentCost": "remarkable",
+        "buyCost": "amazing",
+        "rooms": 18
+      }
+    }
+  },
+  {
+    "name": "Large Manor (24 room)",
+    "type": "equipment",
+    "img": "icons/svg/castle.svg",
+    "system": {
+      "description": "<p>A deluxe 24-room manor with 20+ areas spread over 3+ floors. Material strength is Excellent.</p>",
+      "equipmentType": "building",
+      "cost": "incredible",
+      "material": "excellent",
+      "building": {
+        "buildingType": "manor",
+        "size": "deluxe",
+        "rentCost": "incredible",
+        "buyCost": "monstrous",
+        "rooms": 24
+      }
+    }
+  },
+  {
+    "name": "Mansion (30+ room)",
+    "type": "equipment",
+    "img": "icons/svg/castle.svg",
+    "system": {
+      "description": "<p>A deluxe mansion with 30+ rooms and 20+ areas spread over 3+ floors. Material strength is Excellent. Examples include the Avengers Mansion and Xavier's School.</p>",
+      "equipmentType": "building",
+      "cost": "amazing",
+      "material": "excellent",
+      "building": {
+        "buildingType": "mansion",
+        "size": "deluxe",
+        "rentCost": "amazing",
+        "buyCost": "monstrous",
+        "rooms": 30
+      }
+    }
+  },
+  {
+    "name": "Office (3 room)",
+    "type": "equipment",
+    "img": "icons/svg/tower.svg",
+    "system": {
+      "description": "<p>A mid-sized 3-room office space. Material strength is Excellent.</p>",
+      "equipmentType": "building",
+      "cost": "good",
+      "material": "excellent",
+      "building": {
+        "buildingType": "office",
+        "size": "midSized",
+        "rentCost": "good",
+        "buyCost": "remarkable",
+        "rooms": 3
+      }
+    }
+  },
+  {
+    "name": "Storefront (4 room)",
+    "type": "equipment",
+    "img": "icons/svg/tower.svg",
+    "system": {
+      "description": "<p>A small 4-room storefront. Material strength is Good.</p>",
+      "equipmentType": "building",
+      "cost": "typical",
+      "material": "good",
+      "building": {
+        "buildingType": "storefront",
+        "size": "small",
+        "rentCost": "typical",
+        "buyCost": "remarkable",
+        "rooms": 4
+      }
+    }
+  },
+  {
+    "name": "Office Suite (6 room)",
+    "type": "equipment",
+    "img": "icons/svg/tower.svg",
+    "system": {
+      "description": "<p>A mid-sized 6-room office suite. Material strength is Excellent.</p>",
+      "equipmentType": "building",
+      "cost": "excellent",
+      "material": "excellent",
+      "building": {
+        "buildingType": "office",
+        "size": "midSized",
+        "rentCost": "excellent",
+        "buyCost": "incredible",
+        "rooms": 6
+      }
+    }
+  },
+  {
+    "name": "Office Floor (12 room)",
+    "type": "equipment",
+    "img": "icons/svg/tower.svg",
+    "system": {
+      "description": "<p>A mid-sized 12-room office floor. Material strength is Excellent.</p>",
+      "equipmentType": "building",
+      "cost": "remarkable",
+      "material": "excellent",
+      "building": {
+        "buildingType": "office",
+        "size": "midSized",
+        "rentCost": "remarkable",
+        "buyCost": "amazing",
+        "rooms": 12
+      }
+    }
+  },
+  {
+    "name": "Office Floor, Double (24 room)",
+    "type": "equipment",
+    "img": "icons/svg/tower.svg",
+    "system": {
+      "description": "<p>A large 24-room double office floor. Material strength is Excellent.</p>",
+      "equipmentType": "building",
+      "cost": "incredible",
+      "material": "excellent",
+      "building": {
+        "buildingType": "office",
+        "size": "large",
+        "rentCost": "incredible",
+        "buyCost": "monstrous",
+        "rooms": 24
+      }
+    }
+  },
+  {
+    "name": "Brownstone",
+    "type": "equipment",
+    "img": "icons/svg/house.svg",
+    "system": {
+      "description": "<p>A mid-sized brownstone building. Material strength is Good. Example: Doctor Strange's Sanctum Sanctorum.</p>",
+      "equipmentType": "building",
+      "cost": "excellent",
+      "material": "good",
+      "building": {
+        "buildingType": "brownstone",
+        "size": "midSized",
+        "rentCost": "excellent",
+        "buyCost": "remarkable",
+        "rooms": 8
+      }
+    }
+  },
+  {
+    "name": "Office Building, 4 floor",
+    "type": "equipment",
+    "img": "icons/svg/tower.svg",
+    "system": {
+      "description": "<p>A large 4-floor office building with 10+ areas over two floors. Material strength is Excellent.</p>",
+      "equipmentType": "building",
+      "cost": "remarkable",
+      "material": "excellent",
+      "building": {
+        "buildingType": "officeBuilding",
+        "size": "large",
+        "rentCost": "remarkable",
+        "buyCost": "amazing",
+        "rooms": 16
+      }
+    }
+  },
+  {
+    "name": "Office Building, 8 floor",
+    "type": "equipment",
+    "img": "icons/svg/tower.svg",
+    "system": {
+      "description": "<p>A deluxe 8-floor office building with 20+ areas. Material strength is Remarkable.</p>",
+      "equipmentType": "building",
+      "cost": "incredible",
+      "material": "remarkable",
+      "building": {
+        "buildingType": "officeBuilding",
+        "size": "deluxe",
+        "rentCost": "incredible",
+        "buyCost": "monstrous",
+        "rooms": 32
+      }
+    }
+  },
+  {
+    "name": "Office Building, 12 floor",
+    "type": "equipment",
+    "img": "icons/svg/tower.svg",
+    "system": {
+      "description": "<p>A deluxe 12-floor office building with 20+ areas. Material strength is Remarkable.</p>",
+      "equipmentType": "building",
+      "cost": "amazing",
+      "material": "remarkable",
+      "building": {
+        "buildingType": "officeBuilding",
+        "size": "deluxe",
+        "rentCost": "amazing",
+        "buyCost": "unearthly",
+        "rooms": 48
+      }
+    }
+  },
+  {
+    "name": "Office Building, 20 floor",
+    "type": "equipment",
+    "img": "icons/svg/tower.svg",
+    "system": {
+      "description": "<p>A deluxe 20-floor office building. Material strength is Remarkable. Example: Baxter Building.</p>",
+      "equipmentType": "building",
+      "cost": "monstrous",
+      "material": "remarkable",
+      "building": {
+        "buildingType": "officeBuilding",
+        "size": "deluxe",
+        "rentCost": "monstrous",
+        "buyCost": "shiftX",
+        "rooms": 80
+      }
+    }
+  },
+  {
+    "name": "Office Building, 30+ floor",
+    "type": "equipment",
+    "img": "icons/svg/tower.svg",
+    "system": {
+      "description": "<p>A deluxe 30+ floor office building (skyscraper). Material strength is Remarkable.</p>",
+      "equipmentType": "building",
+      "cost": "unearthly",
+      "material": "remarkable",
+      "building": {
+        "buildingType": "officeBuilding",
+        "size": "deluxe",
+        "rentCost": "unearthly",
+        "buyCost": "shiftZ",
+        "rooms": 120
+      }
+    }
+  },
+  {
+    "name": "Small Warehouse",
+    "type": "equipment",
+    "img": "icons/svg/barrel.svg",
+    "system": {
+      "description": "<p>A mid-sized small warehouse. Material strength is Typical.</p>",
+      "equipmentType": "building",
+      "cost": "typical",
+      "material": "typical",
+      "building": {
+        "buildingType": "warehouse",
+        "size": "midSized",
+        "rentCost": "typical",
+        "buyCost": "remarkable",
+        "rooms": 4
+      }
+    }
+  },
+  {
+    "name": "Medium Warehouse",
+    "type": "equipment",
+    "img": "icons/svg/barrel.svg",
+    "system": {
+      "description": "<p>A large warehouse. Material strength is Good.</p>",
+      "equipmentType": "building",
+      "cost": "good",
+      "material": "good",
+      "building": {
+        "buildingType": "warehouse",
+        "size": "large",
+        "rentCost": "good",
+        "buyCost": "incredible",
+        "rooms": 8
+      }
+    }
+  },
+  {
+    "name": "Large Warehouse",
+    "type": "equipment",
+    "img": "icons/svg/barrel.svg",
+    "system": {
+      "description": "<p>A deluxe large warehouse. Material strength is Good.</p>",
+      "equipmentType": "building",
+      "cost": "excellent",
+      "material": "good",
+      "building": {
+        "buildingType": "warehouse",
+        "size": "deluxe",
+        "rentCost": "excellent",
+        "buyCost": "amazing",
+        "rooms": 16
+      }
+    }
+  },
+  {
+    "name": "Small Factory",
+    "type": "equipment",
+    "img": "icons/svg/tower.svg",
+    "system": {
+      "description": "<p>A mid-sized small factory. Material strength is Remarkable.</p>",
+      "equipmentType": "building",
+      "cost": "good",
+      "material": "remarkable",
+      "building": {
+        "buildingType": "factory",
+        "size": "midSized",
+        "rentCost": "good",
+        "buyCost": "incredible",
+        "rooms": 4
+      }
+    }
+  },
+  {
+    "name": "Medium Factory",
+    "type": "equipment",
+    "img": "icons/svg/tower.svg",
+    "system": {
+      "description": "<p>A large medium factory. Material strength is Remarkable.</p>",
+      "equipmentType": "building",
+      "cost": "excellent",
+      "material": "remarkable",
+      "building": {
+        "buildingType": "factory",
+        "size": "large",
+        "rentCost": "excellent",
+        "buyCost": "amazing",
+        "rooms": 8
+      }
+    }
+  },
+  {
+    "name": "Large Factory",
+    "type": "equipment",
+    "img": "icons/svg/tower.svg",
+    "system": {
+      "description": "<p>A deluxe large factory. Material strength is Incredible.</p>",
+      "equipmentType": "building",
+      "cost": "remarkable",
+      "material": "incredible",
+      "building": {
+        "buildingType": "factory",
+        "size": "deluxe",
+        "rentCost": "remarkable",
+        "buyCost": "monstrous",
+        "rooms": 16
+      }
+    }
+  }
+]

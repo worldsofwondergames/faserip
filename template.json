@@ -230,6 +230,24 @@
         "weaponClass": "",
         "rounds": 0,
         "roundType": "standard"
+      },
+      "building": {
+        "buildingType": "apartment",
+        "size": "small",
+        "rentCost": "feeble",
+        "buyCost": "excellent",
+        "rooms": 1
+      },
+      "roomPackage": {
+        "packageType": "living",
+        "baseCost": "good",
+        "roomsOccupied": 1,
+        "upgradeLevel": "base"
+      },
+      "gear": {
+        "gearType": "tool",
+        "effect": "",
+        "intensity": ""
       }
     },
     "contact": {

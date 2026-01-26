@@ -262,6 +262,71 @@ FASERIP.equipmentTypes = {
   vehicle: 'FASERIP.Equipment.Type.Vehicle',
   gear: 'FASERIP.Equipment.Type.Gear',
   ammunition: 'FASERIP.Equipment.Type.Ammunition',
+  building: 'FASERIP.Equipment.Type.Building',
+  roomPackage: 'FASERIP.Equipment.Type.RoomPackage',
+};
+
+/**
+ * Building types for headquarters
+ */
+FASERIP.buildingTypes = {
+  apartment: 'FASERIP.Building.Type.Apartment',
+  house: 'FASERIP.Building.Type.House',
+  manor: 'FASERIP.Building.Type.Manor',
+  mansion: 'FASERIP.Building.Type.Mansion',
+  cottage: 'FASERIP.Building.Type.Cottage',
+  office: 'FASERIP.Building.Type.Office',
+  storefront: 'FASERIP.Building.Type.Storefront',
+  officeBuilding: 'FASERIP.Building.Type.OfficeBuilding',
+  brownstone: 'FASERIP.Building.Type.Brownstone',
+  warehouse: 'FASERIP.Building.Type.Warehouse',
+  factory: 'FASERIP.Building.Type.Factory',
+};
+
+/**
+ * Building size categories
+ */
+FASERIP.buildingSizes = {
+  small: 'FASERIP.Building.Size.Small',
+  midSized: 'FASERIP.Building.Size.MidSized',
+  large: 'FASERIP.Building.Size.Large',
+  deluxe: 'FASERIP.Building.Size.Deluxe',
+};
+
+/**
+ * Room package types for headquarters
+ */
+FASERIP.roomPackageTypes = {
+  living: 'FASERIP.RoomPackage.Type.Living',
+  information: 'FASERIP.RoomPackage.Type.Information',
+  training: 'FASERIP.RoomPackage.Type.Training',
+  technical: 'FASERIP.RoomPackage.Type.Technical',
+  vehicle: 'FASERIP.RoomPackage.Type.Vehicle',
+  security: 'FASERIP.RoomPackage.Type.Security',
+  special: 'FASERIP.RoomPackage.Type.Special',
+};
+
+/**
+ * Room package upgrade levels
+ */
+FASERIP.roomPackageUpgrades = {
+  base: 'FASERIP.RoomPackage.Upgrade.Base',
+  excellent: 'FASERIP.RoomPackage.Upgrade.Excellent',
+  remarkable: 'FASERIP.RoomPackage.Upgrade.Remarkable',
+  incredible: 'FASERIP.RoomPackage.Upgrade.Incredible',
+  amazing: 'FASERIP.RoomPackage.Upgrade.Amazing',
+};
+
+/**
+ * Gear subtypes for miscellaneous equipment
+ */
+FASERIP.gearTypes = {
+  tool: 'FASERIP.Gear.Type.Tool',
+  vision: 'FASERIP.Gear.Type.Vision',
+  safety: 'FASERIP.Gear.Type.Safety',
+  restraint: 'FASERIP.Gear.Type.Restraint',
+  accessory: 'FASERIP.Gear.Type.Accessory',
+  service: 'FASERIP.Gear.Type.Service',
 };
 
 /**

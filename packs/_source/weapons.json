@@ -1,0 +1,1396 @@
+[
+  {
+    "name": "Cheap Handgun",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>A cheap, unreliable handgun. Range: Feeble. Price: 2. Damage: 6. Rate: 1. Shots: 6. One-handed.</p>",
+      "equipmentType": "weapon",
+      "cost": "Fe",
+      "material": "Pr",
+      "weapon": {
+        "damage": 6,
+        "attackType": "shooting",
+        "range": "feeble",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Handgun/Pistol",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Standard handgun or pistol. Range: Typical. Price: 3. Damage: 6. Rate: 1. Shots: 6, 8, or 9. One-handed.</p>",
+      "equipmentType": "weapon",
+      "cost": "Ty",
+      "material": "Ex",
+      "weapon": {
+        "damage": 6,
+        "attackType": "shooting",
+        "range": "typical",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Target Pistol",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Precision target pistol designed for accuracy. Range: Typical. Price: 5. Damage: 6. Rate: 1. Shots: 1.</p>",
+      "equipmentType": "weapon",
+      "cost": "Ty",
+      "material": "Ex",
+      "weapon": {
+        "damage": 6,
+        "attackType": "shooting",
+        "range": "typical",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Variable Pistol",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Versatile pistol with variable ammunition capacity. Range: Good. Price: 3. Damage: 6. Rate: 1. Shots: 6, 8, or 9. One-handed.</p>",
+      "equipmentType": "weapon",
+      "cost": "Gd",
+      "material": "Ex",
+      "weapon": {
+        "damage": 6,
+        "attackType": "shooting",
+        "range": "good",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Gyro-Jet Pistol",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Fires miniature rockets instead of bullets. Range: Excellent. Price: 5. Damage: 10. Rate: 0.5. Shots: 3. One-handed. Illegal.</p>",
+      "equipmentType": "weapon",
+      "cost": "Ex",
+      "material": "Gd",
+      "weapon": {
+        "damage": 10,
+        "attackType": "shooting",
+        "range": "excellent",
+        "rate": 0.5
+      }
+    }
+  },
+  {
+    "name": "Laser Pistol",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Energy weapon firing coherent light beams. Range: Remarkable. Price: 10. Damage: 10. Rate: 1. Shots: 10. One-handed. Requires power pack. Illegal.</p>",
+      "equipmentType": "weapon",
+      "cost": "Rm",
+      "material": "Pr",
+      "weapon": {
+        "damage": 10,
+        "attackType": "energy",
+        "range": "remarkable",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Stun Pistol",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Non-lethal energy weapon that stuns targets. Range: Remarkable. Price: 2. Damage: 0 (Typical stun). Rate: 1. Shots: 10. One-handed. Requires power pack.</p>",
+      "equipmentType": "weapon",
+      "cost": "Rm",
+      "material": "Pr",
+      "weapon": {
+        "damage": 0,
+        "attackType": "energy",
+        "range": "remarkable",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Concussion Pistol",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Force-based energy weapon. Range: Incredible. Price: 4. Damage: 10. Rate: 1. Shots: 5. One-handed. Requires power pack.</p>",
+      "equipmentType": "weapon",
+      "cost": "In",
+      "material": "Ty",
+      "weapon": {
+        "damage": 10,
+        "attackType": "force",
+        "range": "incredible",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Plasma Beam Handgun",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Advanced plasma-based energy weapon. Range: Amazing. Price: 7. Damage: 20. Rate: 1. Shots: 10. One-handed. Requires power pack.</p>",
+      "equipmentType": "weapon",
+      "cost": "Am",
+      "material": "Ex",
+      "weapon": {
+        "damage": 20,
+        "attackType": "force",
+        "range": "amazing",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Machine Pistol",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Compact automatic pistol capable of burst fire. Range: Excellent. Price: 3. Damage: 20. Rate: 1. Shots: 6. One-handed. Military. May affect multiple adjacent targets (bursts).</p>",
+      "equipmentType": "weapon",
+      "cost": "Ex",
+      "material": "Ex",
+      "weapon": {
+        "damage": 20,
+        "attackType": "shooting",
+        "range": "excellent",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Rifle",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Standard rifle. Range: Typical. Price: 10. Damage: 10. Rate: 1. Shots: 4.</p>",
+      "equipmentType": "weapon",
+      "cost": "Ty",
+      "material": "Gd",
+      "weapon": {
+        "damage": 10,
+        "attackType": "shooting",
+        "range": "typical",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Hunting Rifle",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Rifle designed for hunting. Range: Good. Price: 10. Damage: 10. Rate: 1. Shots: 6, 7, or 8.</p>",
+      "equipmentType": "weapon",
+      "cost": "Gd",
+      "material": "Gd",
+      "weapon": {
+        "damage": 10,
+        "attackType": "shooting",
+        "range": "good",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Sniper Rifle",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>High-powered rifle for long-range precision shooting. Range: Good. Price: 10. Damage: 15. Rate: 1. Shots: 4.</p>",
+      "equipmentType": "weapon",
+      "cost": "Gd",
+      "material": "Gd",
+      "weapon": {
+        "damage": 15,
+        "attackType": "shooting",
+        "range": "good",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Assault Rifle",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Military assault rifle. Range: Excellent. Price: 7. Damage: 10. Rate: 2. Shots: 20. Military.</p>",
+      "equipmentType": "weapon",
+      "cost": "Ex",
+      "material": "Gd",
+      "weapon": {
+        "damage": 10,
+        "attackType": "shooting",
+        "range": "excellent",
+        "rate": 2
+      }
+    }
+  },
+  {
+    "name": "Laser Rifle",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Energy rifle firing coherent light beams. Range: Remarkable. Price: 4. Damage: 20. Rate: 1. Shots: 20. Requires power pack. Illegal.</p>",
+      "equipmentType": "weapon",
+      "cost": "Rm",
+      "material": "Ty",
+      "weapon": {
+        "damage": 20,
+        "attackType": "shooting",
+        "range": "remarkable",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Stun Rifle",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Non-lethal energy rifle that stuns targets. Range: Remarkable. Price: 5. Damage: 0 (Remarkable stun). Rate: 1. Shots: 20. Requires power pack. Illegal.</p>",
+      "equipmentType": "weapon",
+      "cost": "Rm",
+      "material": "Ty",
+      "weapon": {
+        "damage": 0,
+        "attackType": "energy",
+        "range": "remarkable",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Concussion Rifle",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Force-based energy rifle. Range: Remarkable. Price: 7. Damage: 10. Rate: 1. Shots: 12. Requires power pack. Illegal.</p>",
+      "equipmentType": "weapon",
+      "cost": "Rm",
+      "material": "Gd",
+      "weapon": {
+        "damage": 10,
+        "attackType": "force",
+        "range": "remarkable",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Automatic Rifle",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Fully automatic rifle capable of burst fire. Range: Excellent. Price: 5. Damage: 15. Rate: 1. Shots: 20. Military. May affect multiple adjacent targets (bursts).</p>",
+      "equipmentType": "weapon",
+      "cost": "Ex",
+      "material": "Gd",
+      "weapon": {
+        "damage": 15,
+        "attackType": "shooting",
+        "range": "excellent",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Shotgun",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Powerful close-range weapon with spread. Range: Good. Price: 3. Damage: 20. Rate: 1. Shots: 2. May affect multiple adjacent targets (bursts).</p>",
+      "equipmentType": "weapon",
+      "cost": "Gd",
+      "material": "Gd",
+      "weapon": {
+        "damage": 20,
+        "attackType": "shooting",
+        "range": "good",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Riot Gun",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Shotgun designed for riot control. Range: Good. Price: 2. Damage: 15. Rate: 1. Shots: 6. Two-handed.</p>",
+      "equipmentType": "weapon",
+      "cost": "Gd",
+      "material": "Ex",
+      "weapon": {
+        "damage": 15,
+        "attackType": "shooting",
+        "range": "good",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Grenade Launcher",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Launches grenades at range. Range: Excellent. Price: 4. Damage: varies by grenade type. Rate: 0.5. Shots: 1. Military.</p>",
+      "equipmentType": "weapon",
+      "cost": "Ex",
+      "material": "Gd",
+      "weapon": {
+        "damage": 0,
+        "attackType": "shooting",
+        "range": "excellent",
+        "rate": 0.5
+      }
+    }
+  },
+  {
+    "name": "Sub-Machine Gun",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Compact automatic weapon. Range: Remarkable. Price: 7. Damage: 25. Rate: 1. Shots: 7. Military. Two-handed. May affect multiple adjacent targets (bursts).</p>",
+      "equipmentType": "weapon",
+      "cost": "Rm",
+      "material": "Gd",
+      "weapon": {
+        "damage": 25,
+        "attackType": "shooting",
+        "range": "remarkable",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Machine Gun",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Heavy automatic weapon. Range: Incredible. Price: 10. Damage: 30. Rate: 1. Shots: 20. Military. May affect multiple adjacent targets (bursts).</p>",
+      "equipmentType": "weapon",
+      "cost": "In",
+      "material": "Gd",
+      "weapon": {
+        "damage": 30,
+        "attackType": "shooting",
+        "range": "incredible",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Flamethrower",
+    "type": "equipment",
+    "img": "icons/svg/fire.svg",
+    "system": {
+      "description": "<p>Projects burning fuel at targets. Range: Incredible. Price: 2. Damage: 30. Rate: 1. Shots: 5. Military. Affects all within one area (scatters).</p>",
+      "equipmentType": "weapon",
+      "cost": "In",
+      "material": "Ty",
+      "weapon": {
+        "damage": 30,
+        "attackType": "energy",
+        "range": "incredible",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Bazooka",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Anti-tank rocket launcher. Range: Incredible. Price: 4. Damage: 40. Rate: 0.5. Shots: 1. Military. Requires two persons to fire (one may fire at half rate, -2CS).</p>",
+      "equipmentType": "weapon",
+      "cost": "In",
+      "material": "Gd",
+      "weapon": {
+        "damage": 40,
+        "attackType": "shooting",
+        "range": "incredible",
+        "rate": 0.5
+      }
+    }
+  },
+  {
+    "name": "LAW",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Light Anti-tank Weapon. Disposable rocket launcher. Range: Amazing. Price: 4. Damage: 40. Rate: 1. Shots: 6. Military.</p>",
+      "equipmentType": "weapon",
+      "cost": "Am",
+      "material": "Gd",
+      "weapon": {
+        "damage": 40,
+        "attackType": "shooting",
+        "range": "amazing",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Light Artillery",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Light field gun. Range: Amazing. Price: 10. Damage: 40. Rate: 1. Shots: 20. Military. Requires two persons to fire.</p>",
+      "equipmentType": "weapon",
+      "cost": "Am",
+      "material": "Ex",
+      "weapon": {
+        "damage": 40,
+        "attackType": "shooting",
+        "range": "amazing",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Stun Cannon",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Heavy non-lethal energy weapon. Range: Amazing. Price: 10. Damage: 0 (Incredible stun). Rate: 1. Shots: 10. Requires two persons to fire. Requires power pack. May affect multiple adjacent targets (bursts).</p>",
+      "equipmentType": "weapon",
+      "cost": "Am",
+      "material": "Rm",
+      "weapon": {
+        "damage": 0,
+        "attackType": "energy",
+        "range": "amazing",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Concussion Cannon",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Heavy force-based energy weapon. Range: Amazing. Price: 15. Damage: 40. Rate: 1. Shots: 10. Requires power pack.</p>",
+      "equipmentType": "weapon",
+      "cost": "Am",
+      "material": "Rm",
+      "weapon": {
+        "damage": 40,
+        "attackType": "force",
+        "range": "amazing",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Laser Cannon",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Heavy energy weapon firing coherent light beams. Range: Amazing. Price: 20. Damage: 30. Rate: 1. Shots: 10. Requires power pack.</p>",
+      "equipmentType": "weapon",
+      "cost": "Am",
+      "material": "Ex",
+      "weapon": {
+        "damage": 30,
+        "attackType": "energy",
+        "range": "amazing",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Heavy Artillery",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Heavy field gun. Range: Monstrous. Price: 40. Damage: 50. Rate: 1. Shots: 30. Military. Requires two persons to fire. Affects all within one area (scatters).</p>",
+      "equipmentType": "weapon",
+      "cost": "Mn",
+      "material": "Rm",
+      "weapon": {
+        "damage": 50,
+        "attackType": "shooting",
+        "range": "monstrous",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Superheavy Artillery",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Massive fixed artillery piece. Range: Unearthly. Price: 80. Damage: 50. Rate: 1. Shots: 30. Military. Requires two persons to fire. Stationary (cannot move, but can turn).</p>",
+      "equipmentType": "weapon",
+      "cost": "Un",
+      "material": "In",
+      "weapon": {
+        "damage": 50,
+        "attackType": "shooting",
+        "range": "unearthly",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Missile Launcher",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Launches guided missiles. Range: Incredible. Price: varies by missile type. Damage: varies by payload. Rate: 1. Shots: 10. Military.</p>",
+      "equipmentType": "weapon",
+      "cost": "In",
+      "material": "Rm",
+      "weapon": {
+        "damage": 0,
+        "attackType": "shooting",
+        "range": "incredible",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Regular Bow",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Simple bow and arrow. Range: Poor. Price: 5. Damage: 6. Rate: 1. Shots: 1 (arrow). Two-handed.</p>",
+      "equipmentType": "weapon",
+      "cost": "Pr",
+      "material": "Pr",
+      "weapon": {
+        "damage": 6,
+        "attackType": "shooting",
+        "range": "poor",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Long Bow",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Traditional long bow with greater range and power. Range: Typical. Price: 6. Damage: 10. Rate: 1. Shots: 1 (arrow). Two-handed.</p>",
+      "equipmentType": "weapon",
+      "cost": "Ty",
+      "material": "Ty",
+      "weapon": {
+        "damage": 10,
+        "attackType": "shooting",
+        "range": "typical",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Compound Bow",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Modern bow with pulleys for increased power. Range: Excellent. Price: 7. Damage: 15. Rate: 1. Shots: 1 (arrow). Two-handed.</p>",
+      "equipmentType": "weapon",
+      "cost": "Ex",
+      "material": "Gd",
+      "weapon": {
+        "damage": 15,
+        "attackType": "shooting",
+        "range": "excellent",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Crossbow",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Mechanical bow that fires bolts. Range: Good. Price: 3. Damage: 10. Rate: 0.5. Shots: 1 (bolt). Two-handed.</p>",
+      "equipmentType": "weapon",
+      "cost": "Gd",
+      "material": "Ty",
+      "weapon": {
+        "damage": 10,
+        "attackType": "shooting",
+        "range": "good",
+        "rate": 0.5
+      }
+    }
+  },
+  {
+    "name": "Knife",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Simple fighting knife. Can be used for melee or thrown. Price: Feeble. Damage: 10. Material: Excellent. Edged attack or edged throwing.</p>",
+      "equipmentType": "weapon",
+      "cost": "Fe",
+      "material": "Ex",
+      "weapon": {
+        "damage": 10,
+        "attackType": "edgedAttack",
+        "range": "feeble",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Sword",
+    "type": "equipment",
+    "img": "icons/svg/sword.svg",
+    "system": {
+      "description": "<p>Standard one-handed sword. Price: Poor. Damage: 10. Material: Excellent. Edged attack.</p>",
+      "equipmentType": "weapon",
+      "cost": "Pr",
+      "material": "Ex",
+      "weapon": {
+        "damage": 10,
+        "attackType": "edgedAttack",
+        "range": "feeble",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Great Sword",
+    "type": "equipment",
+    "img": "icons/svg/sword.svg",
+    "system": {
+      "description": "<p>Large two-handed sword. Price: Good. Damage: 15. Material: Excellent. Edged attack. Two-handed (-2CS if used one-handed).</p>",
+      "equipmentType": "weapon",
+      "cost": "Gd",
+      "material": "Ex",
+      "weapon": {
+        "damage": 15,
+        "attackType": "edgedAttack",
+        "range": "feeble",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Axe",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Standard fighting axe. Price: Good. Damage: 5. Material: Good. Edged attack.</p>",
+      "equipmentType": "weapon",
+      "cost": "Gd",
+      "material": "Gd",
+      "weapon": {
+        "damage": 5,
+        "attackType": "edgedAttack",
+        "range": "feeble",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Great Axe",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Large two-handed battle axe. Price: Excellent. Damage: 15. Material: Good. Edged attack. Two-handed.</p>",
+      "equipmentType": "weapon",
+      "cost": "Ex",
+      "material": "Gd",
+      "weapon": {
+        "damage": 15,
+        "attackType": "edgedAttack",
+        "range": "feeble",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Spear",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Two-handed polearm that can also be thrown. Price: Feeble. Damage: 10. Material: Good. Edged attack or edged throwing. Two-handed.</p>",
+      "equipmentType": "weapon",
+      "cost": "Fe",
+      "material": "Gd",
+      "weapon": {
+        "damage": 10,
+        "attackType": "edgedAttack",
+        "range": "feeble",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Club",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Simple blunt weapon that can also be thrown. Price: Feeble. Damage: 10. Material: Good. Blunt attack or blunt throwing.</p>",
+      "equipmentType": "weapon",
+      "cost": "Fe",
+      "material": "Gd",
+      "weapon": {
+        "damage": 10,
+        "attackType": "bluntAttack",
+        "range": "feeble",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Whip, Leather",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Leather whip for grappling at range. Price: Poor. Damage: 0. Material: Typical. Grappling at range.</p>",
+      "equipmentType": "weapon",
+      "cost": "Pr",
+      "material": "Ty",
+      "weapon": {
+        "damage": 0,
+        "attackType": "grappling",
+        "range": "poor",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Whip, Metal",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Metal whip for grappling at range with damage. Price: Good. Damage: 10. Material: Good. Grappling at range.</p>",
+      "equipmentType": "weapon",
+      "cost": "Gd",
+      "material": "Gd",
+      "weapon": {
+        "damage": 10,
+        "attackType": "grappling",
+        "range": "poor",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Shuriken",
+    "type": "equipment",
+    "img": "icons/svg/target.svg",
+    "system": {
+      "description": "<p>Throwing stars. Price: Feeble. Damage: 10. Material: Excellent. Edged throwing. Maximum range: 3 areas.</p>",
+      "equipmentType": "weapon",
+      "cost": "Fe",
+      "material": "Ex",
+      "weapon": {
+        "damage": 10,
+        "attackType": "edgedThrowing",
+        "range": "typical",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Boomerang",
+    "type": "equipment",
+    "img": "icons/svg/target.svg",
+    "system": {
+      "description": "<p>Throwing weapon that returns to the thrower (with Throwing talent). Price: Poor. Damage: 10. Material: Good. Blunt throwing.</p>",
+      "equipmentType": "weapon",
+      "cost": "Pr",
+      "material": "Gd",
+      "weapon": {
+        "damage": 10,
+        "attackType": "bluntThrowing",
+        "range": "typical",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Grenade, Fragment",
+    "type": "equipment",
+    "img": "icons/svg/explosion.svg",
+    "system": {
+      "description": "<p>Explosive grenade that scatters shrapnel. Cost: Excellent. Damage: Remarkable (30). Scatters, affecting all in area.</p>",
+      "equipmentType": "weapon",
+      "cost": "Ex",
+      "material": "Ty",
+      "weapon": {
+        "damage": 30,
+        "attackType": "shooting",
+        "range": "typical",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Grenade, Smoke",
+    "type": "equipment",
+    "img": "icons/svg/explosion.svg",
+    "system": {
+      "description": "<p>Creates a smoke screen. Cost: Good. No direct damage. Imposes -2CS on FEATs for those in the smoke.</p>",
+      "equipmentType": "weapon",
+      "cost": "Gd",
+      "material": "Ty",
+      "weapon": {
+        "damage": 0,
+        "attackType": "force",
+        "range": "typical",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Grenade, Tear Gas",
+    "type": "equipment",
+    "img": "icons/svg/explosion.svg",
+    "system": {
+      "description": "<p>Releases tear gas affecting all in area. Cost: Excellent. Typical Intensity tear gas effect.</p>",
+      "equipmentType": "weapon",
+      "cost": "Ex",
+      "material": "Ty",
+      "weapon": {
+        "damage": 0,
+        "attackType": "force",
+        "range": "typical",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Grenade, Knock-out (Good)",
+    "type": "equipment",
+    "img": "icons/svg/explosion.svg",
+    "system": {
+      "description": "<p>Releases knock-out gas. Cost: Incredible. Good Intensity knock-out effect.</p>",
+      "equipmentType": "weapon",
+      "cost": "In",
+      "material": "Ty",
+      "weapon": {
+        "damage": 0,
+        "attackType": "force",
+        "range": "typical",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Grenade, Knock-out (Excellent)",
+    "type": "equipment",
+    "img": "icons/svg/explosion.svg",
+    "system": {
+      "description": "<p>Releases knock-out gas. Cost: Amazing. Excellent Intensity knock-out effect.</p>",
+      "equipmentType": "weapon",
+      "cost": "Am",
+      "material": "Ty",
+      "weapon": {
+        "damage": 0,
+        "attackType": "force",
+        "range": "typical",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Grenade, Knock-out (Remarkable)",
+    "type": "equipment",
+    "img": "icons/svg/explosion.svg",
+    "system": {
+      "description": "<p>Releases knock-out gas. Cost: Monstrous. Remarkable Intensity knock-out effect.</p>",
+      "equipmentType": "weapon",
+      "cost": "Mn",
+      "material": "Ty",
+      "weapon": {
+        "damage": 0,
+        "attackType": "force",
+        "range": "typical",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Grenade, Flash",
+    "type": "equipment",
+    "img": "icons/svg/explosion.svg",
+    "system": {
+      "description": "<p>Blindingly bright flash grenade. Cost: Excellent. Amazing Intensity blinding effect.</p>",
+      "equipmentType": "weapon",
+      "cost": "Ex",
+      "material": "Ty",
+      "weapon": {
+        "damage": 0,
+        "attackType": "energy",
+        "range": "typical",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Grenade, Concussive",
+    "type": "equipment",
+    "img": "icons/svg/explosion.svg",
+    "system": {
+      "description": "<p>Explosive concussion grenade. Cost: Remarkable. Damage: 40 blunt attack affecting all in area.</p>",
+      "equipmentType": "weapon",
+      "cost": "Rm",
+      "material": "Ty",
+      "weapon": {
+        "damage": 40,
+        "attackType": "bluntAttack",
+        "range": "typical",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Grenade, Sonic",
+    "type": "equipment",
+    "img": "icons/svg/explosion.svg",
+    "system": {
+      "description": "<p>Emits a powerful sonic burst. Cost: Incredible. Damage: 20 Energy + Excellent Stun effect.</p>",
+      "equipmentType": "weapon",
+      "cost": "In",
+      "material": "Ty",
+      "weapon": {
+        "damage": 20,
+        "attackType": "energy",
+        "range": "typical",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Missile, Standard",
+    "type": "equipment",
+    "img": "icons/svg/explosion.svg",
+    "system": {
+      "description": "<p>Standard missile body. Cost: Amazing. Forms the base for missile systems.</p>",
+      "equipmentType": "weapon",
+      "cost": "Am",
+      "material": "Gd",
+      "weapon": {
+        "damage": 0,
+        "attackType": "shooting",
+        "range": "amazing",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Missile, High-tech",
+    "type": "equipment",
+    "img": "icons/svg/explosion.svg",
+    "system": {
+      "description": "<p>Advanced missile body with improved systems. Cost: Monstrous.</p>",
+      "equipmentType": "weapon",
+      "cost": "Mn",
+      "material": "Ex",
+      "weapon": {
+        "damage": 0,
+        "attackType": "shooting",
+        "range": "monstrous",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Missile, High-speed",
+    "type": "equipment",
+    "img": "icons/svg/explosion.svg",
+    "system": {
+      "description": "<p>Fast missile body for rapid strikes. Cost: Monstrous.</p>",
+      "equipmentType": "weapon",
+      "cost": "Mn",
+      "material": "Ex",
+      "weapon": {
+        "damage": 0,
+        "attackType": "shooting",
+        "range": "monstrous",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Missile Control, Wire-guided",
+    "type": "equipment",
+    "img": "icons/svg/explosion.svg",
+    "system": {
+      "description": "<p>Wire-guided missile control system. Cost: Remarkable. Maximum range: 10 areas. Wire has Feeble material strength.</p>",
+      "equipmentType": "weapon",
+      "cost": "Rm",
+      "material": "Fe",
+      "weapon": {
+        "damage": 0,
+        "attackType": "shooting",
+        "range": "remarkable",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Missile Control, Tele-guided",
+    "type": "equipment",
+    "img": "icons/svg/explosion.svg",
+    "system": {
+      "description": "<p>Remote-guided missile control system. Cost: Incredible. Maximum range: 5 miles.</p>",
+      "equipmentType": "weapon",
+      "cost": "In",
+      "material": "Gd",
+      "weapon": {
+        "damage": 0,
+        "attackType": "shooting",
+        "range": "incredible",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Missile Control, Computer",
+    "type": "equipment",
+    "img": "icons/svg/explosion.svg",
+    "system": {
+      "description": "<p>Computer-programmed missile guidance. Cost: Amazing. Tracks programmed target.</p>",
+      "equipmentType": "weapon",
+      "cost": "Am",
+      "material": "Ex",
+      "weapon": {
+        "damage": 0,
+        "attackType": "shooting",
+        "range": "amazing",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Missile Control, Radio",
+    "type": "equipment",
+    "img": "icons/svg/explosion.svg",
+    "system": {
+      "description": "<p>Radio-signal tracking missile guidance. Cost: Incredible. Tracks radio signals.</p>",
+      "equipmentType": "weapon",
+      "cost": "In",
+      "material": "Gd",
+      "weapon": {
+        "damage": 0,
+        "attackType": "shooting",
+        "range": "incredible",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Missile Control, Heat Seeker",
+    "type": "equipment",
+    "img": "icons/svg/explosion.svg",
+    "system": {
+      "description": "<p>Heat-seeking missile guidance. Cost: Remarkable. Tracks heat sources.</p>",
+      "equipmentType": "weapon",
+      "cost": "Rm",
+      "material": "Gd",
+      "weapon": {
+        "damage": 0,
+        "attackType": "shooting",
+        "range": "remarkable",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Missile Payload, Standard",
+    "type": "equipment",
+    "img": "icons/svg/explosion.svg",
+    "system": {
+      "description": "<p>Standard explosive warhead. Cost: Remarkable. Damage: 40 pts edged attack, scatters.</p>",
+      "equipmentType": "weapon",
+      "cost": "Rm",
+      "material": "Gd",
+      "weapon": {
+        "damage": 40,
+        "attackType": "edgedAttack",
+        "range": "amazing",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Missile Payload, Concentrated",
+    "type": "equipment",
+    "img": "icons/svg/explosion.svg",
+    "system": {
+      "description": "<p>Focused explosive warhead. Cost: Remarkable. Damage: 40 pts edged attack, target only.</p>",
+      "equipmentType": "weapon",
+      "cost": "Rm",
+      "material": "Gd",
+      "weapon": {
+        "damage": 40,
+        "attackType": "edgedAttack",
+        "range": "amazing",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Missile Payload, High Explosive",
+    "type": "equipment",
+    "img": "icons/svg/explosion.svg",
+    "system": {
+      "description": "<p>High-explosive warhead. Cost: Amazing. Damage: 70 pts to target, 20 pts to adjacent.</p>",
+      "equipmentType": "weapon",
+      "cost": "Am",
+      "material": "Ex",
+      "weapon": {
+        "damage": 70,
+        "attackType": "force",
+        "range": "amazing",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Missile Payload, Incendiary",
+    "type": "equipment",
+    "img": "icons/svg/explosion.svg",
+    "system": {
+      "description": "<p>Incendiary warhead. Cost: Incredible. Damage: 40 pts energy damage, creates Good intensity fire.</p>",
+      "equipmentType": "weapon",
+      "cost": "In",
+      "material": "Gd",
+      "weapon": {
+        "damage": 40,
+        "attackType": "energy",
+        "range": "amazing",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Missile Payload, Gas",
+    "type": "equipment",
+    "img": "icons/svg/explosion.svg",
+    "system": {
+      "description": "<p>Gas warhead. Cost: Amazing. Releases Amazing intensity tear gas or knock-out gas.</p>",
+      "equipmentType": "weapon",
+      "cost": "Am",
+      "material": "Gd",
+      "weapon": {
+        "damage": 0,
+        "attackType": "force",
+        "range": "amazing",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Smoke, Fill One Area",
+    "type": "equipment",
+    "img": "icons/svg/biohazard.svg",
+    "system": {
+      "description": "<p>Area-effect smoke canister. Cost: Good. Creates Excellent intensity smoke covering one area.</p>",
+      "equipmentType": "weapon",
+      "cost": "Gd",
+      "material": "Ty",
+      "weapon": {
+        "damage": 0,
+        "attackType": "force",
+        "range": "typical",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Tear Gas, Fill One Area",
+    "type": "equipment",
+    "img": "icons/svg/biohazard.svg",
+    "system": {
+      "description": "<p>Area-effect tear gas canister. Cost: Excellent. Creates Typical intensity tear gas covering one area.</p>",
+      "equipmentType": "weapon",
+      "cost": "Ex",
+      "material": "Ty",
+      "weapon": {
+        "damage": 0,
+        "attackType": "force",
+        "range": "typical",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Knock-Out Gas, Feeble",
+    "type": "equipment",
+    "img": "icons/svg/biohazard.svg",
+    "system": {
+      "description": "<p>Area-effect knock-out gas. Cost: Excellent. Feeble Intensity knock-out effect.</p>",
+      "equipmentType": "weapon",
+      "cost": "Ex",
+      "material": "Ty",
+      "weapon": {
+        "damage": 0,
+        "attackType": "force",
+        "range": "typical",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Knock-Out Gas, Poor",
+    "type": "equipment",
+    "img": "icons/svg/biohazard.svg",
+    "system": {
+      "description": "<p>Area-effect knock-out gas. Cost: Remarkable. Poor Intensity knock-out effect.</p>",
+      "equipmentType": "weapon",
+      "cost": "Rm",
+      "material": "Ty",
+      "weapon": {
+        "damage": 0,
+        "attackType": "force",
+        "range": "typical",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Knock-Out Gas, Typical",
+    "type": "equipment",
+    "img": "icons/svg/biohazard.svg",
+    "system": {
+      "description": "<p>Area-effect knock-out gas. Cost: Remarkable. Typical Intensity knock-out effect.</p>",
+      "equipmentType": "weapon",
+      "cost": "Rm",
+      "material": "Ty",
+      "weapon": {
+        "damage": 0,
+        "attackType": "force",
+        "range": "typical",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Knock-Out Gas, Good",
+    "type": "equipment",
+    "img": "icons/svg/biohazard.svg",
+    "system": {
+      "description": "<p>Area-effect knock-out gas. Cost: Incredible. Good Intensity knock-out effect.</p>",
+      "equipmentType": "weapon",
+      "cost": "In",
+      "material": "Ty",
+      "weapon": {
+        "damage": 0,
+        "attackType": "force",
+        "range": "typical",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Knock-Out Gas, Excellent",
+    "type": "equipment",
+    "img": "icons/svg/biohazard.svg",
+    "system": {
+      "description": "<p>Area-effect knock-out gas. Cost: Incredible. Excellent Intensity knock-out effect.</p>",
+      "equipmentType": "weapon",
+      "cost": "In",
+      "material": "Ty",
+      "weapon": {
+        "damage": 0,
+        "attackType": "force",
+        "range": "typical",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Knock-Out Gas, Remarkable",
+    "type": "equipment",
+    "img": "icons/svg/biohazard.svg",
+    "system": {
+      "description": "<p>Area-effect knock-out gas. Cost: Amazing. Remarkable Intensity knock-out effect.</p>",
+      "equipmentType": "weapon",
+      "cost": "Am",
+      "material": "Ty",
+      "weapon": {
+        "damage": 0,
+        "attackType": "force",
+        "range": "typical",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Knock-Out Gas, Incredible",
+    "type": "equipment",
+    "img": "icons/svg/biohazard.svg",
+    "system": {
+      "description": "<p>Area-effect knock-out gas. Cost: Amazing. Incredible Intensity knock-out effect.</p>",
+      "equipmentType": "weapon",
+      "cost": "Am",
+      "material": "Ty",
+      "weapon": {
+        "damage": 0,
+        "attackType": "force",
+        "range": "typical",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Knock-Out Gas, Amazing",
+    "type": "equipment",
+    "img": "icons/svg/biohazard.svg",
+    "system": {
+      "description": "<p>Area-effect knock-out gas. Cost: Monstrous. Amazing Intensity knock-out effect.</p>",
+      "equipmentType": "weapon",
+      "cost": "Mn",
+      "material": "Ty",
+      "weapon": {
+        "damage": 0,
+        "attackType": "force",
+        "range": "typical",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Knock-Out Gas, Monstrous",
+    "type": "equipment",
+    "img": "icons/svg/biohazard.svg",
+    "system": {
+      "description": "<p>Area-effect knock-out gas. Cost: Monstrous. Monstrous Intensity knock-out effect.</p>",
+      "equipmentType": "weapon",
+      "cost": "Mn",
+      "material": "Ty",
+      "weapon": {
+        "damage": 0,
+        "attackType": "force",
+        "range": "typical",
+        "rate": 1
+      }
+    }
+  },
+  {
+    "name": "Knock-Out Gas, Unearthly",
+    "type": "equipment",
+    "img": "icons/svg/biohazard.svg",
+    "system": {
+      "description": "<p>Area-effect knock-out gas. Cost: Unearthly. Unearthly Intensity knock-out effect.</p>",
+      "equipmentType": "weapon",
+      "cost": "Un",
+      "material": "Ty",
+      "weapon": {
+        "damage": 0,
+        "attackType": "force",
+        "range": "typical",
+        "rate": 1
+      }
+    }
+  }
+]

@@ -321,3 +321,203 @@ This document contains all equipment data for rebuilding compendium packs.
 - **Space** - Spacecraft capable of sustained space travel
 - **Water** - Boats and ships
 - **Sub** - Submarines and submersibles
+
+---
+
+## Headquarters (27 building types)
+
+### Building Size Categories
+| Size | Description |
+|------|-------------|
+| Small | 1-2 heroes, 2-3 areas/rooms |
+| Mid-sized | 2-3 heroes, up to 5 areas/rooms |
+| Large | 10+ areas spread over two floors |
+| Deluxe | 20+ areas spread over 3+ floors |
+
+### Building Types
+| Type | Rent/Buy | Size | Material |
+|------|----------|------|----------|
+| 1 BR Apartment | Fe/Ex | Small | Gd |
+| 2 BR Apartment | Pr/Ex | Small | Gd |
+| 3 BR Apartment | Gd/Rm | Small | Gd |
+| Cottage (2 rooms) | Pr/Gd | Small | Pr |
+| Small House (4 room) | Ty/Ex | Small | Ty |
+| Medium House (8 room) | Ty/Rm | Mid-sized | Ty |
+| Large House (12 room) | Ex/In | Mid-sized | Gd |
+| Small Manor (18 room) | Rm/Am | Large | Ex |
+| Large Manor (24 room) | In/Mn | Deluxe | Ex |
+| Mansion (30+ room) | Am/Mn | Deluxe | Ex |
+| Office (3 room) | Gd/Rm | Mid-sized | Ex |
+| Storefront (4 room) | Ty/Rm | Small | Gd |
+| Office Suite (6 room) | Ex/In | Mid-sized | Ex |
+| Office Floor (12 room) | Rm/Am | Mid-sized | Ex |
+| Office Floor, Double (24 room) | In/Mn | Large | Ex |
+| Brownstone | Ex/Rm | Mid-sized | Gd |
+| Office Building, 4flr | Rm/Am | Large | Ex |
+| Office Building, 8flr | In/Mn | Deluxe | Rm |
+| Office Building, 12flr | Am/Un | Deluxe | Rm |
+| Office Building, 20flr | Mn/ShX | Deluxe | Rm |
+| Office Building, 30+ flr | Un/ShZ | Deluxe | Rm |
+| Small Warehouse | Ty/Rm | Mid-sized | Ty |
+| Medium Warehouse | Gd/In | Large | Gd |
+| Large Warehouse | Ex/Am | Deluxe | Gd |
+| Small Factory | Gd/In | Mid-sized | Rm |
+| Medium Factory | Ex/Am | Large | Rm |
+| Large Factory | Rm/Mn | Deluxe | In |
+
+### Building Notes
+- **Cost** is presented in two values: first is monthly rent, second is purchase/build cost
+- **Material strength** is the strength of walls and floors
+- **Location modifiers**: Manhattan/richer suburbs +2CS to cost; secluded spots (Colorado, Tamarind Island, Lake Geneva) reduce cost by 1CS
+- A floor can support a load equal to material strength +2CS over time, or higher amount for temporary periods
+- Light-weight openings (windows, doors) will create weak spots that heroes or villains can crash through
+
+---
+
+## Room Packages (24 packages)
+
+### Living Packages
+| Package | Base Cost | Rooms | Description |
+|---------|-----------|-------|-------------|
+| Living Room | Gd | 1 | Sofa, 2 easy chairs, 2 end tables, coffee tables, 2 lamps. Ex: add TV, stereo, piano. Rm: add all three |
+| Dining Room | Gd | 1 | Table, 4 chairs, ceiling lamp. Ex: large table, bureau, 4 more chairs. Rm: china cabinet, sterling tableware |
+| Kitchen | Gd | 1 | Sink, stove, 4 cabinets, dishware, stainless tableware, counterspace. Ex: add refrigerator, dishwasher, microwave, fire extinguisher. Rm: all three and freezer |
+| Office | Gd | 1+ | Desk, 3 chairs, 2 lamps. Ex: doubles material, file cabinet, typewriter. Rm: computer terminal, hanging plants, decorative art |
+
+### Information Packages
+| Package | Base Cost | Rooms | Description |
+|---------|-----------|-------|-------------|
+| Library | Ex | 1 | 2 easy chairs, table, desk, straight chair, up to 5 bookcases (encyclopedias, world histories, atlases). Rm: add globe, microfilm reader, computer terminal. Special/rare volumes obtained separately |
+| Computer Room | Rm | 1 | Computer with Ex ability (calculation, retrieval, monitoring). In: Rm ability. Higher abilities are unique designs |
+| Communications Room | Rm | 1 | Chair, short-wave monitor, computer networks tap-in, police band. In: national security alert equipment, visual displays |
+| Crime Files Room | Ex | 1 | Specialized computer for tracking villains and modi operandi. Performs task with Rm ability. Includes terminal, chairs, lights |
+
+### Training & Recreation Packages
+| Package | Base Cost | Rooms | Description |
+|---------|-----------|-------|-------------|
+| Rec Room | Ex | 1+ | Unmatched sofa/chairs, pool table or ping pong or TV. Rm: all above, video/pinball. Am: holographic entertainment projector |
+| Gym | Ex | 1+ | Ty weight equipment, Universal gym, lockers. Rm: rings, parallel bars, short horse. In: separate locker/steam rooms, diagnostic displays. Am: boxing area, robotic opponents, electronic weights to 100 tons (3+ areas) |
+| Pool | Rm (outdoor) / In (indoor) | 2+ | Olympic swimming pool, diving boards, sun room. Extends 1 floor down |
+| Danger Room | In | 1+ | Rm Gym plus active dangers and security. Threats max In strength/damage. Am: threats to Am, limited Ex holographic illusions |
+| Conference Room | Rm | 1 | Large table, 10 chairs, or platform, speaker, 30 chairs. In: wood paneling |
+
+### Technical Packages
+| Package | Base Cost | Rooms | Description |
+|---------|-----------|-------|-------------|
+| Workshop | Rm | 1+ | Metal/woodworking: lathes, drills, saws, fire extinguisher. In: laser guided instruments. Am: automatic processing materials (automatic factory) |
+| Laboratory | Rm | 1+ | Scales, sinks, common chemicals, microscope. In: computer with In analysis, or clean room. Am: both, plus poison analysis and serum dispenser (Ex vs known poisons). Electron micro-probes, stellar mass detectors: In cost separately |
+| Medical | Rm | 1 | Emergency room care, standard antidotes, medication. In: X-ray, clean room, operating room, pathology (additional rooms). Am: cryogenics. Auto-doc devices are generally experimental (Shi'ar hybrid, Ex healing) |
+| Power Room | Rm | 1 | 12-hour backup power supply. In: 24-hour supply, auto cut-in 2 rounds after failure. Am: solar-powered cells, removes need for external power |
+
+### Vehicle Packages
+| Package | Base Cost | Areas | Description |
+|---------|-----------|-------|-------------|
+| Garage | Gd | 1 | Services 1 ground vehicle, repair facilities, fire extinguisher. Ex: up to 3 vehicles. Rm: up to 12 vehicles |
+| Hangar | Ex | 1/vehicle | Services 1 air vehicle, repair facilities. Each different vehicle needs own hangar |
+| Dock | Rm | 3/vehicle | Services 1 sea/sub vehicle, drydock facilities. Each vehicle needs own dock |
+
+### Security Packages
+| Package | Base Cost | Space | Description |
+|---------|-----------|-------|-------------|
+| Security (per door/window) | Gd | 0 | Hand-set burglar alarms, mechanical locks. Ex: automatic alarms, computer-code/card ID. Rm: palm-print scan, activates defense. In: full body scan, hostility detection, activates defense |
+| Defense | Ex | 1+ areas | Pre-set defenses (tentacles, nets, lasers, stun rifles, pit traps) at Rm Strength max. Rm: In Strength, activated by Security. In: Am Strength. Multiple mechanisms may protect same establishment |
+| Fire Protection | Ex | 0 | Sprinkler covers up to 10 rooms, Gd protection. Rm: foam-projectors, Ex protection, 10 rooms. Auto-activates on heat/smoke |
+
+### Special Packages
+| Package | Base Cost | Rooms | Description |
+|---------|-----------|-------|-------------|
+| Trophy Room | Ex | 1 | Showcase, lighting, frames for mementos. May serve as reception hall/gallery. Rm: handle dangerous exhibits at In level |
+| Imprisonment | Ex | 1 | Standard restraints, Rm material bars. Rm: In Strength devices. In: Am Strength, Ex inhibitor restraints |
+
+### Included Free
+- Porches, storage, bathrooms, closets - included in building cost
+- Multiple rooms of same type must be bought separately
+
+---
+
+## Other Equipment (40+ items)
+
+### Weapon Accessories
+| Item | Cost | Notes |
+|------|------|-------|
+| Silencer | Gd | Reduces max range by 1 rank; target needs Intuition FEAT to hear shot. Not for gyro-jet, lasers, stun, concussion |
+| Sniper Sights | Gd | Eliminates range penalty; user fires last (initiative 10). Illegal |
+| Infra-red Sights | Gd | See up to 5 areas in dark |
+| Tripod | Ty | +1CS to hit for rifles/machine guns when on steady surface |
+
+### Vision Equipment
+| Item | Cost | Notes |
+|------|------|-------|
+| Flashlight, Normal | Fe | Ty Intensity, 2 area range |
+| Flashlight, Halogen | Gd | Rm Intensity, 3 area range, blinds more powerfully |
+| Infra-Red Goggles | Ex | Normal vision up to 5 areas in dim light |
+| Polarized Lenses | Gd | Gd resistance to light attacks; darken 1 round if exposed to bright light |
+
+### Safety Equipment
+| Item | Cost | Notes |
+|------|------|-------|
+| Fire Extinguisher | Ty | Ex Intensity vs fire. Green FEAT: eliminate Ty or less. Yellow: Gd. Red: Ex |
+| Fire Hose | Ex | In Intensity vs fire. 10 pts Blunt Attack at 1 area range, considered fire burst |
+| Gas Mask | Ty | Rm Intensity. Breathe normally in smoke/tear gas/knock-out gas. No clear vision |
+| Asbestos Suit | Ex | Rm Fire Protection |
+| Radiation Suit | In | In Radiation Protection |
+
+### Armor
+| Item | Cost | Notes |
+|------|------|-------|
+| Flak Jacket | Ex | Gd Body Armor |
+| Beta Cloth | Rm | Ty Body Armor |
+
+### Restraints
+| Item | Cost | Notes |
+|------|------|-------|
+| Handcuffs | Ty | Ex material strength |
+| Inhibitor Bands | Rm | -7CS to physical and Powers |
+| Nullifier Bands | In | -7CS (for powered armor) |
+| Stasis Ray | Mn | Am Stunning effect |
+
+### Tools & Miscellaneous
+| Item | Cost | Notes |
+|------|------|-------|
+| Camera | Gd | Standard photography |
+| Personal Computer | Gd | Pr Reason ability |
+| Caltrops | Ty | Target must make Control FEAT |
+| Mace (spray) | Ty | Rm Intensity tear gas, 1 target adjacent, no Agility FEAT to hit, Endurance FEAT to resist |
+| Flare Pistol | Gd | Gd damage, incendiary |
+| Spear Gun | Gd | As crossbow, underwater use |
+| Scuba Gear | Gd | 2 hours breathing underwater |
+| Roller Skates | Ty | Move as vehicle |
+| Rocket Pack | Rm | Flight at Ex speed |
+
+### Salaries (Monthly)
+| Position | Cost |
+|----------|------|
+| Butler or Housekeeper | Ty |
+| Secretary | Ty |
+| Pilot | Gd |
+| Lawyer | Gd |
+
+---
+
+## Equipment Notes
+
+### Headquarters Costs
+- **Renting**: Monthly cost, furnished places often have packages installed (replacement is hero's responsibility)
+- **Buying**: One-time cost. Building your own costs same as buying, time figured using building rules
+- **Very high quality packages** (Library with first editions): may cost +1CS or +2CS
+- **Second-hand**: Furniture goes berserk more often, -1CS price
+
+### Material Strength Reference
+- Floor supports: material +2CS over time, higher for temporary periods
+- Windows/doors create weak spots heroes or villains can crash through
+
+### Fire Extinguisher Effects
+- vs Ty Intensity fire or less: Green FEAT eliminates
+- vs Gd Intensity: Yellow FEAT eliminates
+- vs Ex Intensity: Red FEAT eliminates
+- vs flaming characters (Human Torch): causes FEAT roll to retain flame
+
+### Security Package Integration
+- Rm and In Security packages can activate Defense packages
+- Multiple defense mechanisms can protect same establishment
+- Specialized defense packages may be designed

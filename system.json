@@ -55,13 +55,34 @@
       "path": "packs/vehicles.db",
       "type": "Item",
       "system": "faserip"
+    },
+    {
+      "name": "headquarters",
+      "label": "Headquarters",
+      "path": "packs/headquarters.db",
+      "type": "Item",
+      "system": "faserip"
+    },
+    {
+      "name": "room-packages",
+      "label": "Room Packages",
+      "path": "packs/room-packages.db",
+      "type": "Item",
+      "system": "faserip"
+    },
+    {
+      "name": "gear",
+      "label": "Gear",
+      "path": "packs/gear.db",
+      "type": "Item",
+      "system": "faserip"
     }
   ],
   "packFolders": [
     {
       "name": "FASERIP Equipment",
       "sorting": "a",
-      "packs": ["weapons", "ammunition", "vehicles"]
+      "packs": ["weapons", "ammunition", "vehicles", "headquarters", "room-packages", "gear"]
     }
   ],
   "socket": false,

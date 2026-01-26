@@ -1,0 +1,444 @@
+[
+  {
+    "name": "Living Room Package",
+    "type": "equipment",
+    "img": "icons/svg/door-closed.svg",
+    "system": {
+      "description": "<p>Occupies one room. Consists of sofa, two easy chairs, two end tables, coffee tables, two lamps (ceiling table or floor). At Excellent Cost add television, stereo set-up, or piano. At Remarkable Cost add all three.</p>",
+      "equipmentType": "roomPackage",
+      "cost": "good",
+      "material": "typical",
+      "roomPackage": {
+        "packageType": "living",
+        "baseCost": "good",
+        "roomsOccupied": 1,
+        "upgradeLevel": "base"
+      }
+    }
+  },
+  {
+    "name": "Dining Room Package",
+    "type": "equipment",
+    "img": "icons/svg/door-closed.svg",
+    "system": {
+      "description": "<p>Occupies one room. Consists of table, four chairs, ceiling lamp. Excellent Cost add large table, bureau and four more chairs. Remarkable Cost add china cabinet, set of good china and sterling tableware.</p>",
+      "equipmentType": "roomPackage",
+      "cost": "good",
+      "material": "typical",
+      "roomPackage": {
+        "packageType": "living",
+        "baseCost": "good",
+        "roomsOccupied": 1,
+        "upgradeLevel": "base"
+      }
+    }
+  },
+  {
+    "name": "Kitchen Package",
+    "type": "equipment",
+    "img": "icons/svg/door-closed.svg",
+    "system": {
+      "description": "<p>Occupies one room. Consists of sink, stove (gas or electric), four cabinets, dishware and stainless tableware, counterspace. This version is standard equipment with most residential housing. At Excellent Cost add refrigerator, dishwasher, or microwave, plus a fire extinguisher. At Remarkable Cost add all three and freezer.</p>",
+      "equipmentType": "roomPackage",
+      "cost": "good",
+      "material": "typical",
+      "roomPackage": {
+        "packageType": "living",
+        "baseCost": "good",
+        "roomsOccupied": 1,
+        "upgradeLevel": "base"
+      }
+    }
+  },
+  {
+    "name": "Office Package",
+    "type": "equipment",
+    "img": "icons/svg/door-closed.svg",
+    "system": {
+      "description": "<p>Occupies one or more rooms. Includes desk, three chairs, two lamps. Excellent Cost doubles the material, adds file cabinet, typewriter. At Remarkable Cost, add computer terminal, double previous material, add hanging plants, decorative art.</p>",
+      "equipmentType": "roomPackage",
+      "cost": "good",
+      "material": "typical",
+      "roomPackage": {
+        "packageType": "living",
+        "baseCost": "good",
+        "roomsOccupied": 1,
+        "upgradeLevel": "base"
+      }
+    }
+  },
+  {
+    "name": "Library Package",
+    "type": "equipment",
+    "img": "icons/svg/book.svg",
+    "system": {
+      "description": "<p>Occupies one room. Consists of two easy chairs, table, desk, straight chair, and up to five bookcases on general subjects (texts readily available, and including encyclopedias, world histories, and atlases). Remarkable Cost adds globe, microfilm reader, computer terminal (only useful if building has computer room or is linked up to computer). Special or rare volumes, such as the Book of the Vishanti, the Necronomicon, or Amazing Fantasy #15, would have to be obtained separately.</p>",
+      "equipmentType": "roomPackage",
+      "cost": "excellent",
+      "material": "typical",
+      "roomPackage": {
+        "packageType": "information",
+        "baseCost": "excellent",
+        "roomsOccupied": 1,
+        "upgradeLevel": "base"
+      }
+    }
+  },
+  {
+    "name": "Computer Room",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Occupies one room. Includes computer itself and a terminal for access, or terminal and communication equipment for access to computer outside the building. This computer is capable of performing simple tasks (calculation, information retrieval, monitoring) with Excellent ability. Incredible Cost buys a computer with this at Remarkable ability. Computers with higher forecasting and processing abilities, such as the one running the old Baxter Building and artificial intelligences, are unique designs.</p>",
+      "equipmentType": "roomPackage",
+      "cost": "remarkable",
+      "material": "typical",
+      "roomPackage": {
+        "packageType": "information",
+        "baseCost": "remarkable",
+        "roomsOccupied": 1,
+        "upgradeLevel": "base"
+      }
+    }
+  },
+  {
+    "name": "Communications Room",
+    "type": "equipment",
+    "img": "icons/svg/sound.svg",
+    "system": {
+      "description": "<p>Occupies one room. Includes chair, short-wave monitor, tap-in for computer networks, police band. At Incredible Cost includes national security alert equipment and visual display screens.</p>",
+      "equipmentType": "roomPackage",
+      "cost": "remarkable",
+      "material": "typical",
+      "roomPackage": {
+        "packageType": "information",
+        "baseCost": "remarkable",
+        "roomsOccupied": 1,
+        "upgradeLevel": "base"
+      }
+    }
+  },
+  {
+    "name": "Crime Files Room",
+    "type": "equipment",
+    "img": "icons/svg/mystery-man.svg",
+    "system": {
+      "description": "<p>Occupies one room. Basically a separate computer with a specialized task at information processing and retrieval. Used by large groups to keep track of former villains and modi operandi. Performs its task with Remarkable ability. (Example: Buildings are disappearing, leaving large holes in the ground. A check with the crime files computer indicates this has been a previous tactic of the Mole Man.) Super hero groups on good terms often share their crime files. Room cost includes terminal, chairs, lights.</p>",
+      "equipmentType": "roomPackage",
+      "cost": "excellent",
+      "material": "typical",
+      "roomPackage": {
+        "packageType": "information",
+        "baseCost": "excellent",
+        "roomsOccupied": 1,
+        "upgradeLevel": "base"
+      }
+    }
+  },
+  {
+    "name": "Rec Room Package",
+    "type": "equipment",
+    "img": "icons/svg/d20-black.svg",
+    "system": {
+      "description": "<p>Occupies one or more rooms. Consists of unmatched sofa and easy chairs, pool table or ping pong table or TV. Remarkable Cost contains all of above, video and/or pinball machines (hot tub is optional, only in California). Amazing Cost has all of above plus computer-assisted holographic entertainment projector.</p>",
+      "equipmentType": "roomPackage",
+      "cost": "excellent",
+      "material": "typical",
+      "roomPackage": {
+        "packageType": "training",
+        "baseCost": "excellent",
+        "roomsOccupied": 1,
+        "upgradeLevel": "base"
+      }
+    }
+  },
+  {
+    "name": "Gym Package",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Occupies one or more rooms. Consists of typical weight-lifting equipment, Universal gym, lockers. Remarkable Cost includes rings, even and uneven parallel bars, short horse. Incredible Cost includes separate locker and steam rooms (two additional rooms), diagnostic displays. Amazing Cost includes boxing area, robotic opponents, and electronic-based weights capable of reaching 100 tons, and must occupy at least 3 areas.</p>",
+      "equipmentType": "roomPackage",
+      "cost": "excellent",
+      "material": "typical",
+      "roomPackage": {
+        "packageType": "training",
+        "baseCost": "excellent",
+        "roomsOccupied": 1,
+        "upgradeLevel": "base"
+      }
+    }
+  },
+  {
+    "name": "Pool Package (Outdoor)",
+    "type": "equipment",
+    "img": "icons/svg/waterfall.svg",
+    "system": {
+      "description": "<p>Occupies 2 or more areas, and extends 1 floor downward. Consists of standard olympic swimming pool, diving boards, and sun room (alternately, sun roof which is retractable).</p>",
+      "equipmentType": "roomPackage",
+      "cost": "remarkable",
+      "material": "typical",
+      "roomPackage": {
+        "packageType": "training",
+        "baseCost": "remarkable",
+        "roomsOccupied": 2,
+        "upgradeLevel": "base"
+      }
+    }
+  },
+  {
+    "name": "Pool Package (Indoor)",
+    "type": "equipment",
+    "img": "icons/svg/waterfall.svg",
+    "system": {
+      "description": "<p>Occupies 2 or more areas, and extends 1 floor downward. Consists of standard olympic swimming pool, diving boards, and sun room (alternately, sun roof which is retractable). Indoor version.</p>",
+      "equipmentType": "roomPackage",
+      "cost": "incredible",
+      "material": "typical",
+      "roomPackage": {
+        "packageType": "training",
+        "baseCost": "incredible",
+        "roomsOccupied": 2,
+        "upgradeLevel": "base"
+      }
+    }
+  },
+  {
+    "name": "Danger Room",
+    "type": "equipment",
+    "img": "icons/svg/skull.svg",
+    "system": {
+      "description": "<p>Duplicates Remarkable Cost Gym package with additional active dangers and security systems. \"Threats\" may be of any general type, but no \"threat\" may exceed Incredible in strength, Intensity, or damage. Amazing Cost: as Incredible, with threats increased to Amazing strength, Intensity, or damage. Some limited holographic illusion generation at the Excellent rank. This represents the danger room of the type originally possessed by the X-Men and now used by the Hellions. The current X-Men danger room is a unique hybrid design using Shi'ar technology.</p>",
+      "equipmentType": "roomPackage",
+      "cost": "incredible",
+      "material": "remarkable",
+      "roomPackage": {
+        "packageType": "training",
+        "baseCost": "incredible",
+        "roomsOccupied": 1,
+        "upgradeLevel": "base"
+      }
+    }
+  },
+  {
+    "name": "Conference Room Package",
+    "type": "equipment",
+    "img": "icons/svg/book.svg",
+    "system": {
+      "description": "<p>Occupies one room. Contains material for assembling of heroes, or alternately for news conferences and presentations. Contains large table and up to 10 normal chairs, or platform, speaker, and 30 ordinary chairs. Wood paneling available at Incredible Cost.</p>",
+      "equipmentType": "roomPackage",
+      "cost": "remarkable",
+      "material": "typical",
+      "roomPackage": {
+        "packageType": "training",
+        "baseCost": "remarkable",
+        "roomsOccupied": 1,
+        "upgradeLevel": "base"
+      }
+    }
+  },
+  {
+    "name": "Workshop Package",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Occupies one or more rooms. Basic equipment for metal and woodworking: lathes, drills, saws and fire extinguisher. Incredible Cost includes laser guided instruments. Amazing Cost includes all of the above and automatic processing materials (an automatic factory, in effect, for simple goods).</p>",
+      "equipmentType": "roomPackage",
+      "cost": "remarkable",
+      "material": "typical",
+      "roomPackage": {
+        "packageType": "technical",
+        "baseCost": "remarkable",
+        "roomsOccupied": 1,
+        "upgradeLevel": "base"
+      }
+    }
+  },
+  {
+    "name": "Laboratory Package",
+    "type": "equipment",
+    "img": "icons/svg/skull.svg",
+    "system": {
+      "description": "<p>Occupies one or more rooms. Basic lab equipment: scales, sinks, common chemicals, microscope. At Incredible Cost include computer capable of analysis with Incredible ability, or clean room (prevent germs from escaping lab). At Amazing Cost include both, plus poison analysis and serum dispenser (Excellent effects against known poisons only). Certain pieces, such as electron micro-probes and stellar mass detectors, may be purchased separately (in general, such items are Incredible Rank purchases).</p>",
+      "equipmentType": "roomPackage",
+      "cost": "remarkable",
+      "material": "typical",
+      "roomPackage": {
+        "packageType": "technical",
+        "baseCost": "remarkable",
+        "roomsOccupied": 1,
+        "upgradeLevel": "base"
+      }
+    }
+  },
+  {
+    "name": "Medical Package",
+    "type": "equipment",
+    "img": "icons/svg/blood.svg",
+    "system": {
+      "description": "<p>Occupies one room. Equivalent of emergency room care, no heavy equipment, standard antidotes and medication. Incredible Cost: X-ray, clean room, operating room, pathology. (Additional rooms.) Amazing Cost: as above, plus cryogenics. Note: The Auto-doc and other life-saving devices are generally experimental on Earth. The one in the X-Men's possession is of Shi'ar hybrid technology, is one of the most powerful available, and is limited to Excellent healing ability.</p>",
+      "equipmentType": "roomPackage",
+      "cost": "remarkable",
+      "material": "typical",
+      "roomPackage": {
+        "packageType": "technical",
+        "baseCost": "remarkable",
+        "roomsOccupied": 1,
+        "upgradeLevel": "base"
+      }
+    }
+  },
+  {
+    "name": "Power Room",
+    "type": "equipment",
+    "img": "icons/svg/lightning.svg",
+    "system": {
+      "description": "<p>Occupies one room. Buildings are generally assumed to draw their power from outside sources, with the resulting danger of black-outs and power overloads. Heroes who wish a back-up source or alternate source (say, to power a Monstrous-strength ray-gun) must install their own power supply. At this level the generator purchased will provide a 12-hour supply of power. Incredible Cost brings a 24-hour supply of power and an automatic cut-in 2 rounds after power fails. Amazing Cost brings solar-powered cells, removing need of external power in normal situations.</p>",
+      "equipmentType": "roomPackage",
+      "cost": "remarkable",
+      "material": "typical",
+      "roomPackage": {
+        "packageType": "technical",
+        "baseCost": "remarkable",
+        "roomsOccupied": 1,
+        "upgradeLevel": "base"
+      }
+    }
+  },
+  {
+    "name": "Garage Package",
+    "type": "equipment",
+    "img": "icons/svg/bridge.svg",
+    "system": {
+      "description": "<p>Occupies one room. Servicing for a single ground vehicle, including repair facilities and fire extinguisher. Excellent Cost may service up to three ground vehicles, and Remarkable up to 12 ground vehicles.</p>",
+      "equipmentType": "roomPackage",
+      "cost": "good",
+      "material": "typical",
+      "roomPackage": {
+        "packageType": "vehicle",
+        "baseCost": "good",
+        "roomsOccupied": 1,
+        "upgradeLevel": "base"
+      }
+    }
+  },
+  {
+    "name": "Hangar Package",
+    "type": "equipment",
+    "img": "icons/svg/wing.svg",
+    "system": {
+      "description": "<p>Occupies one area per vehicle using that hangar. Servicing for a single air vehicle, including repair facilities. Each different vehicle requires its own hangar package.</p>",
+      "equipmentType": "roomPackage",
+      "cost": "excellent",
+      "material": "typical",
+      "roomPackage": {
+        "packageType": "vehicle",
+        "baseCost": "excellent",
+        "roomsOccupied": 1,
+        "upgradeLevel": "base"
+      }
+    }
+  },
+  {
+    "name": "Dock Package",
+    "type": "equipment",
+    "img": "icons/svg/anchor.svg",
+    "system": {
+      "description": "<p>Occupies three areas per sea or sub vehicle. Servicing for a single sea or sub vehicle, including drydock facilities. Each sea or sub vehicle requires its own dock package.</p>",
+      "equipmentType": "roomPackage",
+      "cost": "remarkable",
+      "material": "typical",
+      "roomPackage": {
+        "packageType": "vehicle",
+        "baseCost": "remarkable",
+        "roomsOccupied": 3,
+        "upgradeLevel": "base"
+      }
+    }
+  },
+  {
+    "name": "Security Package",
+    "type": "equipment",
+    "img": "icons/svg/padlock.svg",
+    "system": {
+      "description": "<p>One Security package to a door or window. Occupies no space. Consists of hand-set burglar alarms on windows and doors, coupled with mechanical locks. Excellent Cost: Automatic burglar alarms with computer-code or card identification system. Remarkable Cost: automatic burglar alarms with palm-print scan, can activate defense systems. Incredible Cost: full body scan with benign identification program as to hostility. Can activate defense systems.</p>",
+      "equipmentType": "roomPackage",
+      "cost": "good",
+      "material": "typical",
+      "roomPackage": {
+        "packageType": "security",
+        "baseCost": "good",
+        "roomsOccupied": 0,
+        "upgradeLevel": "base"
+      }
+    }
+  },
+  {
+    "name": "Defense Package",
+    "type": "equipment",
+    "img": "icons/svg/target.svg",
+    "system": {
+      "description": "<p>Will protect one or more areas. Pre-set defenses consisting of entangling tentacles or nets or lasers or stun rifles, or concussive rifles or pit traps, with the maximum of Remarkable Strength or Intensity. Remarkable Cost: defense activated by Security package, consists of one type as above of Incredible Strength. Incredible Cost: as above, intensities are of Amazing Strength. Multiple defense mechanisms may protect the same establishment (example, the WCA compound consists of net-filled pits, stun rifles disguised as trees, and a passive alarm system in the Security Package). Specialized defense packages may be designed.</p>",
+      "equipmentType": "roomPackage",
+      "cost": "excellent",
+      "material": "remarkable",
+      "roomPackage": {
+        "packageType": "security",
+        "baseCost": "excellent",
+        "roomsOccupied": 1,
+        "upgradeLevel": "base"
+      }
+    }
+  },
+  {
+    "name": "Fire Protection Package",
+    "type": "equipment",
+    "img": "icons/svg/fire.svg",
+    "system": {
+      "description": "<p>Occupies no space. Sprinkler system that may cover up to 10 rooms, provides Good protection from fire. Remarkable Cost: foam-projectors that provide Excellent protection from fire, covers up to 10 rooms. Fire Protection Packages automatically activate on heat or smoke, and must be modified to avoid extinguishing flaming heroes.</p>",
+      "equipmentType": "roomPackage",
+      "cost": "excellent",
+      "material": "typical",
+      "roomPackage": {
+        "packageType": "security",
+        "baseCost": "excellent",
+        "roomsOccupied": 0,
+        "upgradeLevel": "base"
+      }
+    }
+  },
+  {
+    "name": "Trophy Room Package",
+    "type": "equipment",
+    "img": "icons/svg/chest.svg",
+    "system": {
+      "description": "<p>Occupies one room. Contains showcase, lighting, frames to display mementos, and may be used as a reception hall or gallery. At Remarkable Cost, contains capability to handle potentially dangerous exhibits at the Incredible level.</p>",
+      "equipmentType": "roomPackage",
+      "cost": "excellent",
+      "material": "typical",
+      "roomPackage": {
+        "packageType": "special",
+        "baseCost": "excellent",
+        "roomsOccupied": 1,
+        "upgradeLevel": "base"
+      }
+    }
+  },
+  {
+    "name": "Imprisonment Package",
+    "type": "equipment",
+    "img": "icons/svg/padlock.svg",
+    "system": {
+      "description": "<p>Occupies one room. Contains standard restraining devices, including bars of Remarkable material strength. At Remarkable Cost, restraining devices made of Incredible Strength. At Incredible Cost, restraining devices at Amazing Strength and Excellent Strength inhibitor restraints.</p>",
+      "equipmentType": "roomPackage",
+      "cost": "excellent",
+      "material": "remarkable",
+      "roomPackage": {
+        "packageType": "special",
+        "baseCost": "excellent",
+        "roomsOccupied": 1,
+        "upgradeLevel": "base"
+      }
+    }
+  }
+]

@@ -1,0 +1,514 @@
+[
+  {
+    "name": "Fire Extinguisher",
+    "type": "equipment",
+    "img": "icons/svg/fire.svg",
+    "system": {
+      "description": "<p>Fire extinguishers inflict no damage normally, but against fire are of Good Intensity (eliminate fire of Typical Intensity or less in the same area on a green FEAT, of Good Intensity on a yellow, and up to Excellent on a red). Against characters with flaming powers, such as the Human Torch, the extinguisher causes a FEAT roll against that Intensity to retain flame.</p>",
+      "equipmentType": "gear",
+      "cost": "typical",
+      "material": "typical",
+      "gear": {
+        "gearType": "safety",
+        "effect": "Excellent Intensity vs fire",
+        "intensity": "excellent"
+      }
+    }
+  },
+  {
+    "name": "Fire Hose",
+    "type": "equipment",
+    "img": "icons/svg/waterfall.svg",
+    "system": {
+      "description": "<p>Fire hoses have been used as riot control devices, and inflict 10 points Blunt Attack at a range of one area, and can be considered as fire bursts. Against fire and flaming characters, the water from a fire hose is considered Remarkable Intensity.</p>",
+      "equipmentType": "gear",
+      "cost": "excellent",
+      "material": "typical",
+      "gear": {
+        "gearType": "safety",
+        "effect": "Incredible Intensity vs fire, 10 pts Blunt at 1 area",
+        "intensity": "incredible"
+      }
+    }
+  },
+  {
+    "name": "Silencer",
+    "type": "equipment",
+    "img": "icons/svg/sound.svg",
+    "system": {
+      "description": "<p>A device that may be added to a pistol or rifle which inflicts damage on the Shooting table, excluding the gyro-jet and all lasers, stunning and concussion weapons. The silencer operates by dispersing the gases from the shot that creates the crack of the pistol. Using a silencer reduces maximum range by one rank for the weapon, but the target (and those around him or her) must make an Intuition FEAT to hear the shot and know its location.</p>",
+      "equipmentType": "gear",
+      "cost": "good",
+      "material": "typical",
+      "gear": {
+        "gearType": "accessory",
+        "effect": "Reduces range one area, requires Intuition FEAT to hear",
+        "intensity": ""
+      }
+    }
+  },
+  {
+    "name": "Sniper Sights",
+    "type": "equipment",
+    "img": "icons/svg/eye.svg",
+    "system": {
+      "description": "<p>Sniper Sights are built into the sniper rifle and the target pistol, and added to any other weapon eliminate the penalty for range for weapons. The user of a weapon with a sniper sight automatically has an initiative roll of 10 (last in the round). Its use is considered illegal (Other Crime).</p>",
+      "equipmentType": "gear",
+      "cost": "good",
+      "material": "typical",
+      "gear": {
+        "gearType": "accessory",
+        "effect": "Removes range penalty, fires last. Illegal.",
+        "intensity": ""
+      }
+    }
+  },
+  {
+    "name": "Infra-Red Sights",
+    "type": "equipment",
+    "img": "icons/svg/eye.svg",
+    "system": {
+      "description": "<p>A modification similar to the sniper sight, may be used for any missile weapon. These sights permit the user to see up to 5 areas in the dark.</p>",
+      "equipmentType": "gear",
+      "cost": "good",
+      "material": "typical",
+      "gear": {
+        "gearType": "accessory",
+        "effect": "Sees in dark up to 5 areas",
+        "intensity": ""
+      }
+    }
+  },
+  {
+    "name": "Tripod",
+    "type": "equipment",
+    "img": "icons/svg/bridge.svg",
+    "system": {
+      "description": "<p>Includes all devices used to steady a rifle, automatic rifle, assault rifle, or machine gun to aid in its firing, and may be used by laser, stun, and concussion versions of those weapons. A weapon with a tripod receives a +1CS to hit, provided it is resting on the ground or other steady surface.</p>",
+      "equipmentType": "gear",
+      "cost": "typical",
+      "material": "typical",
+      "gear": {
+        "gearType": "accessory",
+        "effect": "+1CS to hit when on steady surface",
+        "intensity": ""
+      }
+    }
+  },
+  {
+    "name": "Flashlight, Normal",
+    "type": "equipment",
+    "img": "icons/svg/sun.svg",
+    "system": {
+      "description": "<p>The normal flashlight is the type most common, with a plastic or metal body. Normal flashlight has a range of two areas.</p>",
+      "equipmentType": "gear",
+      "cost": "feeble",
+      "material": "typical",
+      "gear": {
+        "gearType": "vision",
+        "effect": "2 area range",
+        "intensity": "typical"
+      }
+    }
+  },
+  {
+    "name": "Flashlight, Halogen",
+    "type": "equipment",
+    "img": "icons/svg/sun.svg",
+    "system": {
+      "description": "<p>The Halogen flashlight has a brighter bulb and more concentrated beam, and blinds with a more powerful Intensity. The halogen flashlight has a range of three areas.</p>",
+      "equipmentType": "gear",
+      "cost": "good",
+      "material": "typical",
+      "gear": {
+        "gearType": "vision",
+        "effect": "3 area range, brighter beam",
+        "intensity": "remarkable"
+      }
+    }
+  },
+  {
+    "name": "Infra-Red Goggles",
+    "type": "equipment",
+    "img": "icons/svg/eye.svg",
+    "system": {
+      "description": "<p>Similar to infra-red sights; these permit normal vision up to 5 areas away in dimly lit areas.</p>",
+      "equipmentType": "gear",
+      "cost": "excellent",
+      "material": "typical",
+      "gear": {
+        "gearType": "vision",
+        "effect": "See 5 areas in dark",
+        "intensity": ""
+      }
+    }
+  },
+  {
+    "name": "Polarized Lenses",
+    "type": "equipment",
+    "img": "icons/svg/eye.svg",
+    "system": {
+      "description": "<p>Goggles that provide Good resistance to light attacks. If exposed to a bright light, they darken for 1 round, then lighten to allow normal sight.</p>",
+      "equipmentType": "gear",
+      "cost": "good",
+      "material": "typical",
+      "gear": {
+        "gearType": "vision",
+        "effect": "Good protection from light attacks",
+        "intensity": "good"
+      }
+    }
+  },
+  {
+    "name": "Mace (Spray)",
+    "type": "equipment",
+    "img": "icons/svg/biohazard.svg",
+    "system": {
+      "description": "<p>A small one-area weapon that shoots a mist of Typical Intensity tear gas at a single target adjacent to the user. It does not require an Agility FEAT to hit, though the target must make an Endurance FEAT to avoid the effects.</p>",
+      "equipmentType": "gear",
+      "cost": "typical",
+      "material": "typical",
+      "gear": {
+        "gearType": "safety",
+        "effect": "Typical tear gas, adjacent target, auto-hit, Endurance FEAT to resist",
+        "intensity": "remarkable"
+      }
+    }
+  },
+  {
+    "name": "Gas Mask",
+    "type": "equipment",
+    "img": "icons/svg/skull.svg",
+    "system": {
+      "description": "<p>Allows the wearer to breathe and act normally in conditions of smoke, tear gas, or knock-out gas. It does not allow clear vision in these areas, however, only normal movement.</p>",
+      "equipmentType": "gear",
+      "cost": "typical",
+      "material": "typical",
+      "gear": {
+        "gearType": "safety",
+        "effect": "Breathe in smoke/tear gas/knock-out gas, no clear vision",
+        "intensity": "remarkable"
+      }
+    }
+  },
+  {
+    "name": "Asbestos Suit",
+    "type": "equipment",
+    "img": "icons/svg/fire.svg",
+    "system": {
+      "description": "<p>Provides Remarkable Fire Protection.</p>",
+      "equipmentType": "gear",
+      "cost": "excellent",
+      "material": "typical",
+      "gear": {
+        "gearType": "safety",
+        "effect": "Remarkable Fire Protection",
+        "intensity": "remarkable"
+      }
+    }
+  },
+  {
+    "name": "Radiation Suit",
+    "type": "equipment",
+    "img": "icons/svg/radiation.svg",
+    "system": {
+      "description": "<p>Provides Incredible Radiation Protection.</p>",
+      "equipmentType": "gear",
+      "cost": "incredible",
+      "material": "typical",
+      "gear": {
+        "gearType": "safety",
+        "effect": "Incredible Radiation Protection",
+        "intensity": "incredible"
+      }
+    }
+  },
+  {
+    "name": "Flak Jacket",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Provides Good Body Armor protection.</p>",
+      "equipmentType": "armor",
+      "cost": "excellent",
+      "material": "typical",
+      "armor": {
+        "protection": 10,
+        "protectionRank": "good",
+        "armorType": "Body Armor"
+      }
+    }
+  },
+  {
+    "name": "Beta Cloth",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Special fabric that provides Typical Body Armor protection.</p>",
+      "equipmentType": "armor",
+      "cost": "remarkable",
+      "material": "typical",
+      "armor": {
+        "protection": 6,
+        "protectionRank": "typical",
+        "armorType": "Body Armor"
+      }
+    }
+  },
+  {
+    "name": "Flare Pistol",
+    "type": "equipment",
+    "img": "icons/svg/fire.svg",
+    "system": {
+      "description": "<p>Fires flares that cause Good damage and are incendiary.</p>",
+      "equipmentType": "gear",
+      "cost": "good",
+      "material": "typical",
+      "gear": {
+        "gearType": "tool",
+        "effect": "Good damage, incendiary",
+        "intensity": "good"
+      }
+    }
+  },
+  {
+    "name": "Camera",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>Standard camera for photography.</p>",
+      "equipmentType": "gear",
+      "cost": "good",
+      "material": "typical",
+      "gear": {
+        "gearType": "tool",
+        "effect": "Photography",
+        "intensity": ""
+      }
+    }
+  },
+  {
+    "name": "Personal Computer",
+    "type": "equipment",
+    "img": "icons/svg/item-bag.svg",
+    "system": {
+      "description": "<p>A personal computer with Poor Reason ability for calculations and data storage.</p>",
+      "equipmentType": "gear",
+      "cost": "good",
+      "material": "typical",
+      "gear": {
+        "gearType": "tool",
+        "effect": "Poor Reason ability",
+        "intensity": "poor"
+      }
+    }
+  },
+  {
+    "name": "Caltrops",
+    "type": "equipment",
+    "img": "icons/svg/trap.svg",
+    "system": {
+      "description": "<p>Spiked devices thrown on the ground to impede movement. Target must make a Control FEAT to avoid.</p>",
+      "equipmentType": "gear",
+      "cost": "typical",
+      "material": "typical",
+      "gear": {
+        "gearType": "tool",
+        "effect": "Control FEAT to avoid",
+        "intensity": ""
+      }
+    }
+  },
+  {
+    "name": "Handcuffs",
+    "type": "equipment",
+    "img": "icons/svg/padlock.svg",
+    "system": {
+      "description": "<p>Standard restraining device with Excellent material strength.</p>",
+      "equipmentType": "gear",
+      "cost": "typical",
+      "material": "excellent",
+      "gear": {
+        "gearType": "restraint",
+        "effect": "Excellent material strength",
+        "intensity": ""
+      }
+    }
+  },
+  {
+    "name": "Inhibitor Bands",
+    "type": "equipment",
+    "img": "icons/svg/padlock.svg",
+    "system": {
+      "description": "<p>Advanced restraining devices that apply -7CS to physical abilities and Powers.</p>",
+      "equipmentType": "gear",
+      "cost": "remarkable",
+      "material": "remarkable",
+      "gear": {
+        "gearType": "restraint",
+        "effect": "-7CS to physical and Powers",
+        "intensity": ""
+      }
+    }
+  },
+  {
+    "name": "Nullifier Bands",
+    "type": "equipment",
+    "img": "icons/svg/padlock.svg",
+    "system": {
+      "description": "<p>Advanced restraining devices that apply -7CS, designed for powered armor users.</p>",
+      "equipmentType": "gear",
+      "cost": "incredible",
+      "material": "incredible",
+      "gear": {
+        "gearType": "restraint",
+        "effect": "-7CS (for powered armor)",
+        "intensity": ""
+      }
+    }
+  },
+  {
+    "name": "Stasis Ray",
+    "type": "equipment",
+    "img": "icons/svg/lightning.svg",
+    "system": {
+      "description": "<p>Advanced device that causes Amazing Stunning effect.</p>",
+      "equipmentType": "gear",
+      "cost": "monstrous",
+      "material": "remarkable",
+      "gear": {
+        "gearType": "restraint",
+        "effect": "Amazing Stunning",
+        "intensity": "amazing"
+      }
+    }
+  },
+  {
+    "name": "Spear Gun",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>Underwater weapon that functions as a crossbow.</p>",
+      "equipmentType": "gear",
+      "cost": "good",
+      "material": "typical",
+      "gear": {
+        "gearType": "tool",
+        "effect": "As crossbow underwater",
+        "intensity": ""
+      }
+    }
+  },
+  {
+    "name": "Scuba Gear",
+    "type": "equipment",
+    "img": "icons/svg/waterfall.svg",
+    "system": {
+      "description": "<p>Underwater breathing apparatus that provides 2 hours of air.</p>",
+      "equipmentType": "gear",
+      "cost": "good",
+      "material": "typical",
+      "gear": {
+        "gearType": "safety",
+        "effect": "2 hours breathing underwater",
+        "intensity": ""
+      }
+    }
+  },
+  {
+    "name": "Roller Skates",
+    "type": "equipment",
+    "img": "icons/svg/wingfoot.svg",
+    "system": {
+      "description": "<p>Allows movement as a vehicle.</p>",
+      "equipmentType": "gear",
+      "cost": "typical",
+      "material": "typical",
+      "gear": {
+        "gearType": "tool",
+        "effect": "Move as vehicle",
+        "intensity": ""
+      }
+    }
+  },
+  {
+    "name": "Rocket Pack",
+    "type": "equipment",
+    "img": "icons/svg/wing.svg",
+    "system": {
+      "description": "<p>Personal flight device that provides Flight at Excellent speed.</p>",
+      "equipmentType": "gear",
+      "cost": "remarkable",
+      "material": "typical",
+      "gear": {
+        "gearType": "tool",
+        "effect": "Flight at Excellent speed",
+        "intensity": "excellent"
+      }
+    }
+  },
+  {
+    "name": "Butler/Housekeeper (Salary)",
+    "type": "equipment",
+    "img": "icons/svg/mystery-man.svg",
+    "system": {
+      "description": "<p>Monthly salary for a butler or housekeeper to maintain the headquarters.</p>",
+      "equipmentType": "gear",
+      "cost": "typical",
+      "material": "",
+      "gear": {
+        "gearType": "service",
+        "effect": "Monthly salary for domestic staff",
+        "intensity": ""
+      }
+    }
+  },
+  {
+    "name": "Secretary (Salary)",
+    "type": "equipment",
+    "img": "icons/svg/mystery-man.svg",
+    "system": {
+      "description": "<p>Monthly salary for a secretary to handle administrative duties.</p>",
+      "equipmentType": "gear",
+      "cost": "typical",
+      "material": "",
+      "gear": {
+        "gearType": "service",
+        "effect": "Monthly salary for administrative staff",
+        "intensity": ""
+      }
+    }
+  },
+  {
+    "name": "Pilot (Salary)",
+    "type": "equipment",
+    "img": "icons/svg/wing.svg",
+    "system": {
+      "description": "<p>Monthly salary for a pilot to operate air vehicles.</p>",
+      "equipmentType": "gear",
+      "cost": "good",
+      "material": "",
+      "gear": {
+        "gearType": "service",
+        "effect": "Monthly salary for pilot",
+        "intensity": ""
+      }
+    }
+  },
+  {
+    "name": "Lawyer (Salary)",
+    "type": "equipment",
+    "img": "icons/svg/book.svg",
+    "system": {
+      "description": "<p>Monthly salary for a lawyer on retainer.</p>",
+      "equipmentType": "gear",
+      "cost": "good",
+      "material": "",
+      "gear": {
+        "gearType": "service",
+        "effect": "Monthly salary for legal counsel",
+        "intensity": ""
+      }
+    }
+  }
+]

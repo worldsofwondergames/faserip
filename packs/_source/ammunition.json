@@ -1,0 +1,530 @@
+[
+  {
+    "name": "Standard Handgun Ammo",
+    "type": "equipment",
+    "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+    "system": {
+      "description": "<p>Standard ammunition for handguns and pistols. Box of 50 rounds.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Fe",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "Handgun",
+        "rounds": 50,
+        "roundType": "standard"
+      }
+    }
+  },
+  {
+    "name": "Standard Rifle Ammo",
+    "type": "equipment",
+    "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+    "system": {
+      "description": "<p>Standard ammunition for rifles. Box of 50 rounds.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Fe",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "Rifle",
+        "rounds": 50,
+        "roundType": "standard"
+      }
+    }
+  },
+  {
+    "name": "Standard Assault Rifle Ammo",
+    "type": "equipment",
+    "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+    "system": {
+      "description": "<p>Standard ammunition for assault rifles. Box of 30 rounds.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Fe",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "Assault Rifle",
+        "rounds": 30,
+        "roundType": "standard"
+      }
+    }
+  },
+  {
+    "name": "Standard Automatic Rifle Clip",
+    "type": "equipment",
+    "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+    "system": {
+      "description": "<p>Standard ammunition clip for automatic rifles. Clip of 20 rounds.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Fe",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "Automatic Rifle",
+        "rounds": 20,
+        "roundType": "standard"
+      }
+    }
+  },
+  {
+    "name": "Standard SMG Clip",
+    "type": "equipment",
+    "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+    "system": {
+      "description": "<p>Standard ammunition clip for sub-machine guns. Clip of 7 rounds.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Fe",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "Sub-Machine Gun",
+        "rounds": 7,
+        "roundType": "standard"
+      }
+    }
+  },
+  {
+    "name": "Standard Machine Gun Clip",
+    "type": "equipment",
+    "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+    "system": {
+      "description": "<p>Standard ammunition clip for machine guns. Clip of 20 rounds.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Pr",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "Machine Gun",
+        "rounds": 20,
+        "roundType": "standard"
+      }
+    }
+  },
+  {
+    "name": "Standard Shotgun Shells",
+    "type": "equipment",
+    "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+    "system": {
+      "description": "<p>Standard shotgun shells. Box of 10 shells.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Fe",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "Shotgun",
+        "rounds": 10,
+        "roundType": "standard"
+      }
+    }
+  },
+  {
+    "name": "Standard Bazooka Round",
+    "type": "equipment",
+    "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+    "system": {
+      "description": "<p>Standard bazooka round. Single round.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Fe",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "Bazooka",
+        "rounds": 1,
+        "roundType": "standard"
+      }
+    }
+  },
+  {
+    "name": "Standard LAW Round",
+    "type": "equipment",
+    "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+    "system": {
+      "description": "<p>Standard LAW (Light Anti-tank Weapon) round. Single round.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Fe",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "LAW",
+        "rounds": 1,
+        "roundType": "standard"
+      }
+    }
+  },
+  {
+    "name": "Standard Light Artillery Round",
+    "type": "equipment",
+    "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+    "system": {
+      "description": "<p>Standard light artillery round. Single round.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Pr",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "Light Artillery",
+        "rounds": 1,
+        "roundType": "standard"
+      }
+    }
+  },
+  {
+    "name": "Standard Heavy Artillery Round",
+    "type": "equipment",
+    "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+    "system": {
+      "description": "<p>Standard heavy artillery round. Single round.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Ty",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "Heavy Artillery",
+        "rounds": 1,
+        "roundType": "standard"
+      }
+    }
+  },
+  {
+    "name": "Standard Superheavy Artillery Round",
+    "type": "equipment",
+    "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+    "system": {
+      "description": "<p>Standard superheavy artillery round. Single round.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Gd",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "Superheavy Artillery",
+        "rounds": 1,
+        "roundType": "standard"
+      }
+    }
+  },
+  {
+    "name": "Power Pack (Pistol)",
+    "type": "equipment",
+    "img": "icons/svg/lightning.svg",
+    "system": {
+      "description": "<p>Power pack for energy pistols including laser pistols, stun pistols, concussion pistols, and plasma beam handguns.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Ty",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "Energy Pistol",
+        "rounds": 1,
+        "roundType": "powerPack"
+      }
+    }
+  },
+  {
+    "name": "Power Pack (Rifle)",
+    "type": "equipment",
+    "img": "icons/svg/lightning.svg",
+    "system": {
+      "description": "<p>Power pack for energy rifles including laser rifles, stun rifles, and concussion rifles.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Gd",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "Energy Rifle",
+        "rounds": 1,
+        "roundType": "powerPack"
+      }
+    }
+  },
+  {
+    "name": "Power Pack (Cannon)",
+    "type": "equipment",
+    "img": "icons/svg/lightning.svg",
+    "system": {
+      "description": "<p>Power pack for energy cannons including stun cannons, concussion cannons, and laser cannons.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Ex",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "Energy Cannon",
+        "rounds": 1,
+        "roundType": "powerPack"
+      }
+    }
+  },
+  {
+    "name": "Mercy Shot (Handgun)",
+    "type": "equipment",
+    "img": "icons/svg/blood.svg",
+    "system": {
+      "description": "<p>Mercy shot ammunition for handguns. Contains a Remarkable intensity knock-out drug. Box of 10 rounds.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Fe",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "Handgun",
+        "rounds": 10,
+        "roundType": "mercyShot"
+      }
+    }
+  },
+  {
+    "name": "Mercy Shot (Rifle)",
+    "type": "equipment",
+    "img": "icons/svg/blood.svg",
+    "system": {
+      "description": "<p>Mercy shot ammunition for rifles. Contains a Remarkable intensity knock-out drug. Box of 10 rounds.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Fe",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "Rifle",
+        "rounds": 10,
+        "roundType": "mercyShot"
+      }
+    }
+  },
+  {
+    "name": "Mercy Shot (Assault Rifle)",
+    "type": "equipment",
+    "img": "icons/svg/blood.svg",
+    "system": {
+      "description": "<p>Mercy shot ammunition for assault rifles. Contains a Remarkable intensity knock-out drug. Box of 5 rounds.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Fe",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "Assault Rifle",
+        "rounds": 5,
+        "roundType": "mercyShot"
+      }
+    }
+  },
+  {
+    "name": "Mercy Shot (Automatic Rifle)",
+    "type": "equipment",
+    "img": "icons/svg/blood.svg",
+    "system": {
+      "description": "<p>Mercy shot ammunition for automatic rifles. Contains a Remarkable intensity knock-out drug. Clip of 20 rounds.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Ty",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "Automatic Rifle",
+        "rounds": 20,
+        "roundType": "mercyShot"
+      }
+    }
+  },
+  {
+    "name": "AP Shot (Handgun)",
+    "type": "equipment",
+    "img": "icons/weapons/ammunition/bullet-ice-blue.webp",
+    "system": {
+      "description": "<p>Armor-piercing ammunition for handguns. Reduces target's Body Armor by -2CS. Box of 10 rounds.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Fe",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "Handgun",
+        "rounds": 10,
+        "roundType": "armorPiercing"
+      }
+    }
+  },
+  {
+    "name": "AP Shot (Sniper Rifle)",
+    "type": "equipment",
+    "img": "icons/weapons/ammunition/bullet-ice-blue.webp",
+    "system": {
+      "description": "<p>Armor-piercing ammunition for sniper rifles. Reduces target's Body Armor by -2CS. Box of 10 rounds.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Fe",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "Sniper Rifle",
+        "rounds": 10,
+        "roundType": "armorPiercing"
+      }
+    }
+  },
+  {
+    "name": "AP Shot (LAW/Bazooka)",
+    "type": "equipment",
+    "img": "icons/weapons/ammunition/bullet-ice-blue.webp",
+    "system": {
+      "description": "<p>Armor-piercing ammunition for LAW or bazooka. Reduces target's Body Armor by -2CS. Single round.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Fe",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "LAW/Bazooka",
+        "rounds": 1,
+        "roundType": "armorPiercing"
+      }
+    }
+  },
+  {
+    "name": "Rubber Shot (Handgun)",
+    "type": "equipment",
+    "img": "icons/weapons/ammunition/shot-round-lead.webp",
+    "system": {
+      "description": "<p>Rubber ammunition for handguns. Deals Slugfest (non-lethal) damage. Box of 40 rounds.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Fe",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "Handgun",
+        "rounds": 40,
+        "roundType": "rubber"
+      }
+    }
+  },
+  {
+    "name": "Rubber Shot (Rifle)",
+    "type": "equipment",
+    "img": "icons/weapons/ammunition/shot-round-lead.webp",
+    "system": {
+      "description": "<p>Rubber ammunition for rifles. Deals Slugfest (non-lethal) damage. Box of 40 rounds.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Fe",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "Rifle",
+        "rounds": 40,
+        "roundType": "rubber"
+      }
+    }
+  },
+  {
+    "name": "Explosive Shot (Handgun)",
+    "type": "equipment",
+    "img": "icons/weapons/ammunition/shot-round-brown.webp",
+    "system": {
+      "description": "<p>Explosive ammunition for handguns. Deals extra damage on impact. Box of 10 rounds.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Ty",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "Handgun",
+        "rounds": 10,
+        "roundType": "explosive"
+      }
+    }
+  },
+  {
+    "name": "Explosive Shot (Rifle)",
+    "type": "equipment",
+    "img": "icons/weapons/ammunition/shot-round-brown.webp",
+    "system": {
+      "description": "<p>Explosive ammunition for rifles. Deals extra damage on impact. Box of 10 rounds.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Ty",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "Rifle",
+        "rounds": 10,
+        "roundType": "explosive"
+      }
+    }
+  },
+  {
+    "name": "Explosive Shot (Bazooka)",
+    "type": "equipment",
+    "img": "icons/weapons/ammunition/shot-round-brown.webp",
+    "system": {
+      "description": "<p>Explosive round for bazookas. Deals extra damage on impact. Single round.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Gd",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "Bazooka",
+        "rounds": 1,
+        "roundType": "explosive"
+      }
+    }
+  },
+  {
+    "name": "Canister Shot (LAW/Bazooka/Riot Gun)",
+    "type": "equipment",
+    "img": "icons/weapons/ammunition/shot-round-silver.webp",
+    "system": {
+      "description": "<p>Canister round for LAW, bazooka, or riot gun. Can contain smoke, explosive, or incendiary payload. Single round.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Gd",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "Various",
+        "rounds": 1,
+        "roundType": "canister"
+      }
+    }
+  },
+  {
+    "name": "Canister Shot (Light Artillery)",
+    "type": "equipment",
+    "img": "icons/weapons/ammunition/shot-round-silver.webp",
+    "system": {
+      "description": "<p>Canister round for light artillery. Can contain smoke, explosive, or incendiary payload. Single round.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Gd",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "Light Artillery",
+        "rounds": 1,
+        "roundType": "canister"
+      }
+    }
+  },
+  {
+    "name": "Canister Shot (Heavy Artillery)",
+    "type": "equipment",
+    "img": "icons/weapons/ammunition/shot-round-silver.webp",
+    "system": {
+      "description": "<p>Canister round for heavy artillery. Can contain smoke, explosive, or incendiary payload. Single round.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Ex",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "Heavy Artillery",
+        "rounds": 1,
+        "roundType": "canister"
+      }
+    }
+  },
+  {
+    "name": "Canister Shot (Superheavy Artillery)",
+    "type": "equipment",
+    "img": "icons/weapons/ammunition/shot-round-silver.webp",
+    "system": {
+      "description": "<p>Canister round for superheavy artillery. Can contain smoke, explosive, or incendiary payload. Single round.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Rm",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "Superheavy Artillery",
+        "rounds": 1,
+        "roundType": "canister"
+      }
+    }
+  },
+  {
+    "name": "Standard Gyro-jet Ammo",
+    "type": "equipment",
+    "img": "icons/weapons/ammunition/shot-round-blue.webp",
+    "system": {
+      "description": "<p>Standard gyro-jet ammunition for gyro-jet pistols. Miniature rockets that accelerate after firing. Box of 3 rounds.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Pr",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "Gyro-Jet Pistol",
+        "rounds": 3,
+        "roundType": "gyroJet"
+      }
+    }
+  },
+  {
+    "name": "Heat-Seeker Gyro-jet Ammo",
+    "type": "equipment",
+    "img": "icons/weapons/ammunition/shot-round-blue.webp",
+    "system": {
+      "description": "<p>Heat-seeking gyro-jet ammunition for gyro-jet pistols. Miniature rockets that track heat signatures. Box of 3 rounds.</p>",
+      "equipmentType": "ammunition",
+      "cost": "Gd",
+      "material": "",
+      "ammunition": {
+        "weaponClass": "Gyro-Jet Pistol",
+        "rounds": 3,
+        "roundType": "heatSeeker"
+      }
+    }
+  }
+]
