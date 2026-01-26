@@ -936,6 +936,8 @@
 .faserip .field-value {
   display: inline-block;
   padding: 2px 6px;
+  font-family: "Roboto", sans-serif;
+  font-size: 11px;
   font-weight: 500;
 }
 
