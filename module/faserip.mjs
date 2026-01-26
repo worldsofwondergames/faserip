@@ -130,6 +130,25 @@ function _registerHandlebarsHelpers() {
     };
     return classes[color] || 'feat-white';
   });
+
+  // Check if array includes a value
+  Handlebars.registerHelper('includes', function (array, value) {
+    if (!Array.isArray(array)) return false;
+    return array.includes(value);
+  });
+
+  // Concatenate strings
+  Handlebars.registerHelper('concat', function (...args) {
+    // Remove the Handlebars options object from the end
+    args.pop();
+    return args.join('');
+  });
+
+  // Capitalize first letter of each word
+  Handlebars.registerHelper('capitalize', function (str) {
+    if (typeof str !== 'string') return '';
+    return str.replace(/\b\w/g, l => l.toUpperCase());
+  });
 }
 
 /* -------------------------------------------- */

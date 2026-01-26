@@ -80,7 +80,7 @@
       {{#if (eq system.equipmentType "weapon")}}
       <fieldset class="equipment-stats weapon-stats">
         <legend>Weapon Stats</legend>
-        <div class="grid grid-2col">
+        <div class="grid grid-3col">
           <div class="form-group">
             <label>Damage</label>
             {{#if editable}}
@@ -88,18 +88,6 @@
             <span>({{rankAbbr system.weapon.damage}})</span>
             {{else}}
             <span class="field-value">{{system.weapon.damage}} ({{rankAbbr system.weapon.damage}})</span>
-            {{/if}}
-          </div>
-          <div class="form-group">
-            <label>Attack Type</label>
-            {{#if editable}}
-            <select name="system.weapon.attackType">
-              {{#each config.weaponAttackTypes as |label key|}}
-              <option value="{{key}}" {{#if (eq key ../system.weapon.attackType)}}selected{{/if}}>{{localize label}}</option>
-              {{/each}}
-            </select>
-            {{else}}
-            <span class="field-value">{{localize (lookup config.weaponAttackTypes system.weapon.attackType)}}</span>
             {{/if}}
           </div>
           <div class="form-group">
@@ -118,11 +106,61 @@
           <div class="form-group">
             <label>Rate</label>
             {{#if editable}}
-            <input type="number" name="system.weapon.rate" value="{{system.weapon.rate}}" data-dtype="Number"/>
+            <input type="number" name="system.weapon.rate" value="{{system.weapon.rate}}" data-dtype="Number" step="0.5"/>
             {{else}}
             <span class="field-value">{{system.weapon.rate}}</span>
             {{/if}}
           </div>
+          <div class="form-group">
+            <label>Shots</label>
+            {{#if editable}}
+            <input type="text" name="system.weapon.shots" value="{{system.weapon.shots}}"/>
+            {{else}}
+            <span class="field-value">{{system.weapon.shots}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group">
+            <label>Price</label>
+            {{#if editable}}
+            <input type="number" name="system.weapon.price" value="{{system.weapon.price}}" data-dtype="Number"/>
+            {{else}}
+            <span class="field-value">{{system.weapon.price}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group">
+            <label>Attack Type</label>
+            {{#if editable}}
+            <select name="system.weapon.attackType">
+              {{#each config.weaponAttackTypes as |label key|}}
+              <option value="{{key}}" {{#if (eq key ../system.weapon.attackType)}}selected{{/if}}>{{localize label}}</option>
+              {{/each}}
+            </select>
+            {{else}}
+            <span class="field-value">{{localize (lookup config.weaponAttackTypes system.weapon.attackType)}}</span>
+            {{/if}}
+          </div>
+        </div>
+        {{!-- Weapon Tags --}}
+        <div class="weapon-tags-section">
+          <label>Tags</label>
+          {{#if editable}}
+          <div class="weapon-tags-edit">
+            {{#each config.weaponTags as |label key|}}
+            <label class="tag-checkbox">
+              <input type="checkbox" name="system.weapon.tags" value="{{key}}" {{#if (includes ../system.weapon.tags key)}}checked{{/if}}/>
+              {{localize label}}
+            </label>
+            {{/each}}
+          </div>
+          {{else}}
+          <div class="weapon-tags-display">
+            {{#each system.weapon.tags as |tag|}}
+            <span class="weapon-tag" data-tooltip="{{localize (concat 'FASERIP.Weapon.TagDescription.' (capitalize tag))}}">
+              {{localize (lookup @root.config.weaponTags tag)}}
+            </span>
+            {{/each}}
+          </div>
+          {{/if}}
         </div>
       </fieldset>
       {{/if}}

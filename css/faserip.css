@@ -991,3 +991,53 @@
 .compendium-directory .thumbnail[src*="systems/faserip/assets/images/icons/"] {
   filter: invert(1);
 }
+
+/* ========================================
+   Weapon Tags
+   ======================================== */
+
+.faserip .weapon-tags-section {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--faserip-border);
+}
+
+.faserip .weapon-tags-section > label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 6px;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.faserip .weapon-tags-edit {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.faserip .weapon-tags-edit .tag-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+}
+
+.faserip .weapon-tags-display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.faserip .weapon-tag {
+  display: inline-block;
+  padding: 3px 8px;
+  border: 1px solid var(--faserip-border);
+  border-radius: 3px;
+  background-color: var(--faserip-gray);
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: help;
+}
