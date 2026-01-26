@@ -974,3 +974,8 @@
   padding: 4px;
   border-radius: 4px;
 }
+
+/* Invert colors for custom system icons */
+.faserip .profile-img[src*="systems/faserip/assets/images/icons/"] {
+  filter: invert(1);
+}
