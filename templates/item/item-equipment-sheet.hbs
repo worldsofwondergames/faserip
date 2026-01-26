@@ -5,26 +5,40 @@
     <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="50" width="50"/>
     <div class="header-fields flexcol">
       <h1 class="charname">
+        {{#if editable}}
         <input name="name" type="text" value="{{item.name}}" placeholder="Equipment Name"/>
+        {{else}}
+        <span class="item-name-display">{{item.name}}</span>
+        {{/if}}
       </h1>
       <div class="flexrow">
         <div class="form-group">
           <label>Type</label>
+          {{#if editable}}
           <select name="system.equipmentType">
             {{#each config.equipmentTypes as |label key|}}
             <option value="{{key}}" {{#if (eq key ../system.equipmentType)}}selected{{/if}}>{{localize label}}</option>
             {{/each}}
           </select>
+          {{else}}
+          <span class="field-value">{{localize (lookup config.equipmentTypes system.equipmentType)}}</span>
+          {{/if}}
         </div>
+        {{#if system.material}}
         <div class="form-group">
-          <label>Material Strength</label>
+          <label>Strength</label>
+          {{#if editable}}
           <select name="system.material">
             <option value="">—</option>
             {{#each config.ranks as |rankData key|}}
             <option value="{{key}}" {{#if (eq key ../system.material)}}selected{{/if}}>{{localize rankData.label}}</option>
             {{/each}}
           </select>
+          {{else}}
+          <span class="field-value">{{localize (lookup (lookup config.ranks system.material) "label")}}</span>
+          {{/if}}
         </div>
+        {{/if}}
       </div>
     </div>
   </header>
@@ -41,15 +55,21 @@
 
     {{!-- Description Tab --}}
     <div class="tab description" data-group="primary" data-tab="description">
+      {{#if system.cost}}
       <div class="form-group">
         <label>Cost Rank</label>
+        {{#if editable}}
         <select name="system.cost">
           <option value="">—</option>
           {{#each config.ranks as |rankData key|}}
           <option value="{{key}}" {{#if (eq key ../system.cost)}}selected{{/if}}>{{localize rankData.label}}</option>
           {{/each}}
         </select>
+        {{else}}
+        <span class="field-value">{{localize (lookup (lookup config.ranks system.cost) "label")}}</span>
+        {{/if}}
       </div>
+      {{/if}}
       {{editor enrichedDescription target="system.description" engine="prosemirror" button=true editable=editable}}
     </div>
 
