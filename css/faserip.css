@@ -967,3 +967,10 @@
 .faserip.item:not(.editable) .editor {
   border: none;
 }
+
+/* Dark background for SVG icons from Foundry core */
+.faserip .profile-img[src*="icons/svg/"] {
+  background-color: #333;
+  padding: 4px;
+  border-radius: 4px;
+}
