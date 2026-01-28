@@ -426,9 +426,11 @@
 
 .faserip .sheet-tabs .item.active {
   border: 1px solid var(--faserip-border);
-  border-bottom: 1px solid white;
+  border-bottom: none;
   background: white;
-  margin-bottom: -2px;
+  position: relative;
+  margin-bottom: -3px;
+  padding-bottom: 7px;
 }
 
 /* ========================================
