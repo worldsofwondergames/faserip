@@ -5,6 +5,7 @@
 # Claude Code
 .claude/
 .history/
+.playwright-mcp/
 
 # Node Modules
 node_modules/

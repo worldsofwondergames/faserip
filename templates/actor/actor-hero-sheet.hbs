@@ -243,11 +243,11 @@
       <div class="bio-fields">
         {{!-- Row 1: Identity and Secret --}}
         <div class="bio-row">
-          <div class="form-group flex-grow">
+          <div class="form-group flex-grow identity-group">
             <label>Identity</label>
             <input type="text" name="system.identity.realName" value="{{system.identity.realName}}" placeholder="Real Name"/>
           </div>
-          <div class="form-group">
+          <div class="form-group secret-group">
             <label>Secret?</label>
             <select name="system.identity.secret">
               <option value="true" {{#if system.identity.secret}}selected{{/if}}>Yes</option>

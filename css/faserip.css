@@ -175,6 +175,7 @@
 
 .faserip .abilities-section {
   display: flex;
+  flex: 0 0 auto;
   gap: 10px;
   margin-bottom: 10px;
 }
@@ -609,6 +610,14 @@
   flex: 1;
 }
 
+.faserip .bio-row .identity-group input {
+  margin-left: 75px;
+}
+
+.faserip .bio-row .secret-group label {
+  padding-right: 5px;
+}
+
 .faserip .bio-row .form-group input[type="text"],
 .faserip .bio-row .form-group select {
   width: 100%;
@@ -622,6 +631,11 @@
 .faserip .editor {
   border: 1px solid var(--faserip-border);
 }
+
+.faserip .tab.biography .editor .editor-content {
+  min-height: 260px;
+}
+
 
 /* ========================================
    Rollable Elements
