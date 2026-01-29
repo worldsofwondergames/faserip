@@ -1,0 +1,1379 @@
+[
+  {
+    "name": "Sedan",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>A standard four-door passenger car suitable for everyday transportation.</p>",
+      "equipmentType": "vehicle",
+      "cost": "remarkable",
+      "material": "",
+      "vehicle": {
+        "control": "typical",
+        "speed": "good",
+        "body": "good",
+        "protection": "poor"
+      }
+    }
+  },
+  {
+    "name": "Mini-Car",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>A compact, economical vehicle with excellent maneuverability but limited protection.</p>",
+      "equipmentType": "vehicle",
+      "cost": "excellent",
+      "material": "",
+      "vehicle": {
+        "control": "good",
+        "speed": "good",
+        "body": "poor",
+        "protection": "feeble"
+      }
+    }
+  },
+  {
+    "name": "Sports Car",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>A high-performance vehicle with excellent handling and remarkable speed.</p>",
+      "equipmentType": "vehicle",
+      "cost": "incredible",
+      "material": "",
+      "vehicle": {
+        "control": "excellent",
+        "speed": "remarkable",
+        "body": "poor",
+        "protection": "poor"
+      }
+    }
+  },
+  {
+    "name": "Luxury Car",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>A high-end vehicle with superior comfort, excellent body construction, and good protection.</p>",
+      "equipmentType": "vehicle",
+      "cost": "incredible",
+      "material": "",
+      "vehicle": {
+        "control": "poor",
+        "speed": "good",
+        "body": "excellent",
+        "protection": "good"
+      }
+    }
+  },
+  {
+    "name": "Security Limo",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>An armored limousine designed for VIP protection with remarkable body armor and protection.</p>",
+      "equipmentType": "vehicle",
+      "cost": "amazing",
+      "material": "",
+      "vehicle": {
+        "control": "typical",
+        "speed": "excellent",
+        "body": "remarkable",
+        "protection": "remarkable"
+      }
+    }
+  },
+  {
+    "name": "Van",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>A versatile cargo and passenger vehicle with good storage capacity.</p>",
+      "equipmentType": "vehicle",
+      "cost": "remarkable",
+      "material": "",
+      "vehicle": {
+        "control": "poor",
+        "speed": "good",
+        "body": "good",
+        "protection": "good"
+      }
+    }
+  },
+  {
+    "name": "Convertible",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>A stylish car with a retractable roof, offering minimal protection when open.</p>",
+      "equipmentType": "vehicle",
+      "cost": "remarkable",
+      "material": "",
+      "vehicle": {
+        "control": "typical",
+        "speed": "good",
+        "body": "good",
+        "protection": "feeble"
+      }
+    }
+  },
+  {
+    "name": "Taxi",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>A standard city taxi cab designed for commercial passenger transport.</p>",
+      "equipmentType": "vehicle",
+      "cost": "excellent",
+      "material": "",
+      "vehicle": {
+        "control": "typical",
+        "speed": "good",
+        "body": "typical",
+        "protection": "poor"
+      }
+    }
+  },
+  {
+    "name": "Bus",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>A large public transportation vehicle capable of carrying many passengers.</p>",
+      "equipmentType": "vehicle",
+      "cost": "incredible",
+      "material": "",
+      "vehicle": {
+        "control": "poor",
+        "speed": "good",
+        "body": "typical",
+        "protection": "typical"
+      }
+    }
+  },
+  {
+    "name": "Police Car",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>A law enforcement vehicle with enhanced performance for pursuit situations.</p>",
+      "equipmentType": "vehicle",
+      "cost": "remarkable",
+      "material": "",
+      "vehicle": {
+        "control": "good",
+        "speed": "excellent",
+        "body": "typical",
+        "protection": "typical"
+      }
+    }
+  },
+  {
+    "name": "Police Van",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>A law enforcement transport vehicle for personnel and equipment.</p>",
+      "equipmentType": "vehicle",
+      "cost": "remarkable",
+      "material": "",
+      "vehicle": {
+        "control": "typical",
+        "speed": "good",
+        "body": "typical",
+        "protection": "typical"
+      }
+    }
+  },
+  {
+    "name": "SWAT Van",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>A heavily armored tactical vehicle for special weapons and tactics teams.</p>",
+      "equipmentType": "vehicle",
+      "cost": "incredible",
+      "material": "",
+      "vehicle": {
+        "control": "typical",
+        "speed": "good",
+        "body": "remarkable",
+        "protection": "excellent"
+      }
+    }
+  },
+  {
+    "name": "Semi",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>A semi-trailer truck for hauling large cargo loads over long distances.</p>",
+      "equipmentType": "vehicle",
+      "cost": "remarkable",
+      "material": "",
+      "vehicle": {
+        "control": "typical",
+        "speed": "excellent",
+        "body": "excellent",
+        "protection": "good"
+      }
+    }
+  },
+  {
+    "name": "Sleeper",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>A semi-truck with an extended cab containing sleeping quarters for long hauls.</p>",
+      "equipmentType": "vehicle",
+      "cost": "incredible",
+      "material": "",
+      "vehicle": {
+        "control": "typical",
+        "speed": "excellent",
+        "body": "excellent",
+        "protection": "excellent"
+      }
+    }
+  },
+  {
+    "name": "Armored Car",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>A heavily armored vehicle used for secure transport of valuables or personnel.</p>",
+      "equipmentType": "vehicle",
+      "cost": "incredible",
+      "material": "",
+      "vehicle": {
+        "control": "typical",
+        "speed": "typical",
+        "body": "remarkable",
+        "protection": "remarkable"
+      }
+    }
+  },
+  {
+    "name": "Fire Truck",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>An emergency vehicle equipped with fire hoses, hook and ladder, and firefighting equipment.</p>",
+      "equipmentType": "vehicle",
+      "cost": "incredible",
+      "material": "",
+      "vehicle": {
+        "control": "typical",
+        "speed": "excellent",
+        "body": "good",
+        "protection": "typical"
+      }
+    }
+  },
+  {
+    "name": "Ambulance",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>An emergency medical vehicle equipped to transport patients and provide initial care.</p>",
+      "equipmentType": "vehicle",
+      "cost": "remarkable",
+      "material": "",
+      "vehicle": {
+        "control": "good",
+        "speed": "excellent",
+        "body": "good",
+        "protection": "good"
+      }
+    }
+  },
+  {
+    "name": "Rocket Car",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>An experimental high-speed vehicle with rocket propulsion capable of Shift Z speeds.</p>",
+      "equipmentType": "vehicle",
+      "cost": "amazing",
+      "material": "",
+      "vehicle": {
+        "control": "feeble",
+        "speed": "shiftZ",
+        "body": "poor",
+        "protection": "poor"
+      }
+    }
+  },
+  {
+    "name": "Bicycle",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>A human-powered two-wheeled vehicle. Offers no protection to the rider.</p>",
+      "equipmentType": "vehicle",
+      "cost": "poor",
+      "material": "",
+      "vehicle": {
+        "control": "good",
+        "speed": "typical",
+        "body": "feeble",
+        "protection": "feeble"
+      }
+    }
+  },
+  {
+    "name": "Motorcycle",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>A two-wheeled motor vehicle with excellent speed but no protection for the rider.</p>",
+      "equipmentType": "vehicle",
+      "cost": "excellent",
+      "material": "",
+      "vehicle": {
+        "control": "typical",
+        "speed": "excellent",
+        "body": "poor",
+        "protection": "feeble"
+      }
+    }
+  },
+  {
+    "name": "Motor Trike",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>A three-wheeled motor vehicle offering better stability than a motorcycle but no protection.</p>",
+      "equipmentType": "vehicle",
+      "cost": "remarkable",
+      "material": "",
+      "vehicle": {
+        "control": "remarkable",
+        "speed": "good",
+        "body": "good",
+        "protection": "feeble"
+      }
+    }
+  },
+  {
+    "name": "Pickup Truck",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>A light truck with an open cargo bed, suitable for both on and off-road use.</p>",
+      "equipmentType": "vehicle",
+      "cost": "remarkable",
+      "material": "",
+      "vehicle": {
+        "control": "typical",
+        "speed": "good",
+        "body": "good",
+        "protection": "typical"
+      }
+    }
+  },
+  {
+    "name": "Jeep",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>A rugged four-wheel-drive vehicle designed for off-road terrain.</p>",
+      "equipmentType": "vehicle",
+      "cost": "remarkable",
+      "material": "",
+      "vehicle": {
+        "control": "good",
+        "speed": "excellent",
+        "body": "good",
+        "protection": "poor"
+      }
+    }
+  },
+  {
+    "name": "ATV",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>An all-terrain vehicle with remarkable control for navigating difficult terrain.</p>",
+      "equipmentType": "vehicle",
+      "cost": "remarkable",
+      "material": "",
+      "vehicle": {
+        "control": "remarkable",
+        "speed": "good",
+        "body": "good",
+        "protection": "typical"
+      }
+    }
+  },
+  {
+    "name": "Snowmobile",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>A motorized vehicle designed for travel over snow and ice.</p>",
+      "equipmentType": "vehicle",
+      "cost": "excellent",
+      "material": "",
+      "vehicle": {
+        "control": "good",
+        "speed": "good",
+        "body": "typical",
+        "protection": "remarkable"
+      }
+    }
+  },
+  {
+    "name": "Heavy Truck",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>A large commercial truck for hauling heavy loads.</p>",
+      "equipmentType": "vehicle",
+      "cost": "incredible",
+      "material": "",
+      "vehicle": {
+        "control": "poor",
+        "speed": "typical",
+        "body": "excellent",
+        "protection": "good"
+      }
+    }
+  },
+  {
+    "name": "Tractor",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>A farm vehicle designed for pulling equipment. Offers no protection to the operator.</p>",
+      "equipmentType": "vehicle",
+      "cost": "remarkable",
+      "material": "",
+      "vehicle": {
+        "control": "good",
+        "speed": "typical",
+        "body": "good",
+        "protection": "feeble"
+      }
+    }
+  },
+  {
+    "name": "Bulldozer",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>A heavy construction vehicle with a large blade for moving earth and debris.</p>",
+      "equipmentType": "vehicle",
+      "cost": "incredible",
+      "material": "",
+      "vehicle": {
+        "control": "typical",
+        "speed": "typical",
+        "body": "excellent",
+        "protection": "typical"
+      }
+    }
+  },
+  {
+    "name": "Tank",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>A heavily armored military combat vehicle equipped with Light Artillery and Machine Gun.</p>",
+      "equipmentType": "vehicle",
+      "cost": "amazing",
+      "material": "",
+      "vehicle": {
+        "control": "excellent",
+        "speed": "typical",
+        "body": "incredible",
+        "protection": "remarkable"
+      }
+    }
+  },
+  {
+    "name": "SPG",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>A Self-Propelled Gun - an armored artillery vehicle equipped with Heavy Artillery and Machine Gun.</p>",
+      "equipmentType": "vehicle",
+      "cost": "monstrous",
+      "material": "",
+      "vehicle": {
+        "control": "typical",
+        "speed": "poor",
+        "body": "remarkable",
+        "protection": "excellent"
+      }
+    }
+  },
+  {
+    "name": "Armored Carrier",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>An armored personnel carrier for transporting troops into combat, equipped with a Machine Gun.</p>",
+      "equipmentType": "vehicle",
+      "cost": "amazing",
+      "material": "",
+      "vehicle": {
+        "control": "good",
+        "speed": "good",
+        "body": "incredible",
+        "protection": "remarkable"
+      }
+    }
+  },
+  {
+    "name": "Walker",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>A bipedal or multi-legged combat vehicle equipped with a Stun Cannon.</p>",
+      "equipmentType": "vehicle",
+      "cost": "incredible",
+      "material": "",
+      "vehicle": {
+        "control": "good",
+        "speed": "good",
+        "body": "remarkable",
+        "protection": "remarkable"
+      }
+    }
+  },
+  {
+    "name": "Borer",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>A tunneling vehicle designed to bore through earth and rock.</p>",
+      "equipmentType": "vehicle",
+      "cost": "incredible",
+      "material": "",
+      "vehicle": {
+        "control": "poor",
+        "speed": "typical",
+        "body": "remarkable",
+        "protection": "remarkable"
+      }
+    }
+  },
+  {
+    "name": "Train",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>A standard locomotive and rail cars for passenger or freight transport.</p>",
+      "equipmentType": "vehicle",
+      "cost": "incredible",
+      "material": "",
+      "vehicle": {
+        "control": "feeble",
+        "speed": "excellent",
+        "body": "good",
+        "protection": "good"
+      }
+    }
+  },
+  {
+    "name": "Bullet Train",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>A high-speed rail vehicle capable of incredible speeds along dedicated tracks.</p>",
+      "equipmentType": "vehicle",
+      "cost": "amazing",
+      "material": "",
+      "vehicle": {
+        "control": "poor",
+        "speed": "incredible",
+        "body": "good",
+        "protection": "good"
+      }
+    }
+  },
+  {
+    "name": "El",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>An elevated train system for urban mass transit.</p>",
+      "equipmentType": "vehicle",
+      "cost": "incredible",
+      "material": "",
+      "vehicle": {
+        "control": "poor",
+        "speed": "typical",
+        "body": "good",
+        "protection": "good"
+      }
+    }
+  },
+  {
+    "name": "Monorail",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>A single-rail transit system, often elevated, for urban transportation.</p>",
+      "equipmentType": "vehicle",
+      "cost": "incredible",
+      "material": "",
+      "vehicle": {
+        "control": "poor",
+        "speed": "excellent",
+        "body": "excellent",
+        "protection": "good"
+      }
+    }
+  },
+  {
+    "name": "Hovercraft",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/land-vehicles.png",
+    "system": {
+      "description": "<p>A ground effect vehicle that travels on a cushion of air over land and water.</p>",
+      "equipmentType": "vehicle",
+      "cost": "incredible",
+      "material": "",
+      "vehicle": {
+        "control": "excellent",
+        "speed": "remarkable",
+        "body": "good",
+        "protection": "good"
+      }
+    }
+  },
+  {
+    "name": "Private Plane",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/air-vehicles.png",
+    "system": {
+      "description": "<p>A small personal aircraft for private transportation.</p>",
+      "equipmentType": "vehicle",
+      "cost": "incredible",
+      "material": "",
+      "vehicle": {
+        "control": "typical",
+        "speed": "amazing",
+        "body": "feeble",
+        "protection": "typical"
+      }
+    }
+  },
+  {
+    "name": "Corporate Jet",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/air-vehicles.png",
+    "system": {
+      "description": "<p>A business jet for executive transportation.</p>",
+      "equipmentType": "vehicle",
+      "cost": "amazing",
+      "material": "",
+      "vehicle": {
+        "control": "typical",
+        "speed": "amazing",
+        "body": "poor",
+        "protection": "typical"
+      }
+    }
+  },
+  {
+    "name": "Military Jet",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>A high-performance military fighter aircraft equipped with 4 Missiles and a Machine Gun.</p>",
+      "equipmentType": "vehicle",
+      "cost": "monstrous",
+      "material": "",
+      "vehicle": {
+        "control": "excellent",
+        "speed": "shiftX",
+        "body": "typical",
+        "protection": "typical"
+      }
+    }
+  },
+  {
+    "name": "Commercial Jet",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/air-vehicles.png",
+    "system": {
+      "description": "<p>A large passenger airliner for commercial flight operations.</p>",
+      "equipmentType": "vehicle",
+      "cost": "monstrous",
+      "material": "",
+      "vehicle": {
+        "control": "good",
+        "speed": "monstrous",
+        "body": "typical",
+        "protection": "typical"
+      }
+    }
+  },
+  {
+    "name": "Blimp",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/air-vehicles.png",
+    "system": {
+      "description": "<p>A non-rigid airship used for advertising, observation, or leisure. Offers no protection.</p>",
+      "equipmentType": "vehicle",
+      "cost": "amazing",
+      "material": "",
+      "vehicle": {
+        "control": "feeble",
+        "speed": "poor",
+        "body": "feeble",
+        "protection": "feeble"
+      }
+    }
+  },
+  {
+    "name": "Traffic Copter",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/air-vehicles.png",
+    "system": {
+      "description": "<p>A small helicopter used for traffic reporting and light observation duties.</p>",
+      "equipmentType": "vehicle",
+      "cost": "incredible",
+      "material": "",
+      "vehicle": {
+        "control": "good",
+        "speed": "excellent",
+        "body": "feeble",
+        "protection": "feeble"
+      }
+    }
+  },
+  {
+    "name": "Battle Copter",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>A military attack helicopter designed for combat operations.</p>",
+      "equipmentType": "vehicle",
+      "cost": "amazing",
+      "material": "",
+      "vehicle": {
+        "control": "excellent",
+        "speed": "excellent",
+        "body": "typical",
+        "protection": "good"
+      }
+    }
+  },
+  {
+    "name": "WWII Plane",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/air-vehicles.png",
+    "system": {
+      "description": "<p>A World War II era fighter aircraft equipped with a Machine Gun and 2 bombs.</p>",
+      "equipmentType": "vehicle",
+      "cost": "incredible",
+      "material": "",
+      "vehicle": {
+        "control": "good",
+        "speed": "remarkable",
+        "body": "typical",
+        "protection": "typical"
+      }
+    }
+  },
+  {
+    "name": "WWII Bomber",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/air-vehicles.png",
+    "system": {
+      "description": "<p>A World War II era heavy bomber equipped with Machine Guns and 100 bombs.</p>",
+      "equipmentType": "vehicle",
+      "cost": "incredible",
+      "material": "",
+      "vehicle": {
+        "control": "typical",
+        "speed": "excellent",
+        "body": "good",
+        "protection": "good"
+      }
+    }
+  },
+  {
+    "name": "WWI Fighter",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/air-vehicles.png",
+    "system": {
+      "description": "<p>A World War I era biplane fighter equipped with Machine Guns. Offers no protection.</p>",
+      "equipmentType": "vehicle",
+      "cost": "incredible",
+      "material": "",
+      "vehicle": {
+        "control": "remarkable",
+        "speed": "good",
+        "body": "poor",
+        "protection": "feeble"
+      }
+    }
+  },
+  {
+    "name": "VTOL Jet",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/air-vehicles.png",
+    "system": {
+      "description": "<p>A Vertical Take-Off and Landing jet aircraft equipped with Four Missiles.</p>",
+      "equipmentType": "vehicle",
+      "cost": "monstrous",
+      "material": "",
+      "vehicle": {
+        "control": "remarkable",
+        "speed": "unearthly",
+        "body": "typical",
+        "protection": "typical"
+      }
+    }
+  },
+  {
+    "name": "Ultra-Light",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/air-vehicles.png",
+    "system": {
+      "description": "<p>A very light, minimalist personal aircraft. Offers no protection.</p>",
+      "equipmentType": "vehicle",
+      "cost": "excellent",
+      "material": "",
+      "vehicle": {
+        "control": "excellent",
+        "speed": "typical",
+        "body": "feeble",
+        "protection": "feeble"
+      }
+    }
+  },
+  {
+    "name": "Gliders",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/air-vehicles.png",
+    "system": {
+      "description": "<p>An unpowered aircraft that relies on air currents for flight. Offers no protection.</p>",
+      "equipmentType": "vehicle",
+      "cost": "excellent",
+      "material": "",
+      "vehicle": {
+        "control": "typical",
+        "speed": "typical",
+        "body": "feeble",
+        "protection": "feeble"
+      }
+    }
+  },
+  {
+    "name": "Autogyro",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/air-vehicles.png",
+    "system": {
+      "description": "<p>A rotorcraft using an unpowered rotor for lift, with excellent control.</p>",
+      "equipmentType": "vehicle",
+      "cost": "remarkable",
+      "material": "",
+      "vehicle": {
+        "control": "excellent",
+        "speed": "excellent",
+        "body": "poor",
+        "protection": "poor"
+      }
+    }
+  },
+  {
+    "name": "Air Car",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/air-vehicles.png",
+    "system": {
+      "description": "<p>A flying car using advanced technology for urban air travel.</p>",
+      "equipmentType": "vehicle",
+      "cost": "incredible",
+      "material": "",
+      "vehicle": {
+        "control": "excellent",
+        "speed": "poor",
+        "body": "good",
+        "protection": "good"
+      }
+    }
+  },
+  {
+    "name": "Skymobile",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/air-vehicles.png",
+    "system": {
+      "description": "<p>An open-air flying vehicle with incredible speed but no protection.</p>",
+      "equipmentType": "vehicle",
+      "cost": "remarkable",
+      "material": "",
+      "vehicle": {
+        "control": "excellent",
+        "speed": "incredible",
+        "body": "excellent",
+        "protection": "feeble"
+      }
+    }
+  },
+  {
+    "name": "Flying Car",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/air-vehicles.png",
+    "system": {
+      "description": "<p>An advanced flying car with remarkable control and amazing speed.</p>",
+      "equipmentType": "vehicle",
+      "cost": "amazing",
+      "material": "",
+      "vehicle": {
+        "control": "remarkable",
+        "speed": "amazing",
+        "body": "excellent",
+        "protection": "good"
+      }
+    }
+  },
+  {
+    "name": "Quinjet",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/air-vehicles.png",
+    "system": {
+      "description": "<p>An advanced VTOL aircraft used by the Avengers, capable of Shift Y speeds.</p>",
+      "equipmentType": "vehicle",
+      "cost": "amazing",
+      "material": "",
+      "vehicle": {
+        "control": "remarkable",
+        "speed": "shiftY",
+        "body": "excellent",
+        "protection": "good"
+      }
+    }
+  },
+  {
+    "name": "Concorde",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/air-vehicles.png",
+    "system": {
+      "description": "<p>A supersonic passenger airliner capable of Shift X speeds.</p>",
+      "equipmentType": "vehicle",
+      "cost": "monstrous",
+      "material": "",
+      "vehicle": {
+        "control": "typical",
+        "speed": "shiftX",
+        "body": "good",
+        "protection": "typical"
+      }
+    }
+  },
+  {
+    "name": "Omnijet",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/air-vehicles.png",
+    "system": {
+      "description": "<p>An advanced multi-role aircraft capable of Shift Y speeds.</p>",
+      "equipmentType": "vehicle",
+      "cost": "amazing",
+      "material": "",
+      "vehicle": {
+        "control": "excellent",
+        "speed": "shiftY",
+        "body": "excellent",
+        "protection": "good"
+      }
+    }
+  },
+  {
+    "name": "Pogo Plane",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/air-vehicles.png",
+    "system": {
+      "description": "<p>A vertical take-off aircraft with Shift Y speed capability.</p>",
+      "equipmentType": "vehicle",
+      "cost": "amazing",
+      "material": "",
+      "vehicle": {
+        "control": "excellent",
+        "speed": "shiftY",
+        "body": "excellent",
+        "protection": "good"
+      }
+    }
+  },
+  {
+    "name": "Fantasticar",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/air-vehicles.png",
+    "system": {
+      "description": "<p>The Fantastic Four's signature flying vehicle, capable of separating into individual modules.</p>",
+      "equipmentType": "vehicle",
+      "cost": "incredible",
+      "material": "",
+      "vehicle": {
+        "control": "excellent",
+        "speed": "incredible",
+        "body": "good",
+        "protection": "typical"
+      }
+    }
+  },
+  {
+    "name": "SRC",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/air-vehicles.png",
+    "system": {
+      "description": "<p>A Short Range Cruiser - a versatile aircraft for medium-range missions.</p>",
+      "equipmentType": "vehicle",
+      "cost": "incredible",
+      "material": "",
+      "vehicle": {
+        "control": "good",
+        "speed": "remarkable",
+        "body": "excellent",
+        "protection": "typical"
+      }
+    }
+  },
+  {
+    "name": "Blackbird",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/air-vehicles.png",
+    "system": {
+      "description": "<p>The X-Men's advanced stealth aircraft capable of Shift Y speeds.</p>",
+      "equipmentType": "vehicle",
+      "cost": "amazing",
+      "material": "",
+      "vehicle": {
+        "control": "remarkable",
+        "speed": "shiftY",
+        "body": "excellent",
+        "protection": "good"
+      }
+    }
+  },
+  {
+    "name": "Space Shuttle",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/space-craft.png",
+    "system": {
+      "description": "<p>A reusable spacecraft for orbital missions, capable of Shift Z speeds.</p>",
+      "equipmentType": "vehicle",
+      "cost": "monstrous",
+      "material": "",
+      "vehicle": {
+        "control": "typical",
+        "speed": "shiftZ",
+        "body": "remarkable",
+        "protection": "remarkable"
+      }
+    }
+  },
+  {
+    "name": "Lunar Shuttle",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/space-craft.png",
+    "system": {
+      "description": "<p>A spacecraft designed for Earth-Moon transport, capable of Class 1000 speeds.</p>",
+      "equipmentType": "vehicle",
+      "cost": "amazing",
+      "material": "",
+      "vehicle": {
+        "control": "good",
+        "speed": "class1000",
+        "body": "remarkable",
+        "protection": "remarkable"
+      }
+    }
+  },
+  {
+    "name": "Space Ship",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/space-craft.png",
+    "system": {
+      "description": "<p>An interplanetary spacecraft capable of Class 3000 speeds. Compartmentalized design.</p>",
+      "equipmentType": "vehicle",
+      "cost": "unearthly",
+      "material": "",
+      "vehicle": {
+        "control": "excellent",
+        "speed": "class3000",
+        "body": "excellent",
+        "protection": "excellent"
+      }
+    }
+  },
+  {
+    "name": "Raft",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/water-vehicles.png",
+    "system": {
+      "description": "<p>A simple floating platform for water travel. Offers no protection.</p>",
+      "equipmentType": "vehicle",
+      "cost": "feeble",
+      "material": "",
+      "vehicle": {
+        "control": "typical",
+        "speed": "feeble",
+        "body": "poor",
+        "protection": "feeble"
+      }
+    }
+  },
+  {
+    "name": "Rowboat",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/water-vehicles.png",
+    "system": {
+      "description": "<p>A small human-powered boat.</p>",
+      "equipmentType": "vehicle",
+      "cost": "typical",
+      "material": "",
+      "vehicle": {
+        "control": "good",
+        "speed": "feeble",
+        "body": "typical",
+        "protection": "feeble"
+      }
+    }
+  },
+  {
+    "name": "Sailboat",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/water-vehicles.png",
+    "system": {
+      "description": "<p>A wind-powered boat for recreation or light transport. Offers no protection.</p>",
+      "equipmentType": "vehicle",
+      "cost": "good",
+      "material": "",
+      "vehicle": {
+        "control": "poor",
+        "speed": "poor",
+        "body": "feeble",
+        "protection": "feeble"
+      }
+    }
+  },
+  {
+    "name": "Racing Sloop",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/water-vehicles.png",
+    "system": {
+      "description": "<p>A high-performance sailing vessel designed for racing.</p>",
+      "equipmentType": "vehicle",
+      "cost": "remarkable",
+      "material": "",
+      "vehicle": {
+        "control": "good",
+        "speed": "good",
+        "body": "poor",
+        "protection": "poor"
+      }
+    }
+  },
+  {
+    "name": "Motorboat",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/water-vehicles.png",
+    "system": {
+      "description": "<p>A powered boat for recreation and light transport.</p>",
+      "equipmentType": "vehicle",
+      "cost": "good",
+      "material": "",
+      "vehicle": {
+        "control": "excellent",
+        "speed": "excellent",
+        "body": "typical",
+        "protection": "poor"
+      }
+    }
+  },
+  {
+    "name": "Yacht",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/water-vehicles.png",
+    "system": {
+      "description": "<p>A luxury recreational boat for cruising.</p>",
+      "equipmentType": "vehicle",
+      "cost": "incredible",
+      "material": "",
+      "vehicle": {
+        "control": "typical",
+        "speed": "good",
+        "body": "typical",
+        "protection": "typical"
+      }
+    }
+  },
+  {
+    "name": "Speedboat",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/water-vehicles.png",
+    "system": {
+      "description": "<p>A high-speed motorboat designed for racing or quick transport.</p>",
+      "equipmentType": "vehicle",
+      "cost": "remarkable",
+      "material": "",
+      "vehicle": {
+        "control": "good",
+        "speed": "incredible",
+        "body": "typical",
+        "protection": "poor"
+      }
+    }
+  },
+  {
+    "name": "Patrol Boat",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/water-vehicles.png",
+    "system": {
+      "description": "<p>A coast guard or military patrol vessel equipped with Light Artillery and Machine Guns.</p>",
+      "equipmentType": "vehicle",
+      "cost": "remarkable",
+      "material": "",
+      "vehicle": {
+        "control": "good",
+        "speed": "remarkable",
+        "body": "good",
+        "protection": "typical"
+      }
+    }
+  },
+  {
+    "name": "Hydrofoil",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/water-vehicles.png",
+    "system": {
+      "description": "<p>A boat with underwater wings that lift the hull above the water at high speeds.</p>",
+      "equipmentType": "vehicle",
+      "cost": "incredible",
+      "material": "",
+      "vehicle": {
+        "control": "typical",
+        "speed": "incredible",
+        "body": "typical",
+        "protection": "typical"
+      }
+    }
+  },
+  {
+    "name": "Jetskis",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/water-vehicles.png",
+    "system": {
+      "description": "<p>A personal watercraft for recreation. Offers no protection.</p>",
+      "equipmentType": "vehicle",
+      "cost": "remarkable",
+      "material": "",
+      "vehicle": {
+        "control": "excellent",
+        "speed": "excellent",
+        "body": "good",
+        "protection": "feeble"
+      }
+    }
+  },
+  {
+    "name": "Ocean Liner",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/water-vehicles.png",
+    "system": {
+      "description": "<p>A large passenger ship for ocean travel.</p>",
+      "equipmentType": "vehicle",
+      "cost": "amazing",
+      "material": "",
+      "vehicle": {
+        "control": "good",
+        "speed": "typical",
+        "body": "remarkable",
+        "protection": "good"
+      }
+    }
+  },
+  {
+    "name": "Destroyer",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>A fast warship equipped with Light Artillery and Heavy Artillery. Compartmentalized design.</p>",
+      "equipmentType": "vehicle",
+      "cost": "monstrous",
+      "material": "",
+      "vehicle": {
+        "control": "typical",
+        "speed": "typical",
+        "body": "excellent",
+        "protection": "excellent"
+      }
+    }
+  },
+  {
+    "name": "Battleship",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>A heavily armed and armored warship equipped with Super Heavy Artillery. Compartmentalized design.</p>",
+      "equipmentType": "vehicle",
+      "cost": "unearthly",
+      "material": "",
+      "vehicle": {
+        "control": "typical",
+        "speed": "poor",
+        "body": "remarkable",
+        "protection": "excellent"
+      }
+    }
+  },
+  {
+    "name": "Carrier",
+    "type": "equipment",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": "<p>An aircraft carrier capable of launching and recovering aircraft, equipped with Missiles. Compartmentalized design.</p>",
+      "equipmentType": "vehicle",
+      "cost": "unearthly",
+      "material": "",
+      "vehicle": {
+        "control": "typical",
+        "speed": "poor",
+        "body": "excellent",
+        "protection": "excellent"
+      }
+    }
+  },
+  {
+    "name": "Submarine",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/water-vehicles.png",
+    "system": {
+      "description": "<p>A military submarine capable of extended underwater operations, equipped with 8 Missiles. Compartmentalized design.</p>",
+      "equipmentType": "vehicle",
+      "cost": "amazing",
+      "material": "",
+      "vehicle": {
+        "control": "good",
+        "speed": "poor",
+        "body": "remarkable",
+        "protection": "excellent"
+      }
+    }
+  },
+  {
+    "name": "Mini-Subs",
+    "type": "equipment",
+    "img": "systems/faserip/assets/images/icons/water-vehicles.png",
+    "system": {
+      "description": "<p>A small submersible vehicle equipped with a Missile or laser.</p>",
+      "equipmentType": "vehicle",
+      "cost": "incredible",
+      "material": "",
+      "vehicle": {
+        "control": "excellent",
+        "speed": "good",
+        "body": "good",
+        "protection": "good"
+      }
+    }
+  }
+]

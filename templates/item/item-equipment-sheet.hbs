@@ -1,0 +1,463 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+
+  {{!-- Item Sheet Header --}}
+  <header class="sheet-header flexrow">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="50" width="50"/>
+    <div class="header-fields flexcol">
+      <h1 class="charname">
+        {{#if editable}}
+        <input name="name" type="text" value="{{item.name}}" placeholder="Equipment Name"/>
+        {{else}}
+        <span class="item-name-display">{{item.name}}</span>
+        {{/if}}
+      </h1>
+      <div class="flexrow">
+        <div class="form-group">
+          <label>Type</label>
+          {{#if editable}}
+          <select name="system.equipmentType">
+            {{#each config.equipmentTypes as |label key|}}
+            <option value="{{key}}" {{#if (eq key ../system.equipmentType)}}selected{{/if}}>{{localize label}}</option>
+            {{/each}}
+          </select>
+          {{else}}
+          <span class="field-value">{{localize (lookup config.equipmentTypes system.equipmentType)}}</span>
+          {{/if}}
+        </div>
+        {{#if system.material}}
+        <div class="form-group">
+          <label>Material</label>
+          {{#if editable}}
+          <select name="system.material">
+            <option value="">—</option>
+            {{#each config.ranks as |rankData key|}}
+            <option value="{{key}}" {{#if (eq key ../system.material)}}selected{{/if}}>{{localize rankData.label}}</option>
+            {{/each}}
+          </select>
+          {{else}}
+          <span class="field-value">{{localize (lookup (lookup config.ranks system.material) "label")}}</span>
+          {{/if}}
+        </div>
+        {{/if}}
+      </div>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="stats">Stats</a>
+    <a class="item" data-tab="effects">{{localize "FASERIP.Sheet.Effects"}}</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- Description Tab --}}
+    <div class="tab description" data-group="primary" data-tab="description">
+      {{#if system.cost}}
+      <div class="form-group">
+        <label>Cost Rank</label>
+        {{#if editable}}
+        <select name="system.cost">
+          <option value="">—</option>
+          {{#each config.ranks as |rankData key|}}
+          <option value="{{key}}" {{#if (eq key ../system.cost)}}selected{{/if}}>{{localize rankData.label}}</option>
+          {{/each}}
+        </select>
+        {{else}}
+        <span class="field-value">{{localize (lookup (lookup config.ranks system.cost) "label")}}</span>
+        {{/if}}
+      </div>
+      {{/if}}
+      {{editor enrichedDescription target="system.description" engine="prosemirror" button=true editable=editable}}
+    </div>
+
+    {{!-- Stats Tab --}}
+    <div class="tab stats" data-group="primary" data-tab="stats">
+
+      {{!-- Weapon Stats --}}
+      {{#if (eq system.equipmentType "weapon")}}
+      <fieldset class="equipment-stats weapon-stats">
+        <legend>Weapon Stats</legend>
+        <div class="grid grid-3col">
+          <div class="form-group">
+            <label>Damage</label>
+            {{#if editable}}
+            <input type="number" name="system.weapon.damage" value="{{system.weapon.damage}}" data-dtype="Number"/>
+            <span>({{rankAbbr system.weapon.damage}})</span>
+            {{else}}
+            <span class="field-value">{{system.weapon.damage}} ({{rankAbbr system.weapon.damage}})</span>
+            {{/if}}
+          </div>
+          <div class="form-group">
+            <label>Range</label>
+            {{#if editable}}
+            <select name="system.weapon.range">
+              <option value="">—</option>
+              {{#each config.ranks as |rankData key|}}
+              <option value="{{key}}" {{#if (eq key ../system.weapon.range)}}selected{{/if}}>{{localize rankData.label}}</option>
+              {{/each}}
+            </select>
+            {{else}}
+            <span class="field-value">{{#if system.weapon.range}}{{localize (lookup (lookup config.ranks system.weapon.range) "label")}}{{else}}—{{/if}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group">
+            <label>Rate</label>
+            {{#if editable}}
+            <input type="number" name="system.weapon.rate" value="{{system.weapon.rate}}" data-dtype="Number" step="0.5"/>
+            {{else}}
+            <span class="field-value">{{system.weapon.rate}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group">
+            <label>Shots</label>
+            {{#if editable}}
+            <input type="text" name="system.weapon.shots" value="{{system.weapon.shots}}"/>
+            {{else}}
+            <span class="field-value">{{system.weapon.shots}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group">
+            <label>Price</label>
+            {{#if editable}}
+            <input type="number" name="system.weapon.price" value="{{system.weapon.price}}" data-dtype="Number"/>
+            {{else}}
+            <span class="field-value">{{system.weapon.price}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group">
+            <label>Attack Type</label>
+            {{#if editable}}
+            <select name="system.weapon.attackType">
+              {{#each config.weaponAttackTypes as |label key|}}
+              <option value="{{key}}" {{#if (eq key ../system.weapon.attackType)}}selected{{/if}}>{{localize label}}</option>
+              {{/each}}
+            </select>
+            {{else}}
+            <span class="field-value">{{localize (lookup config.weaponAttackTypes system.weapon.attackType)}}</span>
+            {{/if}}
+          </div>
+        </div>
+        {{!-- Weapon Tags --}}
+        <div class="weapon-tags-section">
+          <label>Tags</label>
+          {{#if editable}}
+          <div class="weapon-tags-edit">
+            {{#each config.weaponTags as |label key|}}
+            <label class="tag-checkbox">
+              <input type="checkbox" name="system.weapon.tags" value="{{key}}" {{#if (includes ../system.weapon.tags key)}}checked{{/if}}/>
+              {{localize label}}
+            </label>
+            {{/each}}
+          </div>
+          {{else}}
+          <div class="weapon-tags-display">
+            {{#each system.weapon.tags as |tag|}}
+            <span class="weapon-tag" data-tooltip="{{localize (concat 'FASERIP.Weapon.TagDescription.' (capitalize tag))}}">
+              {{localize (lookup @root.config.weaponTags tag)}}
+            </span>
+            {{/each}}
+          </div>
+          {{/if}}
+        </div>
+      </fieldset>
+      {{/if}}
+
+      {{!-- Armor Stats --}}
+      {{#if (eq system.equipmentType "armor")}}
+      <fieldset class="equipment-stats armor-stats">
+        <legend>Armor Stats</legend>
+        <div class="grid grid-2col">
+          <div class="form-group">
+            <label>Protection</label>
+            {{#if editable}}
+            <input type="number" name="system.armor.protection" value="{{system.armor.protection}}" data-dtype="Number"/>
+            <span>({{rankAbbr system.armor.protection}})</span>
+            {{else}}
+            <span class="field-value">{{system.armor.protection}} ({{rankAbbr system.armor.protection}})</span>
+            {{/if}}
+          </div>
+          <div class="form-group">
+            <label>Armor Type</label>
+            {{#if editable}}
+            <input type="text" name="system.armor.armorType" value="{{system.armor.armorType}}" placeholder="Body Armor, Force Field, etc."/>
+            {{else}}
+            <span class="field-value">{{system.armor.armorType}}</span>
+            {{/if}}
+          </div>
+        </div>
+      </fieldset>
+      {{/if}}
+
+      {{!-- Vehicle Stats --}}
+      {{#if (eq system.equipmentType "vehicle")}}
+      <fieldset class="equipment-stats vehicle-stats">
+        <legend>Vehicle Stats</legend>
+        <div class="grid grid-2col">
+          <div class="form-group">
+            <label>Control</label>
+            {{#if editable}}
+            <select name="system.vehicle.control">
+              <option value="">—</option>
+              {{#each config.ranks as |rankData key|}}
+              <option value="{{key}}" {{#if (eq key ../system.vehicle.control)}}selected{{/if}}>{{localize rankData.label}}</option>
+              {{/each}}
+            </select>
+            {{else}}
+            <span class="field-value">{{#if system.vehicle.control}}{{localize (lookup (lookup config.ranks system.vehicle.control) "label")}}{{else}}—{{/if}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group">
+            <label>Speed</label>
+            {{#if editable}}
+            <select name="system.vehicle.speed">
+              <option value="">—</option>
+              {{#each config.ranks as |rankData key|}}
+              <option value="{{key}}" {{#if (eq key ../system.vehicle.speed)}}selected{{/if}}>{{localize rankData.label}}</option>
+              {{/each}}
+            </select>
+            {{else}}
+            <span class="field-value">{{#if system.vehicle.speed}}{{localize (lookup (lookup config.ranks system.vehicle.speed) "label")}}{{else}}—{{/if}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group">
+            <label>Body</label>
+            {{#if editable}}
+            <select name="system.vehicle.body">
+              <option value="">—</option>
+              {{#each config.ranks as |rankData key|}}
+              <option value="{{key}}" {{#if (eq key ../system.vehicle.body)}}selected{{/if}}>{{localize rankData.label}}</option>
+              {{/each}}
+            </select>
+            {{else}}
+            <span class="field-value">{{#if system.vehicle.body}}{{localize (lookup (lookup config.ranks system.vehicle.body) "label")}}{{else}}—{{/if}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group">
+            <label>Protection</label>
+            {{#if editable}}
+            <select name="system.vehicle.protection">
+              <option value="">—</option>
+              {{#each config.ranks as |rankData key|}}
+              <option value="{{key}}" {{#if (eq key ../system.vehicle.protection)}}selected{{/if}}>{{localize rankData.label}}</option>
+              {{/each}}
+            </select>
+            {{else}}
+            <span class="field-value">{{#if system.vehicle.protection}}{{localize (lookup (lookup config.ranks system.vehicle.protection) "label")}}{{else}}—{{/if}}</span>
+            {{/if}}
+          </div>
+        </div>
+      </fieldset>
+      {{/if}}
+
+      {{!-- Building Stats --}}
+      {{#if (eq system.equipmentType "building")}}
+      <fieldset class="equipment-stats building-stats">
+        <legend>{{localize "FASERIP.Equipment.Type.Building"}} Stats</legend>
+        <div class="grid grid-2col">
+          <div class="form-group">
+            <label>{{localize "FASERIP.Building.Type.Label"}}</label>
+            {{#if editable}}
+            <select name="system.building.buildingType">
+              {{#each config.buildingTypes as |label key|}}
+              <option value="{{key}}" {{#if (eq key ../system.building.buildingType)}}selected{{/if}}>{{localize label}}</option>
+              {{/each}}
+            </select>
+            {{else}}
+            <span class="field-value">{{localize (lookup config.buildingTypes system.building.buildingType)}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group">
+            <label>{{localize "FASERIP.Building.Size.Label"}}</label>
+            {{#if editable}}
+            <select name="system.building.size">
+              {{#each config.buildingSizes as |label key|}}
+              <option value="{{key}}" {{#if (eq key ../system.building.size)}}selected{{/if}}>{{localize label}}</option>
+              {{/each}}
+            </select>
+            {{else}}
+            <span class="field-value">{{localize (lookup config.buildingSizes system.building.size)}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group">
+            <label>{{localize "FASERIP.Building.RentCost"}}</label>
+            {{#if editable}}
+            <select name="system.building.rentCost">
+              <option value="">—</option>
+              {{#each config.ranks as |rankData key|}}
+              <option value="{{key}}" {{#if (eq key ../system.building.rentCost)}}selected{{/if}}>{{localize rankData.label}}</option>
+              {{/each}}
+            </select>
+            {{else}}
+            <span class="field-value">{{#if system.building.rentCost}}{{localize (lookup (lookup config.ranks system.building.rentCost) "label")}}{{else}}—{{/if}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group">
+            <label>{{localize "FASERIP.Building.BuyCost"}}</label>
+            {{#if editable}}
+            <select name="system.building.buyCost">
+              <option value="">—</option>
+              {{#each config.ranks as |rankData key|}}
+              <option value="{{key}}" {{#if (eq key ../system.building.buyCost)}}selected{{/if}}>{{localize rankData.label}}</option>
+              {{/each}}
+            </select>
+            {{else}}
+            <span class="field-value">{{#if system.building.buyCost}}{{localize (lookup (lookup config.ranks system.building.buyCost) "label")}}{{else}}—{{/if}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group">
+            <label>{{localize "FASERIP.Building.Rooms"}}</label>
+            {{#if editable}}
+            <input type="number" name="system.building.rooms" value="{{system.building.rooms}}" data-dtype="Number"/>
+            {{else}}
+            <span class="field-value">{{system.building.rooms}}</span>
+            {{/if}}
+          </div>
+        </div>
+      </fieldset>
+      {{/if}}
+
+      {{!-- Room Package Stats --}}
+      {{#if (eq system.equipmentType "roomPackage")}}
+      <fieldset class="equipment-stats roompackage-stats">
+        <legend>{{localize "FASERIP.Equipment.Type.RoomPackage"}} Stats</legend>
+        <div class="grid grid-2col">
+          <div class="form-group">
+            <label>{{localize "FASERIP.RoomPackage.Type.Label"}}</label>
+            {{#if editable}}
+            <select name="system.roomPackage.packageType">
+              {{#each config.roomPackageTypes as |label key|}}
+              <option value="{{key}}" {{#if (eq key ../system.roomPackage.packageType)}}selected{{/if}}>{{localize label}}</option>
+              {{/each}}
+            </select>
+            {{else}}
+            <span class="field-value">{{localize (lookup config.roomPackageTypes system.roomPackage.packageType)}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group">
+            <label>{{localize "FASERIP.RoomPackage.Upgrade.Label"}}</label>
+            {{#if editable}}
+            <select name="system.roomPackage.upgradeLevel">
+              {{#each config.roomPackageUpgrades as |label key|}}
+              <option value="{{key}}" {{#if (eq key ../system.roomPackage.upgradeLevel)}}selected{{/if}}>{{localize label}}</option>
+              {{/each}}
+            </select>
+            {{else}}
+            <span class="field-value">{{localize (lookup config.roomPackageUpgrades system.roomPackage.upgradeLevel)}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group">
+            <label>{{localize "FASERIP.RoomPackage.BaseCost"}}</label>
+            {{#if editable}}
+            <select name="system.roomPackage.baseCost">
+              <option value="">—</option>
+              {{#each config.ranks as |rankData key|}}
+              <option value="{{key}}" {{#if (eq key ../system.roomPackage.baseCost)}}selected{{/if}}>{{localize rankData.label}}</option>
+              {{/each}}
+            </select>
+            {{else}}
+            <span class="field-value">{{#if system.roomPackage.baseCost}}{{localize (lookup (lookup config.ranks system.roomPackage.baseCost) "label")}}{{else}}—{{/if}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group">
+            <label>{{localize "FASERIP.RoomPackage.RoomsOccupied"}}</label>
+            {{#if editable}}
+            <input type="number" name="system.roomPackage.roomsOccupied" value="{{system.roomPackage.roomsOccupied}}" data-dtype="Number"/>
+            {{else}}
+            <span class="field-value">{{system.roomPackage.roomsOccupied}}</span>
+            {{/if}}
+          </div>
+        </div>
+      </fieldset>
+      {{/if}}
+
+      {{!-- Gear Stats --}}
+      {{#if (eq system.equipmentType "gear")}}
+      <fieldset class="equipment-stats gear-stats">
+        <legend>{{localize "FASERIP.Equipment.Type.Gear"}} Stats</legend>
+        <div class="grid grid-2col">
+          <div class="form-group">
+            <label>{{localize "FASERIP.Gear.Type.Label"}}</label>
+            {{#if editable}}
+            <select name="system.gear.gearType">
+              {{#each config.gearTypes as |label key|}}
+              <option value="{{key}}" {{#if (eq key ../system.gear.gearType)}}selected{{/if}}>{{localize label}}</option>
+              {{/each}}
+            </select>
+            {{else}}
+            <span class="field-value">{{localize (lookup config.gearTypes system.gear.gearType)}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group">
+            <label>{{localize "FASERIP.Gear.Intensity"}}</label>
+            {{#if editable}}
+            <select name="system.gear.intensity">
+              <option value="">—</option>
+              {{#each config.ranks as |rankData key|}}
+              <option value="{{key}}" {{#if (eq key ../system.gear.intensity)}}selected{{/if}}>{{localize rankData.label}}</option>
+              {{/each}}
+            </select>
+            {{else}}
+            <span class="field-value">{{#if system.gear.intensity}}{{localize (lookup (lookup config.ranks system.gear.intensity) "label")}}{{else}}—{{/if}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group full-width">
+            <label>{{localize "FASERIP.Gear.Effect"}}</label>
+            {{#if editable}}
+            <input type="text" name="system.gear.effect" value="{{system.gear.effect}}" placeholder="Effect description"/>
+            {{else}}
+            <span class="field-value">{{system.gear.effect}}</span>
+            {{/if}}
+          </div>
+        </div>
+      </fieldset>
+      {{/if}}
+
+      {{!-- Ammunition Stats --}}
+      {{#if (eq system.equipmentType "ammunition")}}
+      <fieldset class="equipment-stats ammunition-stats">
+        <legend>{{localize "FASERIP.Equipment.Type.Ammunition"}} Stats</legend>
+        <div class="grid grid-2col">
+          <div class="form-group">
+            <label>{{localize "FASERIP.Ammunition.WeaponClass"}}</label>
+            {{#if editable}}
+            <input type="text" name="system.ammunition.weaponClass" value="{{system.ammunition.weaponClass}}" placeholder="Handgun"/>
+            {{else}}
+            <span class="field-value">{{system.ammunition.weaponClass}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group">
+            <label>{{localize "FASERIP.Ammunition.Rounds"}}</label>
+            {{#if editable}}
+            <input type="number" name="system.ammunition.rounds" value="{{system.ammunition.rounds}}" data-dtype="Number"/>
+            {{else}}
+            <span class="field-value">{{system.ammunition.rounds}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group">
+            <label>{{localize "FASERIP.Ammunition.RoundType.Label"}}</label>
+            {{#if editable}}
+            <select name="system.ammunition.roundType">
+              {{#each config.roundTypes as |label key|}}
+              <option value="{{key}}" {{#if (eq key ../system.ammunition.roundType)}}selected{{/if}}>{{localize label}}</option>
+              {{/each}}
+            </select>
+            {{else}}
+            <span class="field-value">{{localize (lookup config.roundTypes system.ammunition.roundType)}}</span>
+            {{/if}}
+          </div>
+        </div>
+      </fieldset>
+      {{/if}}
+
+    </div>
+
+    {{!-- Effects Tab --}}
+    <div class="tab effects" data-group="primary" data-tab="effects">
+      {{> "systems/faserip/templates/item/parts/item-effects.hbs"}}
+    </div>
+
+  </section>
+</form>

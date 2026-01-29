@@ -1,25 +1,354 @@
 {
-  "BOILERPLATE": {
+  "FASERIP": {
     "Ability": {
-      "Str": { "long": "Strength", "abbr": "str" },
-      "Con": { "long": "Constitution", "abbr": "con" },
-      "Dex": { "long": "Dexterity", "abbr": "dex" },
-      "Int": { "long": "Intelligence", "abbr": "int" },
-      "Wis": { "long": "Wisdom", "abbr": "wis" },
-      "Cha": { "long": "Charisma", "abbr": "cha" }
+      "Fighting": { "long": "Fighting", "abbr": "F" },
+      "Agility": { "long": "Agility", "abbr": "A" },
+      "Strength": { "long": "Strength", "abbr": "S" },
+      "Endurance": { "long": "Endurance", "abbr": "E" },
+      "Reason": { "long": "Reason", "abbr": "R" },
+      "Intuition": { "long": "Intuition", "abbr": "I" },
+      "Psyche": { "long": "Psyche", "abbr": "P" }
+    },
+    "Rank": {
+      "Shift0": "Shift 0",
+      "Feeble": "Feeble",
+      "Poor": "Poor",
+      "Typical": "Typical",
+      "Good": "Good",
+      "Excellent": "Excellent",
+      "Remarkable": "Remarkable",
+      "Incredible": "Incredible",
+      "Amazing": "Amazing",
+      "Monstrous": "Monstrous",
+      "Unearthly": "Unearthly",
+      "ShiftX": "Shift X",
+      "ShiftY": "Shift Y",
+      "ShiftZ": "Shift Z",
+      "Class1000": "Class 1000",
+      "Class3000": "Class 3000",
+      "Class5000": "Class 5000",
+      "Beyond": "Beyond"
+    },
+    "Origin": {
+      "AlteredHuman": "Altered Human",
+      "Mutant": "Mutant",
+      "HighTech": "High Technology",
+      "Robot": "Robot",
+      "Alien": "Alien",
+      "Magic": "Magic",
+      "Birthright": "Birthright"
+    },
+    "Result": {
+      "White": "White - Failure",
+      "Green": "Green - Success",
+      "Yellow": "Yellow - Greater Success",
+      "Red": "Red - Extraordinary Success"
+    },
+    "Action": {
+      "BluntAttacks": "Blunt Attacks",
+      "EdgedAttacks": "Edged Attacks",
+      "Shooting": "Shooting",
+      "ThrowingEdged": "Throwing Edged",
+      "ThrowingBlunt": "Throwing Blunt",
+      "Energy": "Energy",
+      "Force": "Force",
+      "Grappling": "Grappling",
+      "Grabbing": "Grabbing",
+      "Escaping": "Escaping",
+      "Charging": "Charging",
+      "Dodging": "Dodging",
+      "Evading": "Evading",
+      "Blocking": "Blocking",
+      "Catching": "Catching",
+      "Stun": "Stun?",
+      "Slam": "Slam?",
+      "Kill": "Kill?",
+      "Other": "Other (Generic FEAT)"
+    },
+    "Dialog": {
+      "FEATRoll": "FEAT Roll",
+      "Ability": "Ability",
+      "ActionType": "Action Type",
+      "Intensity": "Intensity",
+      "ColumnShift": "Column Shift",
+      "EffectiveRank": "Effective Rank",
+      "RequiredResult": "Required Result",
+      "Roll": "Roll",
+      "NoIntensity": "None (Any color succeeds)"
+    },
+    "Color": {
+      "White": "White",
+      "Green": "Green",
+      "Yellow": "Yellow",
+      "Red": "Red",
+      "Impossible": "Impossible"
+    },
+    "Chat": {
+      "EffectiveRank": "Effective Rank",
+      "Shift": "Shift",
+      "Success": "Success",
+      "Failure": "Failure",
+      "Needed": "Needed",
+      "Intensity": "vs"
+    },
+    "Shift": {
+      "ClassRankNoShift": "Class 1000+ ranks cannot be column shifted",
+      "MinRankReached": "Minimum rank (Shift 0) reached",
+      "MaxShiftableRankReached": "Maximum shiftable rank (Shift Z) reached"
+    },
+    "ActionResult": {
+      "Miss": "Miss",
+      "Hit": "Hit",
+      "Slam": "Slam",
+      "Stun": "Stun",
+      "Kill": "Kill",
+      "Bullseye": "Bullseye",
+      "Partial": "Partial",
+      "Hold": "Hold",
+      "Take": "Take",
+      "Grab": "Grab",
+      "Escape": "Escape",
+      "Break": "Break",
+      "None": "None",
+      "Evasion": "Evasion",
+      "Minus2CS": "-2 CS",
+      "Minus4CS": "-4 CS",
+      "Minus6CS": "-6 CS",
+      "Plus1CS": "+1 CS",
+      "Catch": "Catch",
+      "Autohit": "Autohit",
+      "Damage": "Damage",
+      "1to10": "1-10",
+      "1Round": "1",
+      "No": "No",
+      "GrandSlam": "Gr. Slam",
+      "1Area": "1 area",
+      "Stagger": "Stagger",
+      "EnLoss": "En. Loss",
+      "EnduranceSlam": "E/S"
+    },
+    "Talent": {
+      "Category": {
+        "Weapon": "Weapon Skills",
+        "Fighting": "Fighting Skills",
+        "Professional": "Professional Skills",
+        "Scientific": "Scientific Skills",
+        "Mystic": "Mystic & Mental Skills",
+        "Other": "Other Talents"
+      }
+    },
+    "Equipment": {
+      "Type": {
+        "Weapon": "Weapon",
+        "Armor": "Armor",
+        "Vehicle": "Vehicle",
+        "Gear": "Gear",
+        "Ammunition": "Ammunition",
+        "Building": "Building",
+        "RoomPackage": "Room Package"
+      },
+      "Shots": "Shots",
+      "Rate": "Rate",
+      "Range": "Range",
+      "Cost": "Cost",
+      "Material": "Material"
+    },
+    "Building": {
+      "Type": {
+        "Label": "Building Type",
+        "Apartment": "Apartment",
+        "House": "House",
+        "Manor": "Manor",
+        "Mansion": "Mansion",
+        "Cottage": "Cottage",
+        "Office": "Office",
+        "Storefront": "Storefront",
+        "OfficeBuilding": "Office Building",
+        "Brownstone": "Brownstone",
+        "Warehouse": "Warehouse",
+        "Factory": "Factory"
+      },
+      "Size": {
+        "Label": "Size",
+        "Small": "Small",
+        "MidSized": "Mid-Sized",
+        "Large": "Large",
+        "Deluxe": "Deluxe"
+      },
+      "SizeDescription": {
+        "Small": "1-2 heroes, 2-3 areas/rooms",
+        "MidSized": "2-3 heroes, up to 5 areas/rooms",
+        "Large": "10+ areas spread over two floors",
+        "Deluxe": "20+ areas spread over 3+ floors"
+      },
+      "RentCost": "Rent Cost",
+      "BuyCost": "Buy Cost",
+      "Rooms": "Rooms"
+    },
+    "RoomPackage": {
+      "Type": {
+        "Label": "Package Type",
+        "Living": "Living",
+        "Information": "Information",
+        "Training": "Training & Recreation",
+        "Technical": "Technical",
+        "Vehicle": "Vehicle",
+        "Security": "Security",
+        "Special": "Special"
+      },
+      "Upgrade": {
+        "Label": "Upgrade Level",
+        "Base": "Base",
+        "Excellent": "Excellent",
+        "Remarkable": "Remarkable",
+        "Incredible": "Incredible",
+        "Amazing": "Amazing"
+      },
+      "BaseCost": "Base Cost",
+      "RoomsOccupied": "Rooms Occupied"
+    },
+    "Gear": {
+      "Type": {
+        "Label": "Gear Type",
+        "Tool": "Tool",
+        "Vision": "Vision Equipment",
+        "Safety": "Safety Equipment",
+        "Restraint": "Restraint",
+        "Accessory": "Accessory",
+        "Service": "Service"
+      },
+      "Effect": "Effect",
+      "Intensity": "Intensity"
+    },
+    "Vehicle": {
+      "Type": {
+        "Road": "Road",
+        "OffRoad": "Off-Road",
+        "Railed": "Railed",
+        "GEV": "GEV",
+        "Air": "Air",
+        "Space": "Space",
+        "Water": "Water",
+        "Sub": "Submersible"
+      },
+      "Control": "Control",
+      "Speed": "Speed",
+      "Body": "Body",
+      "Protection": "Protection",
+      "Weapons": "Weapons"
+    },
+    "Ammunition": {
+      "WeaponClass": "Weapon Class",
+      "Rounds": "Rounds",
+      "RoundType": {
+        "Label": "Round Type",
+        "Standard": "Standard",
+        "ArmorPiercing": "Armor Piercing",
+        "Mercy": "Mercy Shot",
+        "Rubber": "Rubber Shot",
+        "Explosive": "Explosive Shot",
+        "Canister": "Canister Shot",
+        "Gyrojet": "Gyro-jet",
+        "HeatSeeker": "Heat-Seeker",
+        "PowerPack": "Power Pack"
+      },
+      "RoundDescription": {
+        "ArmorPiercing": "Reduces target Body Armor by 2 CS for hitting and damage. No effect on force fields.",
+        "Mercy": "Remarkable Intensity knock-out drug. If damage inflicted, target knocked out for 1-10 rounds.",
+        "Rubber": "Inflicts slugfest damage instead of shooting damage. Ignore Slam results.",
+        "Explosive": "Inflicts additional explosive damage.",
+        "Canister": "Smoke (Excellent Intensity), Explosive (double damage to target area, normal to adjacent), or Incendiary (fire burns 1-10 rounds).",
+        "HeatSeeker": "Seeks hottest source in line to target. No range penalty. Gyro-Jet Pistol only."
+      }
+    },
+    "Weapon": {
+      "Category": {
+        "Ranged": "Ranged",
+        "Melee": "Melee",
+        "Thrown": "Thrown",
+        "Other": "Other"
+      },
+      "AttackType": {
+        "Shooting": "Shooting",
+        "Energy": "Energy",
+        "Force": "Force",
+        "Edged": "Edged",
+        "Blunt": "Blunt",
+        "Throwing": "Throwing",
+        "Grappling": "Grappling"
+      },
+      "Tag": {
+        "OneHanded": "One-handed",
+        "TwoHanded": "Two-handed",
+        "Illegal": "Illegal",
+        "Military": "Military",
+        "PowerPack": "Power Pack",
+        "Bursts": "Bursts",
+        "Scatters": "Scatters",
+        "TwoMenToFire": "Two Men to Fire",
+        "Stationary": "Stationary"
+      },
+      "TagDescription": {
+        "OneHanded": "The weapon can be fired one-handed without penalty",
+        "Illegal": "Possession of this weapon outside of certain authorized groups is a misdemeanor",
+        "Military": "Possession of this weapon outside of the military and certain authorized groups is a crime (Other Crime)",
+        "PowerPack": "This weapon operates from a power pack, as opposed to using standard ammunition",
+        "Bursts": "This weapon may affect multiple adjacent targets",
+        "Scatters": "This weapon affects all within one area of the target",
+        "TwoMenToFire": "Two persons are required to fire this weapon effectively. One may fire, with the result of the firing rate being halved and a -2CS to hit",
+        "Stationary": "This weapon does not move, but it can turn in place"
+      },
+      "Price": "Price",
+      "StunIntensity": "Stun Intensity",
+      "Notes": "Notes"
+    },
+    "Secondary": {
+      "Health": "Health",
+      "Karma": "Karma",
+      "Resources": "Resources",
+      "Popularity": "Popularity"
+    },
+    "Sheet": {
+      "Powers": "Powers",
+      "Talents": "Talents",
+      "Equipment": "Equipment",
+      "Contacts": "Contacts",
+      "Biography": "Biography",
+      "Effects": "Effects",
+      "Origin": "Origin",
+      "Identity": "Identity",
+      "Base": "Base of Operations",
+      "KarmaPool": "Karma Pool"
+    },
+    "Power": {
+      "Rank": "Power Rank",
+      "Type": "Power Type",
+      "Range": "Range",
+      "Duration": "Duration",
+      "Stunts": "Stunts",
+      "AddStunt": "Add Stunt"
+    },
+    "Stunt": {
+      "Name": "Stunt Name",
+      "Mastered": "Mastered",
+      "Attempts": "Attempts"
+    },
+    "Contact": {
+      "Relationship": "Relationship",
+      "Resources": "Contact Resources"
+    },
+    "Roll": {
+      "FEAT": "FEAT Roll",
+      "AbilityCheck": "{ability} Check",
+      "PowerCheck": "{power} Check"
     },
     "SheetLabels": {
       "Actor": "FASERIP Actor Sheet",
       "Item": "FASERIP Item Sheet"
     },
-    "Item": {
-      "Spell": {
-        "SpellLVL": "Level {level} Spells",
-        "AddLVL": "Add LVL {level}"
-      }
-    },
     "Effect": {
       "Source": "Source",
+      "Duration": "Duration",
       "Toggle": "Toggle Effect",
       "Temporary": "Temporary Effects",
       "Passive": "Passive Effects",
@@ -29,13 +358,18 @@
 
   "TYPES": {
     "Actor": {
-      "character": "Character",
-      "npc": "NPC"
+      "hero": "Hero",
+      "villain": "Villain",
+      "entity": "Entity",
+      "animal": "Animal",
+      "alien": "Alien",
+      "supportingCast": "Supporting Cast"
     },
     "Item": {
-      "item": "Item",
-      "feature": "Feature",
-      "spell": "Spell"
+      "power": "Power",
+      "talent": "Talent",
+      "equipment": "Equipment",
+      "contact": "Contact"
     }
   }
 }

@@ -4,7 +4,7 @@ import {
 } from '../helpers/effects.mjs';
 
 /**
- * Extend the basic ActorSheet with some very simple modifications
+ * Extend the basic ActorSheet with FASERIP-specific functionality
  * @extends {ActorSheet}
  */
 export class FASERIPActorSheet extends ActorSheet {
@@ -12,13 +12,13 @@ export class FASERIPActorSheet extends ActorSheet {
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ['faserip', 'sheet', 'actor'],
-      width: 600,
-      height: 600,
+      width: 720,
+      height: 680,
       tabs: [
         {
           navSelector: '.sheet-tabs',
           contentSelector: '.sheet-body',
-          initial: 'features',
+          initial: 'abilities',
         },
       ],
     });
@@ -33,10 +33,6 @@ export class FASERIPActorSheet extends ActorSheet {
 
   /** @override */
   async getData() {
-    // Retrieve the data structure from the base sheet. You can inspect or log
-    // the context variable to see the structure, but some key properties for
-    // sheets are the actor object, the data object, whether or not it's
-    // editable, the items array, and the effects array.
     const context = super.getData();
 
     // Use a safe clone of the actor data for further operations.
@@ -46,40 +42,44 @@ export class FASERIPActorSheet extends ActorSheet {
     context.system = actorData.system;
     context.flags = actorData.flags;
 
-    // Adding a pointer to CONFIG.BOILERPLATE
-    context.config = CONFIG.BOILERPLATE;
+    // Adding a pointer to CONFIG.FASERIP
+    context.config = CONFIG.FASERIP;
 
-    // Prepare character data and items.
-    if (actorData.type == 'character') {
-      this._prepareItems(context);
-      this._prepareCharacterData(context);
-    }
+    // Prepare character data and items based on type
+    this._prepareItems(context);
 
-    // Prepare NPC data and items.
-    if (actorData.type == 'npc') {
-      this._prepareItems(context);
+    switch (actorData.type) {
+      case 'hero':
+      case 'villain':
+        this._prepareHeroData(context);
+        break;
+      case 'entity':
+        this._prepareEntityData(context);
+        break;
+      case 'animal':
+        this._prepareAnimalData(context);
+        break;
+      case 'alien':
+        this._prepareAlienData(context);
+        break;
+      case 'supportingCast':
+        this._prepareSupportingCastData(context);
+        break;
     }
 
     // Enrich biography info for display
-    // Enrichment turns text like `[[/r 1d20]]` into buttons
     context.enrichedBiography = await TextEditor.enrichHTML(
       this.actor.system.biography,
       {
-        // Whether to show secret blocks in the finished html
         secrets: this.document.isOwner,
-        // Necessary in v11, can be removed in v12
         async: true,
-        // Data to fill in for inline rolls
         rollData: this.actor.getRollData(),
-        // Relative UUID resolution
         relativeTo: this.actor,
       }
     );
 
     // Prepare active effects
     context.effects = prepareActiveEffectCategories(
-      // A generator that returns all effects stored on the actor
-      // as well as any items
       this.actor.allApplicableEffects()
     );
 
@@ -87,60 +87,92 @@ export class FASERIPActorSheet extends ActorSheet {
   }
 
   /**
-   * Character-specific context modifications
-   *
-   * @param {object} context The context object to mutate
+   * Prepare Hero/Villain specific context data
+   * @param {object} context
    */
-  _prepareCharacterData(context) {
-    // This is where you can enrich character-specific editor fields
-    // or setup anything else that's specific to this type
+  _prepareHeroData(context) {
+    // Add origin options
+    context.origins = CONFIG.FASERIP.origins;
+
+    // Add rank options for dropdowns
+    context.ranks = CONFIG.FASERIP.ranks;
+  }
+
+  /**
+   * Prepare Entity specific context data
+   * @param {object} context
+   */
+  _prepareEntityData(context) {
+    context.ranks = CONFIG.FASERIP.ranks;
+  }
+
+  /**
+   * Prepare Animal specific context data
+   * @param {object} context
+   */
+  _prepareAnimalData(context) {
+    context.ranks = CONFIG.FASERIP.ranks;
+  }
+
+  /**
+   * Prepare Alien specific context data
+   * @param {object} context
+   */
+  _prepareAlienData(context) {
+    context.origins = CONFIG.FASERIP.origins;
+    context.ranks = CONFIG.FASERIP.ranks;
+  }
+
+  /**
+   * Prepare Supporting Cast specific context data
+   * @param {object} context
+   */
+  _prepareSupportingCastData(context) {
+    context.ranks = CONFIG.FASERIP.ranks;
   }
 
   /**
    * Organize and classify Items for Actor sheets.
-   *
    * @param {object} context The context object to mutate
    */
   _prepareItems(context) {
-    // Initialize containers.
-    const gear = [];
-    const features = [];
-    const spells = {
-      0: [],
-      1: [],
-      2: [],
-      3: [],
-      4: [],
-      5: [],
-      6: [],
-      7: [],
-      8: [],
-      9: [],
-    };
+    // Initialize containers
+    const powers = [];
+    const talents = [];
+    const equipment = [];
+    const contacts = [];
 
     // Iterate through items, allocating to containers
     for (let i of context.items) {
       i.img = i.img || Item.DEFAULT_ICON;
-      // Append to gear.
-      if (i.type === 'item') {
-        gear.push(i);
-      }
-      // Append to features.
-      else if (i.type === 'feature') {
-        features.push(i);
-      }
-      // Append to spells.
-      else if (i.type === 'spell') {
-        if (i.system.spellLevel != undefined) {
-          spells[i.system.spellLevel].push(i);
-        }
+
+      switch (i.type) {
+        case 'power':
+          powers.push(i);
+          break;
+        case 'talent':
+          talents.push(i);
+          break;
+        case 'equipment':
+          equipment.push(i);
+          break;
+        case 'contact':
+          contacts.push(i);
+          break;
       }
     }
 
-    // Assign and return
-    context.gear = gear;
-    context.features = features;
-    context.spells = spells;
+    // Sort items by name
+    powers.sort((a, b) => a.name.localeCompare(b.name));
+    talents.sort((a, b) => a.name.localeCompare(b.name));
+    equipment.sort((a, b) => a.name.localeCompare(b.name));
+    contacts.sort((a, b) => a.name.localeCompare(b.name));
+
+    // Assign to context
+    context.powers = powers;
+    context.talents = talents;
+    context.equipment = equipment;
+    context.contacts = contacts;
   }
 
   /* -------------------------------------------- */
@@ -181,10 +213,16 @@ export class FASERIPActorSheet extends ActorSheet {
       onManageActiveEffect(ev, document);
     });
 
-    // Rollable abilities.
+    // Rollable abilities
     html.on('click', '.rollable', this._onRoll.bind(this));
 
-    // Drag events for macros.
+    // Ability value changes - update rank automatically
+    html.on('change', '.ability-value', this._onAbilityChange.bind(this));
+
+    // Value adjust buttons (+/-)
+    html.on('click', '.adjust-btn', this._onAdjustValue.bind(this));
+
+    // Drag events for macros
     if (this.actor.isOwner) {
       let handler = (ev) => this._onDragStart(ev);
       html.find('li.item').each((i, li) => {
@@ -203,23 +241,52 @@ export class FASERIPActorSheet extends ActorSheet {
   async _onItemCreate(event) {
     event.preventDefault();
     const header = event.currentTarget;
-    // Get the type of item to create.
     const type = header.dataset.type;
-    // Grab any data associated with this control.
     const data = duplicate(header.dataset);
-    // Initialize a default name.
     const name = `New ${type.capitalize()}`;
-    // Prepare the item object.
     const itemData = {
       name: name,
       type: type,
       system: data,
     };
-    // Remove the type from the dataset since it's in the itemData.type prop.
     delete itemData.system['type'];
 
-    // Finally, create the item!
     return await Item.create(itemData, { parent: this.actor });
+  }
+
+  /**
+   * Handle ability value changes to auto-update rank
+   * @param {Event} event
+   * @private
+   */
+  async _onAbilityChange(event) {
+    event.preventDefault();
+    const element = event.currentTarget;
+    const abilityKey = element.dataset.ability;
+    const newValue = parseInt(element.value, 10) || 0;
+
+    // The rank will be calculated automatically in prepareDerivedData
+    await this.actor.update({
+      [`system.abilities.${abilityKey}.value`]: newValue
+    });
+  }
+
+  /**
+   * Handle +/- button clicks to adjust values
+   * @param {Event} event
+   * @private
+   */
+  async _onAdjustValue(event) {
+    event.preventDefault();
+    const button = event.currentTarget;
+    const field = button.dataset.field;
+    const delta = parseInt(button.dataset.delta, 10) || 0;
+
+    // Get current value using foundry's getProperty
+    const currentValue = foundry.utils.getProperty(this.actor, field) || 0;
+    const newValue = Math.max(0, currentValue + delta);
+
+    await this.actor.update({ [field]: newValue });
   }
 
   /**
@@ -227,24 +294,31 @@ export class FASERIPActorSheet extends ActorSheet {
    * @param {Event} event   The originating click event
    * @private
    */
-  _onRoll(event) {
+  async _onRoll(event) {
     event.preventDefault();
     const element = event.currentTarget;
     const dataset = element.dataset;
 
-    // Handle item rolls.
-    if (dataset.rollType) {
-      if (dataset.rollType == 'item') {
-        const itemId = element.closest('.item').dataset.itemId;
-        const item = this.actor.items.get(itemId);
-        if (item) return item.roll();
+    // Handle ability rolls
+    if (dataset.rollType === 'ability') {
+      const abilityKey = dataset.ability;
+      if (abilityKey) {
+        return this.actor.rollAbility(abilityKey);
       }
     }
 
-    // Handle rolls that supply the formula directly.
+    // Handle item rolls
+    if (dataset.rollType === 'item') {
+      const itemId = element.closest('.item').dataset.itemId;
+      const item = this.actor.items.get(itemId);
+      if (item) return item.roll();
+    }
+
+    // Handle rolls that supply the formula directly
     if (dataset.roll) {
       let label = dataset.label ? `[ability] ${dataset.label}` : '';
       let roll = new Roll(dataset.roll, this.actor.getRollData());
+      await roll.evaluate();
       roll.toMessage({
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
         flavor: label,

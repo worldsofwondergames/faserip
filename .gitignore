@@ -2,12 +2,20 @@
 .idea/
 .vs/
 
+# Claude Code
+.claude/
+.history/
+.playwright-mcp/
+
 # Node Modules
 node_modules/
 npm-debug.log
 
 # Foundry
 *.lock
+LOCK
+LOG
+LOG.old
 jsconfig.json
 foundry
 

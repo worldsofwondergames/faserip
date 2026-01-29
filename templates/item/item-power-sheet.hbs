@@ -1,0 +1,67 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+
+  {{!-- Item Sheet Header --}}
+  <header class="sheet-header flexrow">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="50" width="50"/>
+    <div class="header-fields flexcol">
+      <h1 class="charname">
+        <input name="name" type="text" value="{{item.name}}" placeholder="Power Name"/>
+      </h1>
+      <div class="flexrow">
+        <div class="form-group">
+          <label>{{localize "FASERIP.Power.Rank"}}</label>
+          <input type="number" name="system.value" value="{{system.value}}" data-dtype="Number"/>
+          <span class="rank-display">({{rankAbbr system.value}})</span>
+        </div>
+        <div class="form-group">
+          <label>{{localize "FASERIP.Power.Type"}}</label>
+          <input type="text" name="system.powerType" value="{{system.powerType}}" placeholder="Energy, Mental, etc."/>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="details">Details</a>
+    <a class="item" data-tab="stunts">{{localize "FASERIP.Power.Stunts"}}</a>
+    <a class="item" data-tab="effects">{{localize "FASERIP.Sheet.Effects"}}</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- Description Tab --}}
+    <div class="tab description" data-group="primary" data-tab="description">
+      {{editor enrichedDescription target="system.description" engine="prosemirror" button=true editable=editable}}
+    </div>
+
+    {{!-- Details Tab --}}
+    <div class="tab details" data-group="primary" data-tab="details">
+      <div class="form-group">
+        <label>{{localize "FASERIP.Power.Range"}}</label>
+        <input type="text" name="system.range" value="{{system.range}}" placeholder="Touch, Line of Sight, etc."/>
+      </div>
+      <div class="form-group">
+        <label>{{localize "FASERIP.Power.Duration"}}</label>
+        <input type="text" name="system.duration" value="{{system.duration}}" placeholder="Instant, Concentration, etc."/>
+      </div>
+    </div>
+
+    {{!-- Stunts Tab --}}
+    <div class="tab stunts" data-group="primary" data-tab="stunts">
+      <p class="notes">Power Stunts are creative uses of a power. Track attempts and mastery here.</p>
+      <div class="stunts-list">
+        {{!-- Stunts would be managed via JavaScript - placeholder for now --}}
+        <p><em>Stunt management coming in a future update.</em></p>
+      </div>
+    </div>
+
+    {{!-- Effects Tab --}}
+    <div class="tab effects" data-group="primary" data-tab="effects">
+      {{> "systems/faserip/templates/item/parts/item-effects.hbs"}}
+    </div>
+
+  </section>
+</form>
