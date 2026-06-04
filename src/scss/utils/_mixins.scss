@@ -1,16 +1,42 @@
+// $komika-* vars come from _fonts.scss, imported before this file in faserip.scss
+
 @mixin element-invisible {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
-
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
 @mixin hide {
   display: none;
+}
+
+@mixin panel-title($footer: false) {
+  $-border-edge: "bottom";
+  $-gradient-rotation: 180deg;
+  @if $footer {
+    $-border-edge: "top";
+    $-gradient-rotation: 0deg;
+  }
+
+  flex: 0;
+
+  font-family: $komika-smallcaps;
+  font-size: var(--header-text-size);
+  line-height: var(--header-text-size);
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+
+  border-#{$-border-edge}: 3px solid var(--border-black);
+
+  background: linear-gradient(
+    $-gradient-rotation,
+    var(--header-yellow) 0%,
+    var(--header-gray) 100%
+  );
 }

@@ -1,0 +1,69 @@
+// Komika Text — freeware by Apostrophic Labs / Vigilante Typeface Corporation
+$font-path: "../../assets/fonts/komika-text";
+
+@font-face {
+  font-family: "KomikaText";
+  src: url("#{$font-path}/KOMTXT__.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "KomikaText";
+  src: url("#{$font-path}/KOMTXTB_.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "KomikaText";
+  src: url("#{$font-path}/KOMTXTI_.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "KomikaText";
+  src: url("#{$font-path}/KOMTXTBI.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "KomikaTextSmallCaps";
+  src: url("#{$font-path}/KOMTXTK_.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "KomikaTextSmallCaps";
+  src: url("#{$font-path}/KOMTXTKB.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "KomikaTextSmallCaps";
+  src: url("#{$font-path}/KOMTXTKI.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "KomikaTextSmallCaps";
+  src: url("#{$font-path}/KOMTXKBI.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "KomikaTextTight";
+  src: url("#{$font-path}/KOMTXTT_.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "KomikaTextTight";
+  src: url("#{$font-path}/KOMTXTTI.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+$komika-base: "KomikaText", sans-serif;
+$komika-smallcaps: "KomikaTextSmallCaps", sans-serif;
+$komika-tight: "KomikaTextTight", sans-serif;
