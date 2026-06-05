@@ -185,7 +185,17 @@ export class FASERIPActorSheet extends ActorSheet {
     requestAnimationFrame(() => {
       const statsPanel = html[0].querySelector('.secondary-stats-panel');
       const table = html[0].querySelector('.abilities-table');
+      const container = html[0].querySelector('.abilities-table-container');
       if (statsPanel && table) {
+        const pr = statsPanel.getBoundingClientRect();
+        const tr = table.getBoundingClientRect();
+        const cr = container ? container.getBoundingClientRect() : null;
+        console.log('FASERIP layout:', {
+          panelTop: Math.round(pr.top), panelH: statsPanel.offsetHeight,
+          tableTop: Math.round(tr.top), tableH: table.offsetHeight,
+          containerTop: cr ? Math.round(cr.top) : null, containerH: container?.offsetHeight,
+          topOffset: Math.round(tr.top - pr.top),
+        });
         table.style.height = statsPanel.offsetHeight + 'px';
       }
     });

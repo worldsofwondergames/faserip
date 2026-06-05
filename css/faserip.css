@@ -745,6 +745,7 @@ section {
 }
 .faserip .abilities-table {
   width: 100%;
+  margin: 0;
   border-collapse: collapse;
   border: 3px solid var(--border-black);
   box-shadow: 3px 3px;
