@@ -135,13 +135,10 @@
 }
 
 .abilities-table-container {
-  display: flex;
-  flex-direction: column;
+  min-width: 0;
 }
 
 .abilities-table {
-  flex: 1;
-  height: 100%;
   width: 100%;
   border-collapse: collapse;
   border: 3px solid var(--border-black);

@@ -181,6 +181,15 @@ export class FASERIPActorSheet extends ActorSheet {
   activateListeners(html) {
     super.activateListeners(html);
 
+    // Tables ignore flex/grid height constraints — sync explicitly after layout
+    requestAnimationFrame(() => {
+      const statsPanel = html[0].querySelector('.secondary-stats-panel');
+      const table = html[0].querySelector('.abilities-table');
+      if (statsPanel && table) {
+        table.style.height = statsPanel.offsetHeight + 'px';
+      }
+    });
+
     // Render the item sheet for viewing/editing prior to the editable check.
     html.on('click', '.item-edit', (ev) => {
       const li = $(ev.currentTarget).parents('.item');
