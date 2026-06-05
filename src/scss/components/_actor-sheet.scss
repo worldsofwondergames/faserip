@@ -126,15 +126,15 @@
 
 /* ---- Abilities Section ---- */
 .abilities-section {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  align-items: flex-start;
   gap: 10px;
   margin-bottom: 10px;
-  flex: 0 0 auto;
 }
 
 .abilities-table-container {
+  flex: 1;
   min-width: 0;
 }
 
