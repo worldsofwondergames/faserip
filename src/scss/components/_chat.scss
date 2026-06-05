@@ -1,0 +1,102 @@
+// Chat card and roll result styles.
+
+.faserip-roll {
+  .roll-result-container {
+    margin-top: 12px;
+    text-align: center;
+  }
+
+  .roll-result {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-family: $komika-smallcaps;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-width: 3px;
+    border-style: solid;
+    box-shadow: 3px 3px;
+
+    .result-separator {
+      opacity: 0.7;
+    }
+
+    .result-action {
+      font-size: 13px;
+    }
+
+    &.feat-white {
+      background-color: #f0f0f0;
+      color: #666;
+      border-color: #999;
+    }
+
+    &.feat-green {
+      background-color: var(--hulk-green);
+      color: black;
+      border-color: var(--lizard-green);
+    }
+
+    &.feat-yellow {
+      background-color: var(--wasp-yellow);
+      color: black;
+      border-color: #ccac00;
+    }
+
+    &.feat-red {
+      background-color: var(--gwen-pink);
+      color: var(--venom-black);
+      border-color: var(--spider-red);
+    }
+  }
+
+  .roll-details {
+    margin-top: 8px;
+    font-size: 11px;
+    color: #666;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+
+    .detail-label {
+      font-weight: 600;
+      margin-right: 4px;
+    }
+  }
+
+  .roll-success {
+    margin-top: 8px;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-family: $komika-smallcaps;
+    font-weight: 600;
+    display: inline-block;
+
+    i {
+      margin-right: 4px;
+    }
+
+    &.success {
+      background: var(--hulk-green);
+      color: var(--lizard-green);
+      border: 1px solid var(--lizard-green);
+    }
+
+    &.failure {
+      background: var(--gwen-pink);
+      color: var(--spider-red);
+      border: 1px solid var(--spider-red);
+    }
+  }
+
+  .required-info {
+    font-weight: normal;
+    margin-left: 8px;
+    opacity: 0.8;
+  }
+}

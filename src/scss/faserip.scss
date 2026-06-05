@@ -1,4 +1,4 @@
-// Import utilities
+// Import utilities (fonts must be first — other partials reference $komika-* vars)
 @import 'utils/fonts';
 @import 'utils/typography';
 @import 'utils/colors';
@@ -10,10 +10,15 @@
 @import 'global/grid';
 @import 'global/flex';
 
+// Chat (outside .faserip scope — chat cards rendered globally)
+@import 'components/chat';
+
 // Styles limited to faserip sheets
 .faserip {
   @import 'components/forms';
+  @import 'components/actor-sheet';
   @import 'components/resource';
   @import 'components/items';
   @import 'components/effects';
+  @import 'components/dialog';
 }

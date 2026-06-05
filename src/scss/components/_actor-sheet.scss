@@ -1,0 +1,537 @@
+// All actor character-sheet specific styles.
+
+/* ---- Sheet Header ---- */
+.sheet-header {
+  flex: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid var(--spider-red);
+
+  .profile-img {
+    flex: 0 0 80px;
+    height: 80px;
+    border: 3px solid var(--border-black);
+    box-shadow: 3px 3px;
+    margin-right: 10px;
+  }
+
+  .header-fields {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1.charname {
+    margin: 0 0 4px 0;
+    padding: 0;
+    border: none;
+    font-family: $komika-smallcaps;
+    font-size: var(--name-text-size);
+    font-weight: bold;
+    color: var(--spider-red);
+
+    input {
+      font-family: $komika-smallcaps;
+      font-size: var(--name-text-size);
+      font-weight: bold;
+      color: var(--spider-red);
+      height: auto;
+      border: none;
+      border-bottom: 3px solid var(--border-black);
+      background: transparent;
+      width: 100%;
+    }
+  }
+}
+
+/* ---- Character Info Grid ---- */
+.char-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 100px;
+  gap: 4px 12px;
+  font-size: 11px;
+
+  label {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-family: $komika-smallcaps;
+  }
+
+  input,
+  select {
+    border: none;
+    border-bottom: 1px solid var(--border-black);
+    background: transparent;
+    font-size: 11px;
+    padding: 1px 2px;
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 2px center;
+    background-size: 12px;
+    padding-right: 16px;
+  }
+
+  .rank-abbr {
+    margin-left: 4px;
+    font-size: 11px;
+  }
+}
+
+/* ---- Rank Reference Bar ---- */
+.rank-reference-bar {
+  display: flex;
+  flex: 0 0 auto;
+  border: 2px solid var(--border-black);
+  box-shadow: 2px 2px;
+  margin-bottom: 10px;
+  font-size: 10px;
+  background: var(--wasp-yellow);
+  height: 32px;
+  min-height: 32px;
+  max-height: 32px;
+
+  .rank-cell {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid var(--border-black);
+    padding: 2px 1px;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  .rank-name {
+    font-family: $komika-smallcaps;
+    font-weight: 700;
+    font-size: 9px;
+    display: block;
+  }
+
+  .rank-value {
+    font-size: 11px;
+    font-weight: 700;
+  }
+}
+
+/* ---- Abilities Section ---- */
+.abilities-section {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.abilities-table-container {
+  flex: 1;
+}
+
+.abilities-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid var(--border-black);
+  box-shadow: 3px 3px;
+  font-size: 12px;
+
+  th,
+  td {
+    border: 1px solid var(--border-black);
+    padding: 4px 6px;
+    text-align: center;
+  }
+
+  th {
+    @include panel-title;
+    font-size: 11px;
+    border: 1px solid var(--border-black);
+
+    &.col-green {
+      background: var(--lizard-green);
+      color: white;
+    }
+
+    &.col-yellow {
+      background: var(--faserip-yellow);
+      color: black;
+    }
+
+    &.col-red {
+      background: var(--spider-red);
+      color: white;
+    }
+  }
+
+  td.ability-name {
+    text-align: left;
+    font-family: $komika-smallcaps;
+    font-weight: 700;
+    font-size: 11px;
+    cursor: pointer;
+    width: 70px;
+
+    &:hover {
+      background: var(--wasp-yellow);
+    }
+  }
+
+  tr.resources-row td {
+    border-top: 3px solid var(--border-black);
+
+    &.ability-name {
+      cursor: default;
+    }
+  }
+
+  .value-cell {
+    width: 85px;
+  }
+
+  td.rank-display {
+    width: 30px;
+    font-family: $komika-smallcaps;
+    font-weight: 700;
+    font-size: 11px;
+  }
+
+  td.feat-green,
+  td.feat-yellow,
+  td.feat-red {
+    width: 50px;
+    font-family: $komika-smallcaps;
+    font-weight: 700;
+    font-size: 11px;
+  }
+
+  td.feat-green  { background: var(--hulk-green); }
+  td.feat-yellow { background: var(--wasp-yellow); }
+  td.feat-red    { background: var(--gwen-pink); }
+
+  // Override the table-cell input to a fixed width
+  input {
+    width: 36px;
+    text-align: center;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .value-adjust input {
+    width: 36px;
+  }
+}
+
+/* ---- Value Adjust (+/- buttons) ---- */
+.value-adjust {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+
+  input {
+    width: 40px;
+    height: 22px;
+    text-align: center;
+    border: 1px solid var(--border-black);
+    border-radius: 0;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 0 2px;
+    margin: 0;
+  }
+}
+
+.adjust-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 22px;
+  border: 1px solid var(--border-black);
+  background: #e0e0e0;
+  cursor: pointer;
+  font-size: 10px;
+  color: var(--border-black);
+  text-decoration: none;
+  flex-shrink: 0;
+
+  &:hover {
+    background: var(--wasp-yellow);
+  }
+
+  &.minus {
+    border-radius: 3px 0 0 3px;
+    border-right: none;
+  }
+
+  &.plus {
+    border-radius: 0 3px 3px 0;
+    border-left: none;
+  }
+}
+
+/* ---- Secondary Stats Panel (Health / Karma) ---- */
+.secondary-stats-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 140px;
+}
+
+.stat-box {
+  border: 3px solid var(--border-black);
+  box-shadow: 3px 3px;
+  padding: 6px;
+  text-align: center;
+
+  .stat-label {
+    font-family: $komika-smallcaps;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    display: block;
+  }
+
+  .stat-formula {
+    font-size: 9px;
+    color: var(--label-gray);
+    margin-bottom: 4px;
+    display: block;
+  }
+
+  .stat-value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+  }
+
+  input {
+    width: 50px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid var(--border-black);
+  }
+
+  .stat-max {
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  &.health-box {
+    background: var(--gwen-pink);
+  }
+
+  &.karma-box {
+    background: var(--cap-blue);
+  }
+}
+
+/* ---- Form Elements (actor sheet) ---- */
+.form-group {
+  margin-bottom: 6px;
+
+  label {
+    font-family: $komika-smallcaps;
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--border-black);
+    display: block;
+    margin-bottom: 2px;
+  }
+}
+
+select,
+input[type="text"],
+input[type="number"] {
+  font-size: 12px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 60px;
+  border: 1px solid var(--border-black);
+  padding: 4px;
+}
+
+/* ---- Biography / Editor ---- */
+.bio-fields {
+  margin-bottom: 10px;
+}
+
+.bio-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 6px;
+  align-items: flex-end;
+
+  .form-group {
+    margin-bottom: 0;
+
+    &.flex-grow {
+      flex: 1;
+    }
+  }
+
+  .identity-group input {
+    margin-left: 75px;
+  }
+
+  .secret-group label {
+    padding-right: 5px;
+  }
+
+  .form-group input[type="text"],
+  .form-group select {
+    width: 100%;
+  }
+
+  .form-group select {
+    background: transparent;
+  }
+}
+
+.editor {
+  border: 1px solid var(--border-black);
+}
+
+.tab.biography .editor .editor-content {
+  min-height: 260px;
+}
+
+/* ---- Rollable ---- */
+.rollable {
+  cursor: pointer;
+
+  &:hover {
+    text-shadow: 0 0 8px var(--spider-red);
+  }
+}
+
+/* ---- Effects Tab ---- */
+.effects .item {
+  display: flex;
+  align-items: center;
+}
+
+.effects .effect-source,
+.effects .effect-duration,
+.effects .effect-controls {
+  text-align: center;
+  font-size: 11px;
+  flex: 0 0 80px;
+}
+
+/* ---- Window header ---- */
+.window-header {
+  background: var(--spider-red);
+  border-bottom: 2px solid #5c0000;
+
+  .window-title {
+    color: #ffffff;
+    font-family: $komika-smallcaps;
+  }
+
+  .header-button,
+  .close {
+    color: #ffffff;
+
+    &:hover {
+      color: #ffcccc;
+    }
+  }
+}
+
+/* ---- Item sheet ---- */
+.field-value {
+  display: inline-block;
+  padding: 2px 6px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.item-name-display {
+  font-family: $komika-smallcaps;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 50px;
+  color: var(--spider-red);
+}
+
+.editor-content {
+  font-size: 12px;
+  padding: 8px;
+}
+
+&.item:not(.editable) .editor {
+  border: none;
+}
+
+.profile-img[src*="icons/svg/"] {
+  background-color: #333;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.compendium-directory .thumbnail[src*="systems/faserip/assets/images/icons/"] {
+  filter: invert(1);
+}
+
+/* ---- Weapon Tags ---- */
+.weapon-tags-section {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border-black);
+
+  > label {
+    display: block;
+    font-family: $komika-smallcaps;
+    font-weight: 700;
+    margin-bottom: 6px;
+    font-size: 11px;
+    text-transform: uppercase;
+  }
+}
+
+.weapon-tags-edit {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  .tag-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+  }
+}
+
+.weapon-tags-display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.weapon-tag {
+  display: inline-block;
+  padding: 3px 8px;
+  border: 1px solid var(--border-black);
+  border-radius: 3px;
+  background-color: var(--thing-orange);
+  font-family: $komika-smallcaps;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: help;
+}

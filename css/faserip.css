@@ -379,49 +379,111 @@ section {
   text-align: center;
 }
 
+.faserip-roll .roll-result-container {
+  margin-top: 12px;
+  text-align: center;
+}
+.faserip-roll .roll-result {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-family: "KomikaTextSmallCaps", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-width: 3px;
+  border-style: solid;
+  box-shadow: 3px 3px;
+}
+.faserip-roll .roll-result .result-separator {
+  opacity: 0.7;
+}
+.faserip-roll .roll-result .result-action {
+  font-size: 13px;
+}
+.faserip-roll .roll-result.feat-white {
+  background-color: #f0f0f0;
+  color: #666;
+  border-color: #999;
+}
+.faserip-roll .roll-result.feat-green {
+  background-color: var(--hulk-green);
+  color: black;
+  border-color: var(--lizard-green);
+}
+.faserip-roll .roll-result.feat-yellow {
+  background-color: var(--wasp-yellow);
+  color: black;
+  border-color: #ccac00;
+}
+.faserip-roll .roll-result.feat-red {
+  background-color: var(--gwen-pink);
+  color: var(--venom-black);
+  border-color: var(--spider-red);
+}
+.faserip-roll .roll-details {
+  margin-top: 8px;
+  font-size: 11px;
+  color: #666;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.faserip-roll .roll-details .detail-label {
+  font-weight: 600;
+  margin-right: 4px;
+}
+.faserip-roll .roll-success {
+  margin-top: 8px;
+  padding: 6px 12px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-family: "KomikaTextSmallCaps", sans-serif;
+  font-weight: 600;
+  display: inline-block;
+}
+.faserip-roll .roll-success i {
+  margin-right: 4px;
+}
+.faserip-roll .roll-success.success {
+  background: var(--hulk-green);
+  color: var(--lizard-green);
+  border: 1px solid var(--lizard-green);
+}
+.faserip-roll .roll-success.failure {
+  background: var(--gwen-pink);
+  color: var(--spider-red);
+  border: 1px solid var(--spider-red);
+}
+.faserip-roll .required-info {
+  font-weight: normal;
+  margin-left: 8px;
+  opacity: 0.8;
+}
+
 .faserip {
   /* Sheet tabs — 3-sided border style */
+  /* ---- Sheet Header ---- */
+  /* ---- Character Info Grid ---- */
+  /* ---- Rank Reference Bar ---- */
+  /* ---- Abilities Section ---- */
+  /* ---- Value Adjust (+/- buttons) ---- */
+  /* ---- Secondary Stats Panel (Health / Karma) ---- */
+  /* ---- Form Elements (actor sheet) ---- */
+  /* ---- Biography / Editor ---- */
+  /* ---- Rollable ---- */
+  /* ---- Effects Tab ---- */
+  /* ---- Window header ---- */
+  /* ---- Item sheet ---- */
+  /* ---- Weapon Tags ---- */
   /* Section header (top-level, outside list) */
   /* Items list */
 }
 .faserip .item-form {
   font-family: "KomikaText", sans-serif;
-}
-.faserip .sheet-header {
-  flex: 0 auto;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  margin-bottom: 10px;
-}
-.faserip .sheet-header .profile-img {
-  flex: 0 0 100px;
-  height: 100px;
-  margin-right: 10px;
-  border: 3px solid var(--border-black);
-  box-shadow: 3px 3px;
-}
-.faserip .sheet-header .header-fields {
-  flex: 1;
-}
-.faserip .sheet-header h1.charname {
-  height: 50px;
-  padding: 0;
-  margin: 5px 0;
-  border: none;
-}
-.faserip .sheet-header h1.charname input {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  font-family: "KomikaTextSmallCaps", sans-serif;
-  font-size: var(--name-text-size);
-  background: none;
-  border: none;
-  border-bottom: 3px solid var(--border-black);
-  color: var(--spider-red);
 }
 .faserip .sheet-tabs.tabs {
   flex: 0;
@@ -436,7 +498,7 @@ section {
   border-style: solid;
   border-color: var(--label-gray);
   color: var(--label-gray);
-  padding: 0 2px;
+  padding: 2px 4px;
   font-weight: normal;
   font-family: "KomikaTextSmallCaps", sans-serif;
   font-size: var(--header-text-size);
@@ -449,11 +511,13 @@ section {
   font-weight: bold;
 }
 .faserip .sheet-body {
-  overflow-y: auto;
+  flex: 1;
+  overflow: hidden;
   background-color: var(--wasp-yellow);
 }
 .faserip .sheet-body .tab {
   height: 100%;
+  overflow-y: auto;
 }
 .faserip .sheet-body .editor,
 .faserip .sheet-body .editor.prosemirror {
@@ -464,9 +528,402 @@ section {
   padding: 2px;
   gap: 0;
 }
+.faserip .tox .tox-editor-container {
+  background: #fff;
+}
+.faserip .tox .tox-edit-area {
+  padding: 0 8px;
+}
+.faserip .sheet-header {
+  flex: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid var(--spider-red);
+}
+.faserip .sheet-header .profile-img {
+  flex: 0 0 80px;
+  height: 80px;
+  border: 3px solid var(--border-black);
+  box-shadow: 3px 3px;
+  margin-right: 10px;
+}
+.faserip .sheet-header .header-fields {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.faserip .sheet-header h1.charname {
+  margin: 0 0 4px 0;
+  padding: 0;
+  border: none;
+  font-family: "KomikaTextSmallCaps", sans-serif;
+  font-size: var(--name-text-size);
+  font-weight: bold;
+  color: var(--spider-red);
+}
+.faserip .sheet-header h1.charname input {
+  font-family: "KomikaTextSmallCaps", sans-serif;
+  font-size: var(--name-text-size);
+  font-weight: bold;
+  color: var(--spider-red);
+  height: auto;
+  border: none;
+  border-bottom: 3px solid var(--border-black);
+  background: transparent;
+  width: 100%;
+}
+.faserip .char-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 100px;
+  gap: 4px 12px;
+  font-size: 11px;
+}
+.faserip .char-info-grid label {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-family: "KomikaTextSmallCaps", sans-serif;
+}
+.faserip .char-info-grid input,
+.faserip .char-info-grid select {
+  border: none;
+  border-bottom: 1px solid var(--border-black);
+  background: transparent;
+  font-size: 11px;
+  padding: 1px 2px;
+}
+.faserip .char-info-grid select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 2px center;
+  background-size: 12px;
+  padding-right: 16px;
+}
+.faserip .char-info-grid .rank-abbr {
+  margin-left: 4px;
+  font-size: 11px;
+}
+.faserip .rank-reference-bar {
+  display: flex;
+  flex: 0 0 auto;
+  border: 2px solid var(--border-black);
+  box-shadow: 2px 2px;
+  margin-bottom: 10px;
+  font-size: 10px;
+  background: var(--wasp-yellow);
+  height: 32px;
+  min-height: 32px;
+  max-height: 32px;
+}
+.faserip .rank-reference-bar .rank-cell {
+  flex: 1;
+  text-align: center;
+  border-right: 1px solid var(--border-black);
+  padding: 2px 1px;
+}
+.faserip .rank-reference-bar .rank-cell:last-child {
+  border-right: none;
+}
+.faserip .rank-reference-bar .rank-name {
+  font-family: "KomikaTextSmallCaps", sans-serif;
+  font-weight: 700;
+  font-size: 9px;
+  display: block;
+}
+.faserip .rank-reference-bar .rank-value {
+  font-size: 11px;
+  font-weight: 700;
+}
+.faserip .abilities-section {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.faserip .abilities-table-container {
+  flex: 1;
+}
+.faserip .abilities-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid var(--border-black);
+  box-shadow: 3px 3px;
+  font-size: 12px;
+}
+.faserip .abilities-table th,
+.faserip .abilities-table td {
+  border: 1px solid var(--border-black);
+  padding: 4px 6px;
+  text-align: center;
+}
+.faserip .abilities-table th {
+  flex: 0;
+  font-family: "KomikaTextSmallCaps", sans-serif;
+  font-size: var(--header-text-size);
+  line-height: var(--header-text-size);
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  border-bottom: 3px solid var(--border-black);
+  background: linear-gradient(180deg, var(--header-yellow) 0%, var(--header-gray) 100%);
+  font-size: 11px;
+  border: 1px solid var(--border-black);
+}
+.faserip .abilities-table th.col-green {
+  background: var(--lizard-green);
+  color: white;
+}
+.faserip .abilities-table th.col-yellow {
+  background: var(--faserip-yellow);
+  color: black;
+}
+.faserip .abilities-table th.col-red {
+  background: var(--spider-red);
+  color: white;
+}
+.faserip .abilities-table td.ability-name {
+  text-align: left;
+  font-family: "KomikaTextSmallCaps", sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  cursor: pointer;
+  width: 70px;
+}
+.faserip .abilities-table td.ability-name:hover {
+  background: var(--wasp-yellow);
+}
+.faserip .abilities-table tr.resources-row td {
+  border-top: 3px solid var(--border-black);
+}
+.faserip .abilities-table tr.resources-row td.ability-name {
+  cursor: default;
+}
+.faserip .abilities-table .value-cell {
+  width: 85px;
+}
+.faserip .abilities-table td.rank-display {
+  width: 30px;
+  font-family: "KomikaTextSmallCaps", sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+}
+.faserip .abilities-table td.feat-green,
+.faserip .abilities-table td.feat-yellow,
+.faserip .abilities-table td.feat-red {
+  width: 50px;
+  font-family: "KomikaTextSmallCaps", sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+}
+.faserip .abilities-table td.feat-green {
+  background: var(--hulk-green);
+}
+.faserip .abilities-table td.feat-yellow {
+  background: var(--wasp-yellow);
+}
+.faserip .abilities-table td.feat-red {
+  background: var(--gwen-pink);
+}
+.faserip .abilities-table input {
+  width: 36px;
+  text-align: center;
+  border: 1px solid #ccc;
+  font-size: 12px;
+  font-weight: 700;
+}
+.faserip .abilities-table .value-adjust input {
+  width: 36px;
+}
+.faserip .value-adjust {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+}
+.faserip .value-adjust input {
+  width: 40px;
+  height: 22px;
+  text-align: center;
+  border: 1px solid var(--border-black);
+  border-radius: 0;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 0 2px;
+  margin: 0;
+}
+.faserip .adjust-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 22px;
+  border: 1px solid var(--border-black);
+  background: #e0e0e0;
+  cursor: pointer;
+  font-size: 10px;
+  color: var(--border-black);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.faserip .adjust-btn:hover {
+  background: var(--wasp-yellow);
+}
+.faserip .adjust-btn.minus {
+  border-radius: 3px 0 0 3px;
+  border-right: none;
+}
+.faserip .adjust-btn.plus {
+  border-radius: 0 3px 3px 0;
+  border-left: none;
+}
+.faserip .secondary-stats-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 140px;
+}
+.faserip .stat-box {
+  border: 3px solid var(--border-black);
+  box-shadow: 3px 3px;
+  padding: 6px;
+  text-align: center;
+}
+.faserip .stat-box .stat-label {
+  font-family: "KomikaTextSmallCaps", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  display: block;
+}
+.faserip .stat-box .stat-formula {
+  font-size: 9px;
+  color: var(--label-gray);
+  margin-bottom: 4px;
+  display: block;
+}
+.faserip .stat-box .stat-value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.faserip .stat-box input {
+  width: 50px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  border: 1px solid var(--border-black);
+}
+.faserip .stat-box .stat-max {
+  font-size: 14px;
+  font-weight: 700;
+}
+.faserip .stat-box.health-box {
+  background: var(--gwen-pink);
+}
+.faserip .stat-box.karma-box {
+  background: var(--cap-blue);
+}
+.faserip .form-group {
+  margin-bottom: 6px;
+}
+.faserip .form-group label {
+  font-family: "KomikaTextSmallCaps", sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--border-black);
+  display: block;
+  margin-bottom: 2px;
+}
+.faserip select,
+.faserip input[type=text],
+.faserip input[type=number] {
+  font-size: 12px;
+}
+.faserip textarea {
+  width: 100%;
+  min-height: 60px;
+  border: 1px solid var(--border-black);
+  padding: 4px;
+}
+.faserip .bio-fields {
+  margin-bottom: 10px;
+}
+.faserip .bio-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 6px;
+  align-items: flex-end;
+}
+.faserip .bio-row .form-group {
+  margin-bottom: 0;
+}
+.faserip .bio-row .form-group.flex-grow {
+  flex: 1;
+}
+.faserip .bio-row .identity-group input {
+  margin-left: 75px;
+}
+.faserip .bio-row .secret-group label {
+  padding-right: 5px;
+}
+.faserip .bio-row .form-group input[type=text],
+.faserip .bio-row .form-group select {
+  width: 100%;
+}
+.faserip .bio-row .form-group select {
+  background: transparent;
+}
+.faserip .editor {
+  border: 1px solid var(--border-black);
+}
+.faserip .tab.biography .editor .editor-content {
+  min-height: 260px;
+}
+.faserip .rollable {
+  cursor: pointer;
+}
+.faserip .rollable:hover {
+  text-shadow: 0 0 8px var(--spider-red);
+}
+.faserip .effects .item {
+  display: flex;
+  align-items: center;
+}
+.faserip .effects .effect-source,
+.faserip .effects .effect-duration,
+.faserip .effects .effect-controls {
+  text-align: center;
+  font-size: 11px;
+  flex: 0 0 80px;
+}
+.faserip .window-header {
+  background: var(--spider-red);
+  border-bottom: 2px solid #5c0000;
+}
+.faserip .window-header .window-title {
+  color: #ffffff;
+  font-family: "KomikaTextSmallCaps", sans-serif;
+}
+.faserip .window-header .header-button,
+.faserip .window-header .close {
+  color: #ffffff;
+}
+.faserip .window-header .header-button:hover,
+.faserip .window-header .close:hover {
+  color: #ffcccc;
+}
 .faserip .field-value {
   display: inline-block;
   padding: 2px 6px;
+  font-size: 11px;
   font-weight: 500;
 }
 .faserip .item-name-display {
@@ -474,12 +931,63 @@ section {
   font-size: 1.5em;
   font-weight: bold;
   line-height: 50px;
+  color: var(--spider-red);
 }
-.faserip .tox .tox-editor-container {
-  background: #fff;
+.faserip .editor-content {
+  font-size: 12px;
+  padding: 8px;
 }
-.faserip .tox .tox-edit-area {
-  padding: 0 8px;
+.faserip.item:not(.editable) .editor {
+  border: none;
+}
+.faserip .profile-img[src*="icons/svg/"] {
+  background-color: #333;
+  padding: 4px;
+  border-radius: 4px;
+}
+.faserip .compendium-directory .thumbnail[src*="systems/faserip/assets/images/icons/"] {
+  filter: invert(1);
+}
+.faserip .weapon-tags-section {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border-black);
+}
+.faserip .weapon-tags-section > label {
+  display: block;
+  font-family: "KomikaTextSmallCaps", sans-serif;
+  font-weight: 700;
+  margin-bottom: 6px;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+.faserip .weapon-tags-edit {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.faserip .weapon-tags-edit .tag-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+}
+.faserip .weapon-tags-display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.faserip .weapon-tag {
+  display: inline-block;
+  padding: 3px 8px;
+  border: 1px solid var(--border-black);
+  border-radius: 3px;
+  background-color: var(--thing-orange);
+  font-family: "KomikaTextSmallCaps", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: help;
 }
 .faserip .resource-label {
   font-weight: bold;
@@ -654,4 +1162,144 @@ section {
 }
 .faserip .effects .item .effect-controls {
   border: none;
+}
+.faserip .feat-dialog.window-content {
+  padding: 10px;
+  background: var(--wasp-yellow);
+}
+.faserip .feat-roll-form .form-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.faserip .feat-roll-form .form-group label {
+  font-family: "KomikaTextSmallCaps", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #333;
+  flex: 0 0 auto;
+}
+.faserip .feat-roll-form .form-group select {
+  padding: 6px 8px;
+  border: 1px solid #999;
+  border-radius: 3px;
+  font-size: 13px;
+  background: white;
+  flex: 0 0 180px;
+}
+.faserip .feat-roll-form .ability-display .ability-info {
+  font-family: "KomikaTextSmallCaps", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--spider-red);
+  text-align: right;
+  flex: 0 0 180px;
+}
+.faserip .feat-roll-form .preview {
+  display: block;
+  background: var(--wasp-yellow);
+  padding: 6px 10px 4px 10px;
+  border: 3px solid var(--border-black);
+  box-shadow: 3px 3px;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+.faserip .feat-roll-form .preview-row {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+.faserip .feat-roll-form .preview-row:last-child {
+  margin-bottom: 0;
+}
+.faserip .feat-roll-form .preview-row label {
+  font-family: "KomikaTextSmallCaps", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 0;
+  text-align: left;
+}
+.faserip .feat-roll-form .preview-row .effective-rank,
+.faserip .feat-roll-form .preview-row .required-color {
+  text-align: right;
+}
+.faserip .feat-roll-form .effective-rank {
+  font-family: "KomikaTextSmallCaps", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 2px 10px;
+  background: #e0e0e0;
+  border-radius: 3px;
+}
+.faserip .feat-roll-form .required-color {
+  font-family: "KomikaTextSmallCaps", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+.faserip .feat-roll-form .required-color.feat-green {
+  background: var(--hulk-green);
+  color: var(--lizard-green);
+}
+.faserip .feat-roll-form .required-color.feat-yellow {
+  background: var(--wasp-yellow);
+  color: black;
+  border: 1px solid #ccac00;
+}
+.faserip .feat-roll-form .required-color.feat-red {
+  background: var(--gwen-pink);
+  color: var(--spider-red);
+}
+.faserip .feat-roll-form .required-color.feat-impossible {
+  background: var(--venom-black);
+  color: white;
+}
+.faserip .feat-roll-form .shift-warning {
+  margin-top: 8px;
+  padding: 4px 8px;
+  background: var(--wasp-yellow);
+  color: #856404;
+  border: 1px solid #ffc107;
+  border-radius: 3px;
+  font-size: 11px;
+  text-align: center;
+}
+.faserip .feat-roll-form .form-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+.faserip .feat-roll-form button {
+  padding: 8px 16px;
+  font-family: "KomikaTextSmallCaps", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 13px;
+}
+.faserip .feat-roll-form .roll-feat {
+  background: var(--spider-red);
+  color: white;
+  border: none;
+}
+.faserip .feat-roll-form .roll-feat:hover {
+  background: var(--faserip-red-light);
+}
+.faserip .feat-roll-form .cancel {
+  background: #e0e0e0;
+  color: #333;
+  border: 1px solid #999;
+}
+.faserip .feat-roll-form .cancel:hover {
+  background: #d0d0d0;
 }
