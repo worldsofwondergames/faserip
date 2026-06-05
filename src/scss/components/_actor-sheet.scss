@@ -126,21 +126,22 @@
 
 /* ---- Abilities Section ---- */
 .abilities-section {
-  display: flex;
-  flex: 0 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
   align-items: stretch;
   gap: 10px;
   margin-bottom: 10px;
+  flex: 0 0 auto;
 }
 
 .abilities-table-container {
-  flex: 1;
   display: flex;
   flex-direction: column;
 }
 
 .abilities-table {
   flex: 1;
+  height: 100%;
   width: 100%;
   border-collapse: collapse;
   border: 3px solid var(--border-black);
