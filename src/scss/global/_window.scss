@@ -48,8 +48,47 @@ section {
   scrollbar-width: thin;
 }
 
-.window-app {
+// Scope font to faserip sheets only — don't affect other Foundry windows.
+.faserip {
   font-family: $komika-base;
+
+  input,
+  select,
+  textarea,
+  button {
+    font-family: $komika-base;
+  }
+
+  input {
+    text-align: center;
+  }
+
+  input,
+  button {
+    &:focus {
+      outline-color: var(--spider-red);
+    }
+  }
+
+  select,
+  input[type="text"],
+  input[type="number"] {
+    color: black;
+    border: none;
+    background: none;
+
+    &:hover {
+      color: var(--spider-red);
+    }
+  }
+
+  img[data-edit="img"] {
+    cursor: pointer;
+    border: none;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 .faserip.sheet .window-content {
@@ -58,6 +97,12 @@ section {
     radial-gradient(circle, rgba(255, 137, 180, 0.1) 0%, #ffebf2 100%),
     url(/ui/parchment.jpg) repeat;
   padding: 0.75rem;
+  position: relative;
+}
+
+// The <form> inside .window-content is the positioning context for the overlay.
+.faserip.sheet form {
+  position: relative;
 }
 
 .rollable {

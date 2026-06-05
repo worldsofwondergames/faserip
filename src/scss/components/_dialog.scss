@@ -1,17 +1,28 @@
-// Feat roll dialog and shared dialog styles.
+// Feat roll dialog — the app element gets both .faserip and .feat-dialog as sibling classes.
 
-.feat-dialog.window-content {
-  padding: 10px;
-  background: var(--wasp-yellow);
+.faserip.feat-dialog {
+  .window-content {
+    padding: 10px;
+    background:
+      radial-gradient(circle, rgba(255, 137, 180, 0.1) 0%, #ffebf2 100%),
+      url(/ui/parchment.jpg) repeat;
+  }
 }
 
 .feat-roll-form {
+  font-family: $komika-base;
+
   .form-group {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 10px;
+    padding: 0 8px;
+
+    &:nth-child(odd) {
+      background-color: var(--thing-orange);
+    }
 
     label {
       font-family: $komika-smallcaps;
@@ -26,6 +37,7 @@
       padding: 6px 8px;
       border: 1px solid #999;
       border-radius: 3px;
+      font-family: $komika-base;
       font-size: 13px;
       background: white;
       flex: 0 0 180px;
@@ -58,6 +70,11 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 4px;
+    padding: 2px 8px;
+
+    &:nth-child(odd) {
+      background-color: var(--thing-orange);
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -140,14 +157,16 @@
     font-family: $komika-smallcaps;
     font-weight: 700;
     cursor: pointer;
-    border-radius: 3px;
     font-size: 13px;
+
+    border: 3px solid var(--border-black);
+    border-radius: 1px;
+    box-shadow: 3px 3px;
   }
 
   .roll-feat {
     background: var(--spider-red);
     color: white;
-    border: none;
 
     &:hover {
       background: var(--faserip-red-light);
@@ -157,7 +176,6 @@
   .cancel {
     background: #e0e0e0;
     color: #333;
-    border: 1px solid #999;
 
     &:hover {
       background: #d0d0d0;

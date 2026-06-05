@@ -104,14 +104,51 @@ section {
   scrollbar-width: thin;
 }
 
-.window-app {
+.faserip {
   font-family: "KomikaText", sans-serif;
+}
+.faserip input,
+.faserip select,
+.faserip textarea,
+.faserip button {
+  font-family: "KomikaText", sans-serif;
+}
+.faserip input {
+  text-align: center;
+}
+.faserip input:focus,
+.faserip button:focus {
+  outline-color: var(--spider-red);
+}
+.faserip select,
+.faserip input[type=text],
+.faserip input[type=number] {
+  color: black;
+  border: none;
+  background: none;
+}
+.faserip select:hover,
+.faserip input[type=text]:hover,
+.faserip input[type=number]:hover {
+  color: var(--spider-red);
+}
+.faserip img[data-edit=img] {
+  cursor: pointer;
+  border: none;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .faserip.sheet .window-content {
   color: black;
   background: radial-gradient(circle, rgba(255, 137, 180, 0.1) 0%, #ffebf2 100%), url(/ui/parchment.jpg) repeat;
   padding: 0.75rem;
+  position: relative;
+}
+
+.faserip.sheet form {
+  position: relative;
 }
 
 .rollable:hover, .rollable:focus {
@@ -1177,18 +1214,27 @@ section {
 .faserip .effects .item .effect-controls {
   border: none;
 }
-.faserip .feat-dialog.window-content {
+
+.faserip.feat-dialog .window-content {
   padding: 10px;
-  background: var(--wasp-yellow);
+  background: radial-gradient(circle, rgba(255, 137, 180, 0.1) 0%, #ffebf2 100%), url(/ui/parchment.jpg) repeat;
 }
-.faserip .feat-roll-form .form-group {
+
+.feat-roll-form {
+  font-family: "KomikaText", sans-serif;
+}
+.feat-roll-form .form-group {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
+  padding: 0 8px;
 }
-.faserip .feat-roll-form .form-group label {
+.feat-roll-form .form-group:nth-child(odd) {
+  background-color: var(--thing-orange);
+}
+.feat-roll-form .form-group label {
   font-family: "KomikaTextSmallCaps", sans-serif;
   font-weight: 700;
   font-size: 12px;
@@ -1196,15 +1242,16 @@ section {
   color: #333;
   flex: 0 0 auto;
 }
-.faserip .feat-roll-form .form-group select {
+.feat-roll-form .form-group select {
   padding: 6px 8px;
   border: 1px solid #999;
   border-radius: 3px;
+  font-family: "KomikaText", sans-serif;
   font-size: 13px;
   background: white;
   flex: 0 0 180px;
 }
-.faserip .feat-roll-form .ability-display .ability-info {
+.feat-roll-form .ability-display .ability-info {
   font-family: "KomikaTextSmallCaps", sans-serif;
   font-weight: 700;
   font-size: 14px;
@@ -1212,7 +1259,7 @@ section {
   text-align: right;
   flex: 0 0 180px;
 }
-.faserip .feat-roll-form .preview {
+.feat-roll-form .preview {
   display: block;
   background: var(--wasp-yellow);
   padding: 6px 10px 4px 10px;
@@ -1221,18 +1268,22 @@ section {
   border-radius: 2px;
   margin-bottom: 10px;
 }
-.faserip .feat-roll-form .preview-row {
+.feat-roll-form .preview-row {
   display: flex;
   width: 100%;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 4px;
+  padding: 2px 8px;
 }
-.faserip .feat-roll-form .preview-row:last-child {
+.feat-roll-form .preview-row:nth-child(odd) {
+  background-color: var(--thing-orange);
+}
+.feat-roll-form .preview-row:last-child {
   margin-bottom: 0;
 }
-.faserip .feat-roll-form .preview-row label {
+.feat-roll-form .preview-row label {
   font-family: "KomikaTextSmallCaps", sans-serif;
   font-size: 12px;
   font-weight: 700;
@@ -1241,11 +1292,11 @@ section {
   margin-bottom: 0;
   text-align: left;
 }
-.faserip .feat-roll-form .preview-row .effective-rank,
-.faserip .feat-roll-form .preview-row .required-color {
+.feat-roll-form .preview-row .effective-rank,
+.feat-roll-form .preview-row .required-color {
   text-align: right;
 }
-.faserip .feat-roll-form .effective-rank {
+.feat-roll-form .effective-rank {
   font-family: "KomikaTextSmallCaps", sans-serif;
   font-weight: 700;
   font-size: 14px;
@@ -1253,7 +1304,7 @@ section {
   background: #e0e0e0;
   border-radius: 3px;
 }
-.faserip .feat-roll-form .required-color {
+.feat-roll-form .required-color {
   font-family: "KomikaTextSmallCaps", sans-serif;
   font-weight: 700;
   font-size: 12px;
@@ -1261,24 +1312,24 @@ section {
   border-radius: 3px;
   text-transform: uppercase;
 }
-.faserip .feat-roll-form .required-color.feat-green {
+.feat-roll-form .required-color.feat-green {
   background: var(--hulk-green);
   color: var(--lizard-green);
 }
-.faserip .feat-roll-form .required-color.feat-yellow {
+.feat-roll-form .required-color.feat-yellow {
   background: var(--wasp-yellow);
   color: black;
   border: 1px solid #ccac00;
 }
-.faserip .feat-roll-form .required-color.feat-red {
+.feat-roll-form .required-color.feat-red {
   background: var(--gwen-pink);
   color: var(--spider-red);
 }
-.faserip .feat-roll-form .required-color.feat-impossible {
+.feat-roll-form .required-color.feat-impossible {
   background: var(--venom-black);
   color: white;
 }
-.faserip .feat-roll-form .shift-warning {
+.feat-roll-form .shift-warning {
   margin-top: 8px;
   padding: 4px 8px;
   background: var(--wasp-yellow);
@@ -1288,32 +1339,32 @@ section {
   font-size: 11px;
   text-align: center;
 }
-.faserip .feat-roll-form .form-buttons {
+.feat-roll-form .form-buttons {
   display: flex;
   gap: 8px;
   justify-content: flex-end;
 }
-.faserip .feat-roll-form button {
+.feat-roll-form button {
   padding: 8px 16px;
   font-family: "KomikaTextSmallCaps", sans-serif;
   font-weight: 700;
   cursor: pointer;
-  border-radius: 3px;
   font-size: 13px;
+  border: 3px solid var(--border-black);
+  border-radius: 1px;
+  box-shadow: 3px 3px;
 }
-.faserip .feat-roll-form .roll-feat {
+.feat-roll-form .roll-feat {
   background: var(--spider-red);
   color: white;
-  border: none;
 }
-.faserip .feat-roll-form .roll-feat:hover {
+.feat-roll-form .roll-feat:hover {
   background: var(--faserip-red-light);
 }
-.faserip .feat-roll-form .cancel {
+.feat-roll-form .cancel {
   background: #e0e0e0;
   color: #333;
-  border: 1px solid #999;
 }
-.faserip .feat-roll-form .cancel:hover {
+.feat-roll-form .cancel:hover {
   background: #d0d0d0;
 }

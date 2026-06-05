@@ -20,5 +20,7 @@
   @import 'components/resource';
   @import 'components/items';
   @import 'components/effects';
-  @import 'components/dialog';
 }
+
+// Dialog — scoped to .faserip.feat-dialog (sibling classes, not descendant)
+@import 'components/dialog';
