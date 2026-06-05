@@ -96,6 +96,7 @@
       object-fit: cover;
       border: none;
       display: block;
+      filter: invert(1);
     }
 
     .overlay {

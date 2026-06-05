@@ -1135,6 +1135,7 @@ section {
   object-fit: cover;
   border: none;
   display: block;
+  filter: invert(1);
 }
 .faserip .items-list .item-image .overlay {
   position: absolute;
