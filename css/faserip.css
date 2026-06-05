@@ -1,61 +1,61 @@
 @charset "UTF-8";
 @font-face {
   font-family: "KomikaText";
-  src: url("../../assets/fonts/komika-text/KOMTXT__.ttf") format("truetype");
+  src: url("../assets/fonts/komika-text/KOMTXT__.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "KomikaText";
-  src: url("../../assets/fonts/komika-text/KOMTXTB_.ttf") format("truetype");
+  src: url("../assets/fonts/komika-text/KOMTXTB_.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "KomikaText";
-  src: url("../../assets/fonts/komika-text/KOMTXTI_.ttf") format("truetype");
+  src: url("../assets/fonts/komika-text/KOMTXTI_.ttf") format("truetype");
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
   font-family: "KomikaText";
-  src: url("../../assets/fonts/komika-text/KOMTXTBI.ttf") format("truetype");
+  src: url("../assets/fonts/komika-text/KOMTXTBI.ttf") format("truetype");
   font-weight: bold;
   font-style: italic;
 }
 @font-face {
   font-family: "KomikaTextSmallCaps";
-  src: url("../../assets/fonts/komika-text/KOMTXTK_.ttf") format("truetype");
+  src: url("../assets/fonts/komika-text/KOMTXTK_.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "KomikaTextSmallCaps";
-  src: url("../../assets/fonts/komika-text/KOMTXTKB.ttf") format("truetype");
+  src: url("../assets/fonts/komika-text/KOMTXTKB.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "KomikaTextSmallCaps";
-  src: url("../../assets/fonts/komika-text/KOMTXTKI.ttf") format("truetype");
+  src: url("../assets/fonts/komika-text/KOMTXTKI.ttf") format("truetype");
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
   font-family: "KomikaTextSmallCaps";
-  src: url("../../assets/fonts/komika-text/KOMTXKBI.ttf") format("truetype");
+  src: url("../assets/fonts/komika-text/KOMTXKBI.ttf") format("truetype");
   font-weight: bold;
   font-style: italic;
 }
 @font-face {
   font-family: "KomikaTextTight";
-  src: url("../../assets/fonts/komika-text/KOMTXTT_.ttf") format("truetype");
+  src: url("../assets/fonts/komika-text/KOMTXTT_.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "KomikaTextTight";
-  src: url("../../assets/fonts/komika-text/KOMTXTTI.ttf") format("truetype");
+  src: url("../assets/fonts/komika-text/KOMTXTTI.ttf") format("truetype");
   font-weight: normal;
   font-style: italic;
 }
@@ -161,7 +161,7 @@ section {
   opacity: 0.08;
   background-repeat: repeat;
   background-size: 30rem;
-  background-image: url("../../assets/sheets/comic-book-overlay.svg");
+  background-image: url("../assets/sheets/comic-book-overlay.svg");
 }
 
 /* ---------------- Info pill utility ---------------- */
@@ -479,8 +479,8 @@ section {
   /* ---- Window header ---- */
   /* ---- Item sheet ---- */
   /* ---- Weapon Tags ---- */
-  /* Section header (top-level, outside list) */
-  /* Items list */
+  /* ---- Section header (items-header, outside and inside lists) ---- */
+  /* ---- Items list ---- */
 }
 .faserip .item-form {
   font-family: "KomikaText", sans-serif;
@@ -1010,30 +1010,42 @@ section {
   }
 }
 .faserip .items-header {
-  height: 28px;
-  margin: 2px 0;
-  padding: 0 4px;
+  display: flex;
+  flex: 0 0 auto;
   align-items: center;
+  height: 28px;
+  padding: 0 6px;
   background: var(--venom-black);
   color: white;
   font-family: "KomikaTextSmallCaps", sans-serif;
   font-weight: bold;
   font-style: italic;
-  border-bottom: 3px solid var(--border-black);
+  border: 3px solid var(--border-black);
+  border-bottom: none;
 }
-.faserip .items-header > * {
-  font-size: 14px;
+.faserip .items-header h3 {
+  flex: 1;
+  margin: 0;
+  font-family: "KomikaTextSmallCaps", sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  font-style: italic;
+  color: white;
   text-align: center;
 }
-.faserip .items-header .item-name {
-  font-weight: bold;
-  padding-left: 5px;
-  text-align: left;
+.faserip .items-header .item-controls {
+  flex: 0;
   display: flex;
-  color: white;
+  align-items: center;
 }
 .faserip .items-header .item-controls a {
   color: white;
+  font-size: 11px;
+  padding: 0 4px;
+  white-space: nowrap;
+}
+.faserip .items-header .item-controls a:hover {
+  color: var(--wasp-yellow);
 }
 .faserip .items-list {
   list-style: none;
@@ -1041,52 +1053,23 @@ section {
   padding: 0;
   overflow-y: auto;
   scrollbar-width: thin;
-  color: #444;
   border: 3px solid var(--border-black);
-  border-top: none;
   box-shadow: 3px 3px;
-  /* Nested section header */
-}
-.faserip .items-list .item-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.faserip .items-list .item-name {
-  flex: 2;
-  margin: 0;
-  overflow: hidden;
-  font-size: 13px;
-  font-family: "KomikaTextSmallCaps", sans-serif;
-  text-align: left;
-  align-items: center;
-  display: flex;
-}
-.faserip .items-list .item-name h3, .faserip .items-list .item-name h4 {
-  margin: 0;
-  white-space: nowrap;
-  overflow-x: hidden;
-}
-.faserip .items-list .item-controls {
-  display: flex;
-  flex: 0 0 100px;
-  justify-content: flex-end;
-}
-.faserip .items-list .item-controls a {
-  font-size: 12px;
-  text-align: center;
-  margin: 0 6px;
-}
-.faserip .items-list .item-controls .rollable:hover {
-  animation: rattle 0.4s infinite ease-in-out;
-}
-.faserip .items-list .item-controls .item-delete {
-  color: var(--spider-red);
+  /* Each row is a fixed-height flex row */
+  /* Item image — constrained icon on the left */
+  /* Item name (h4 element in the template) */
+  /* Rank / category / type pill */
+  /* Edit / delete icons */
 }
 .faserip .items-list .item {
+  display: flex;
   align-items: center;
-  padding: 0 2px;
+  height: 36px;
+  min-height: 36px;
+  max-height: 36px;
+  padding: 0 6px;
   border-bottom: 1px solid #c9c7b8;
+  overflow: hidden;
 }
 .faserip .items-list .item:last-child {
   border-bottom: none;
@@ -1094,59 +1077,90 @@ section {
 .faserip .items-list .item:nth-child(even) {
   background-color: var(--thing-orange);
 }
-.faserip .items-list .item .item-name {
-  color: #191813;
-}
-.faserip .items-list .item .item-name .item-image {
-  flex: 0 0 30px;
-  height: 30px;
-  background-size: 30px;
-  border: none;
-  margin-right: 5px;
+.faserip .items-list .item-image {
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  margin-right: 6px;
   position: relative;
 }
-.faserip .items-list .item .item-name .item-image img {
+.faserip .items-list .item-image img {
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
   border: none;
+  display: block;
 }
-.faserip .items-list .item .item-name .item-image .overlay {
+.faserip .items-list .item-image .overlay {
   position: absolute;
-  left: 0.25rem;
-  top: 0.25rem;
-  font-size: 1.25rem;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
   color: white;
   opacity: 0;
-  transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
-.faserip .items-list .item .item-name .item-image:hover .overlay {
-  opacity: 0.75;
+.faserip .items-list .item-image:hover .overlay {
+  opacity: 0.8;
+}
+.faserip .items-list .item-name {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "KomikaTextSmallCaps", sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: #191813;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  /* When item-name wraps h3/h4 tags */
+}
+.faserip .items-list .item-name:hover {
+  color: var(--spider-red);
+}
+.faserip .items-list .item-name h3, .faserip .items-list .item-name h4 {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.faserip .items-list .item-rank,
+.faserip .items-list .item-category,
+.faserip .items-list .item-type {
+  flex: 0 0 90px;
+  text-align: center;
+  font-family: "KomikaTextSmallCaps", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #555;
+}
+.faserip .items-list .item-controls {
+  flex: 0 0 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+}
+.faserip .items-list .item-controls a {
+  font-size: 12px;
+  color: #666;
+}
+.faserip .items-list .item-controls a:hover {
+  color: var(--spider-red);
+  animation: rattle 0.4s infinite ease-in-out;
+}
+.faserip .items-list .item-controls .item-delete {
+  color: var(--spider-red);
 }
 .faserip .items-list .item-prop {
   text-align: center;
   border-left: 1px solid #c9c7b8;
   border-right: 1px solid #c9c7b8;
   font-size: 12px;
-}
-.faserip .items-list .items-header {
-  height: 28px;
-  margin: 2px 0;
-  padding: 0 4px;
-  align-items: center;
-  background: var(--venom-black);
-  color: white;
-  border: none;
-  border-bottom: 2px solid var(--border-black);
-  font-family: "KomikaTextSmallCaps", sans-serif;
-  font-weight: bold;
-  font-style: italic;
-}
-.faserip .items-list .items-header > * {
-  font-size: 12px;
-  text-align: center;
-}
-.faserip .items-list .items-header .item-name {
-  padding-left: 5px;
-  text-align: left;
-  color: white;
 }
 .faserip .item-formula {
   flex: 0 0 200px;
