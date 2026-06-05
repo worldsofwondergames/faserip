@@ -416,71 +416,117 @@ section {
   text-align: center;
 }
 
+.faserip-roll {
+  font-family: "KomikaText", sans-serif;
+  position: relative;
+  /* ---- FoundryVTT core dice roll output ---- */
+  /* ---- Result container ---- */
+  /* ---- Details row ---- */
+  /* ---- Success / failure badge ---- */
+}
+.faserip-roll .dice-roll .dice-result {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px 0;
+}
+.faserip-roll .dice-roll .dice-formula {
+  font-family: "KomikaText", sans-serif;
+  font-size: 12px;
+  text-align: center;
+  background: var(--wasp-yellow);
+  border: 2px solid var(--border-black);
+  box-shadow: 2px 2px;
+  padding: 2px 8px;
+  border-radius: 1px;
+}
+.faserip-roll .dice-roll .dice-tooltip {
+  display: none;
+}
+.faserip-roll .dice-roll h4.dice-total {
+  font-family: "KomikaTextSmallCaps", sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  background: var(--background-white);
+  border: 3px solid var(--border-black);
+  box-shadow: 3px 3px;
+  padding: 4px 12px;
+  border-radius: 1px;
+  line-height: 1.2;
+}
 .faserip-roll .roll-result-container {
-  margin-top: 12px;
+  margin-top: 8px;
   text-align: center;
 }
 .faserip-roll .roll-result {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   padding: 8px 16px;
-  border-radius: 4px;
+  border-radius: 1px;
   font-family: "KomikaTextSmallCaps", sans-serif;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
   text-transform: uppercase;
   border-width: 3px;
   border-style: solid;
   box-shadow: 3px 3px;
+  width: 100%;
 }
 .faserip-roll .roll-result .result-separator {
   opacity: 0.7;
 }
 .faserip-roll .roll-result .result-action {
-  font-size: 13px;
+  font-size: 14px;
 }
 .faserip-roll .roll-result.feat-white {
   background-color: #f0f0f0;
-  color: #666;
+  color: #555;
   border-color: #999;
 }
 .faserip-roll .roll-result.feat-green {
   background-color: var(--hulk-green);
-  color: black;
+  color: var(--lizard-green);
   border-color: var(--lizard-green);
 }
 .faserip-roll .roll-result.feat-yellow {
   background-color: var(--wasp-yellow);
-  color: black;
+  color: #7a6200;
   border-color: #ccac00;
 }
 .faserip-roll .roll-result.feat-red {
   background-color: var(--gwen-pink);
-  color: var(--venom-black);
+  color: var(--spider-red);
   border-color: var(--spider-red);
 }
 .faserip-roll .roll-details {
-  margin-top: 8px;
-  font-size: 11px;
-  color: #666;
+  margin-top: 6px;
+  font-family: "KomikaText", sans-serif;
+  font-size: 12px;
+  color: #555;
   display: flex;
   justify-content: center;
   gap: 16px;
 }
 .faserip-roll .roll-details .detail-label {
-  font-weight: 600;
+  font-weight: bold;
   margin-right: 4px;
 }
 .faserip-roll .roll-success {
-  margin-top: 8px;
-  padding: 6px 12px;
-  border-radius: 3px;
-  font-size: 12px;
+  margin-top: 6px;
+  padding: 4px 12px;
+  border-radius: 1px;
   font-family: "KomikaTextSmallCaps", sans-serif;
-  font-weight: 600;
-  display: inline-block;
+  font-size: 13px;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  border-width: 2px;
+  border-style: solid;
+  box-shadow: 2px 2px;
 }
 .faserip-roll .roll-success i {
   margin-right: 4px;
@@ -488,15 +534,16 @@ section {
 .faserip-roll .roll-success.success {
   background: var(--hulk-green);
   color: var(--lizard-green);
-  border: 1px solid var(--lizard-green);
+  border-color: var(--lizard-green);
 }
 .faserip-roll .roll-success.failure {
   background: var(--gwen-pink);
   color: var(--spider-red);
-  border: 1px solid var(--spider-red);
+  border-color: var(--spider-red);
 }
 .faserip-roll .required-info {
   font-weight: normal;
+  font-size: 11px;
   margin-left: 8px;
   opacity: 0.8;
 }
