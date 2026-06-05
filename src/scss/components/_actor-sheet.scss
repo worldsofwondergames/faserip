@@ -160,7 +160,7 @@
 
   th {
     @include panel-title;
-    font-size: 13px;
+    font-size: inherit;
     border: 1px solid var(--border-black);
 
     &.col-green {
@@ -183,7 +183,7 @@
     text-align: left;
     font-family: $komika-smallcaps;
     font-weight: 700;
-    font-size: 13px;
+    font-size: inherit;
     cursor: pointer;
     width: 70px;
 
@@ -208,7 +208,7 @@
     width: 30px;
     font-family: $komika-smallcaps;
     font-weight: 700;
-    font-size: 13px;
+    font-size: inherit;
   }
 
   td.feat-green,
@@ -217,7 +217,7 @@
     width: 50px;
     font-family: $komika-smallcaps;
     font-weight: 700;
-    font-size: 13px;
+    font-size: inherit;
   }
 
   td.feat-green  { background: var(--hulk-green); }

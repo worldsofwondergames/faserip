@@ -771,7 +771,7 @@ section {
   text-align: center;
   border-bottom: 3px solid var(--border-black);
   background: linear-gradient(180deg, var(--header-yellow) 0%, var(--header-gray) 100%);
-  font-size: 13px;
+  font-size: inherit;
   border: 1px solid var(--border-black);
 }
 .faserip .abilities-table th.col-green {
@@ -790,7 +790,7 @@ section {
   text-align: left;
   font-family: "KomikaTextSmallCaps", sans-serif;
   font-weight: 700;
-  font-size: 13px;
+  font-size: inherit;
   cursor: pointer;
   width: 70px;
 }
@@ -810,7 +810,7 @@ section {
   width: 30px;
   font-family: "KomikaTextSmallCaps", sans-serif;
   font-weight: 700;
-  font-size: 13px;
+  font-size: inherit;
 }
 .faserip .abilities-table td.feat-green,
 .faserip .abilities-table td.feat-yellow,
@@ -818,7 +818,7 @@ section {
   width: 50px;
   font-family: "KomikaTextSmallCaps", sans-serif;
   font-weight: 700;
-  font-size: 13px;
+  font-size: inherit;
 }
 .faserip .abilities-table td.feat-green {
   background: var(--hulk-green);
