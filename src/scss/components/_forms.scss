@@ -4,13 +4,14 @@
   font-family: $komika-base;
 }
 
-/* Sheet tabs — 3-sided border style */
+/* Sheet tabs — 3-sided border style, active tab overlaps body border */
 .sheet-tabs.tabs {
   flex: 0;
   gap: 5px;
   justify-content: unset;
   border: unset;
   border-top: none !important;
+  margin-bottom: 0;
 
   a.item {
     flex: 1;
@@ -18,17 +19,22 @@
     border-style: solid;
     border-color: var(--label-gray);
     color: var(--label-gray);
-    padding: 2px 4px;
+    padding: 2px 4px 5px;
     font-weight: normal;
     font-family: $komika-smallcaps;
     font-size: var(--header-text-size);
     line-height: var(--header-text-size);
     text-align: center;
+    position: relative;
+    z-index: 1;
 
     &.active {
       border-color: var(--border-black);
       color: var(--border-black);
       font-weight: bold;
+      background-color: var(--wasp-yellow);
+      margin-bottom: -3px;
+      padding-bottom: 8px;
     }
   }
 }
@@ -37,6 +43,8 @@
   flex: 1;
   overflow: hidden;
   background-color: var(--wasp-yellow);
+  border: 3px solid var(--border-black);
+  box-shadow: 3px 3px;
 
   .tab {
     height: 100%;

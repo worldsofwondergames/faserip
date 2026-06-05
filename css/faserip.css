@@ -195,9 +195,9 @@ section {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  opacity: 0.08;
+  opacity: 0.04;
   background-repeat: repeat;
-  background-size: 30rem;
+  background-size: 40rem;
   background-image: url("../assets/sheets/comic-book-overlay.svg");
 }
 
@@ -502,7 +502,7 @@ section {
 }
 
 .faserip {
-  /* Sheet tabs — 3-sided border style */
+  /* Sheet tabs — 3-sided border style, active tab overlaps body border */
   /* ---- Sheet Header ---- */
   /* ---- Character Info Grid ---- */
   /* ---- Rank Reference Bar ---- */
@@ -528,6 +528,7 @@ section {
   justify-content: unset;
   border: unset;
   border-top: none !important;
+  margin-bottom: 0;
 }
 .faserip .sheet-tabs.tabs a.item {
   flex: 1;
@@ -535,22 +536,29 @@ section {
   border-style: solid;
   border-color: var(--label-gray);
   color: var(--label-gray);
-  padding: 2px 4px;
+  padding: 2px 4px 5px;
   font-weight: normal;
   font-family: "KomikaTextSmallCaps", sans-serif;
   font-size: var(--header-text-size);
   line-height: var(--header-text-size);
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 .faserip .sheet-tabs.tabs a.item.active {
   border-color: var(--border-black);
   color: var(--border-black);
   font-weight: bold;
+  background-color: var(--wasp-yellow);
+  margin-bottom: -3px;
+  padding-bottom: 8px;
 }
 .faserip .sheet-body {
   flex: 1;
   overflow: hidden;
   background-color: var(--wasp-yellow);
+  border: 3px solid var(--border-black);
+  box-shadow: 3px 3px;
 }
 .faserip .sheet-body .tab {
   height: 100%;
@@ -654,9 +662,9 @@ section {
   margin-bottom: 10px;
   font-size: 10px;
   background: var(--wasp-yellow);
-  height: 32px;
-  min-height: 32px;
-  max-height: 32px;
+  height: 40px;
+  min-height: 40px;
+  max-height: 40px;
 }
 .faserip .rank-reference-bar .rank-cell {
   flex: 1;
@@ -670,11 +678,11 @@ section {
 .faserip .rank-reference-bar .rank-name {
   font-family: "KomikaTextSmallCaps", sans-serif;
   font-weight: 700;
-  font-size: 9px;
+  font-size: 11px;
   display: block;
 }
 .faserip .rank-reference-bar .rank-value {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
 }
 .faserip .abilities-section {
@@ -691,7 +699,7 @@ section {
   border-collapse: collapse;
   border: 3px solid var(--border-black);
   box-shadow: 3px 3px;
-  font-size: 12px;
+  font-size: 13px;
 }
 .faserip .abilities-table th,
 .faserip .abilities-table td {
@@ -709,7 +717,7 @@ section {
   text-align: center;
   border-bottom: 3px solid var(--border-black);
   background: linear-gradient(180deg, var(--header-yellow) 0%, var(--header-gray) 100%);
-  font-size: 11px;
+  font-size: 13px;
   border: 1px solid var(--border-black);
 }
 .faserip .abilities-table th.col-green {
@@ -728,7 +736,7 @@ section {
   text-align: left;
   font-family: "KomikaTextSmallCaps", sans-serif;
   font-weight: 700;
-  font-size: 11px;
+  font-size: 13px;
   cursor: pointer;
   width: 70px;
 }
@@ -748,7 +756,7 @@ section {
   width: 30px;
   font-family: "KomikaTextSmallCaps", sans-serif;
   font-weight: 700;
-  font-size: 11px;
+  font-size: 13px;
 }
 .faserip .abilities-table td.feat-green,
 .faserip .abilities-table td.feat-yellow,
@@ -756,7 +764,7 @@ section {
   width: 50px;
   font-family: "KomikaTextSmallCaps", sans-serif;
   font-weight: 700;
-  font-size: 11px;
+  font-size: 13px;
 }
 .faserip .abilities-table td.feat-green {
   background: var(--hulk-green);
@@ -833,13 +841,13 @@ section {
 .faserip .stat-box .stat-label {
   font-family: "KomikaTextSmallCaps", sans-serif;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 14px;
   text-transform: uppercase;
   margin-bottom: 2px;
   display: block;
 }
 .faserip .stat-box .stat-formula {
-  font-size: 9px;
+  font-size: 11px;
   color: var(--label-gray);
   margin-bottom: 4px;
   display: block;
