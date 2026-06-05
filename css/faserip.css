@@ -735,18 +735,25 @@ section {
 .faserip .abilities-section {
   display: flex;
   flex: 0 0 auto;
+  align-items: stretch;
   gap: 10px;
   margin-bottom: 10px;
 }
 .faserip .abilities-table-container {
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 .faserip .abilities-table {
   width: 100%;
+  height: 100%;
   border-collapse: collapse;
   border: 3px solid var(--border-black);
   box-shadow: 3px 3px;
-  font-size: 13px;
+  font-size: 14px;
+}
+.faserip .abilities-table tr {
+  height: 1%;
 }
 .faserip .abilities-table th,
 .faserip .abilities-table td {
