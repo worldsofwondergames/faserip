@@ -86,8 +86,8 @@
     }
   ],
   "socket": false,
-  "manifest": "https://github.com/worldsofwondergames/faserip/releases/latest/download/system.json",
-  "download": "https://github.com/worldsofwondergames/faserip/releases/latest/download/faserip.zip",
+  "manifest": "https://raw.githubusercontent.com/worldsofwondergames/faserip/claude/faserip-styling-analysis-XX0pq/system.json",
+  "download": "https://github.com/worldsofwondergames/faserip/archive/refs/heads/claude/faserip-styling-analysis-XX0pq.zip",
   "background": "systems/faserip/assets/anvil-impact.png",
   "gridDistance": 5,
   "gridUnits": "ft",

@@ -4,9 +4,13 @@
 
 An implementation of the FASERIP (Marvel Super Heroes) game system for Foundry Virtual Tabletop.
 
+Support this and other projects via these platforms.
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/worldsofwonder)
+
 ## About FASERIP
 
-FASERIP is a superhero role-playing game system based on the classic Marvel Super Heroes RPG. The system uses a simple percentile-based resolution mechanic with the Universal Results Table to determine the outcome of actions.
+FASERIP is a superhero role-playing game system compatible with the classic Marvel Super Heroes RPG. The system uses a simple percentile-based resolution mechanic with the Universal Results Table to determine the outcome of actions.
 
 ## Core Game Mechanics
 

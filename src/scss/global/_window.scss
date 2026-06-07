@@ -1,12 +1,170 @@
-.window-app {
-  font-family: $font-primary;
+// Mixins and font vars are set up by faserip.scss before this file is loaded.
+
+:root {
+  /* Component Colors */
+  --background-white: rgb(255, 255, 255);
+  --border-black: rgb(0, 0, 0);
+  --header-yellow: rgb(255, 237, 143);
+  --header-gray: rgba(253, 212, 0, 0.15);
+  --label-gray: rgb(116, 116, 116);
+
+  /* Thematic Colors */
+  --spider-red: rgb(155, 29, 29);
+  --gwen-pink: rgb(240, 156, 156);
+  --venom-black: rgb(37, 37, 37);
+  --cap-blue: rgb(156, 199, 240);
+  --hulk-green: rgb(170, 204, 170);
+  --lizard-green: rgb(5, 85, 5);
+  --thing-orange: rgb(255, 218, 185);
+  --thanos-purple: rgb(209, 181, 247);
+  --wasp-yellow: rgb(255, 244, 220);
+
+  /* Legacy faserip aliases */
+  --faserip-red: var(--spider-red);
+  --faserip-red-light: rgb(165, 42, 42);
+  --faserip-green: var(--lizard-green);
+  --faserip-green-bg: var(--hulk-green);
+  --faserip-yellow: rgb(255, 215, 0);
+  --faserip-yellow-bg: rgb(255, 255, 153);
+  --faserip-red-bg: var(--gwen-pink);
+  --faserip-white-bg: var(--background-white);
+  --faserip-gray: rgb(224, 224, 224);
+  --faserip-gray-light: rgb(245, 245, 245);
+  --faserip-border: var(--border-black);
+  --faserip-text: var(--border-black);
+  --faserip-label: var(--border-black);
+
+  /* Sizes */
+  --name-text-size: 1.8rem;
+  --dialog-text-size: 1.1rem;
+  --header-text-size: 1.3rem;
+  --main-info-text-size: 1.6rem;
+  --sub-info-text-size: 1.2rem;
+  --pill-text-size: 0.8rem;
+}
+
+div,
+section {
+  scrollbar-width: thin;
+}
+
+// Scope font to faserip sheets only — don't affect other Foundry windows.
+.faserip {
+  font-family: $komika-base;
+
+  input,
+  select,
+  textarea,
+  button {
+    font-family: $komika-base;
+  }
+
+  input {
+    text-align: center;
+  }
+
+  input,
+  button {
+    &:focus {
+      outline-color: var(--spider-red);
+    }
+  }
+
+  select,
+  input[type="text"],
+  input[type="number"] {
+    color: black;
+    border: none;
+    background: none;
+
+    &:hover {
+      color: var(--spider-red);
+    }
+  }
+
+  img[data-edit="img"] {
+    cursor: pointer;
+    border: none;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.faserip.sheet .window-content {
+  color: black;
+  background:
+    radial-gradient(circle, rgba(255, 137, 180, 0.1) 0%, #ffebf2 100%),
+    url(/ui/parchment.jpg) repeat;
+  padding: 0.75rem;
+  position: relative;
+}
+
+// The <form> inside .window-content is the positioning context for the overlay.
+.faserip.sheet form {
+  position: relative;
 }
 
 .rollable {
   &:hover,
   &:focus {
     color: #000;
-    text-shadow: 0 0 10px red;
+    text-shadow: 0 0 10px var(--spider-red);
     cursor: pointer;
+  }
+}
+
+/* ---------------- Comic frame utility ---------------- */
+.comic-frame {
+  border: 3px solid var(--border-black);
+  border-radius: 1px;
+  box-shadow: 5px 5px;
+
+  header {
+    @include panel-title;
+  }
+
+  footer {
+    @include panel-title($footer: true);
+  }
+}
+
+/* ---------------- Halftone overlay utility ---------------- */
+.half-tone-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.04;
+  background-repeat: repeat;
+  background-size: 40rem;
+  background-image: url("../assets/sheets/comic-book-overlay.svg");
+}
+
+/* ---------------- Info pill utility ---------------- */
+.info-pill {
+  border-radius: 5px;
+  background-color: rgba(200, 211, 211, 0.75);
+  text-align: center;
+  padding: 0 2px;
+}
+
+/* ---------------- Combatant glow on fantastic result ---------------- */
+.combatant.is-fantastic {
+  div.token-name .name,
+  div.token-initiative input {
+    animation: glow 1s infinite alternate;
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px rgb(128, 0, 0);
+  }
+  to {
+    text-shadow: 0 0 12px rgb(255, 0, 0);
   }
 }

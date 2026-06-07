@@ -1,0 +1,184 @@
+// Feat roll dialog — the app element gets both .faserip and .feat-dialog as sibling classes.
+
+.faserip.feat-dialog {
+  .window-content {
+    padding: 10px;
+    background:
+      radial-gradient(circle, rgba(255, 137, 180, 0.1) 0%, #ffebf2 100%),
+      url(/ui/parchment.jpg) repeat;
+  }
+}
+
+.feat-roll-form {
+  font-family: $komika-base;
+
+  .form-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 0 8px;
+
+    &:nth-child(odd) {
+      background-color: var(--thing-orange);
+    }
+
+    label {
+      font-family: $komika-smallcaps;
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #333;
+      flex: 0 0 auto;
+    }
+
+    select {
+      padding: 6px 8px;
+      border: 1px solid #999;
+      border-radius: 3px;
+      font-family: $komika-base;
+      font-size: 13px;
+      background: white;
+      flex: 0 0 180px;
+    }
+  }
+
+  .ability-display .ability-info {
+    font-family: $komika-smallcaps;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--spider-red);
+    text-align: right;
+    flex: 0 0 180px;
+  }
+
+  .preview {
+    display: block;
+    background: var(--wasp-yellow);
+    padding: 6px 10px 4px 10px;
+    border: 3px solid var(--border-black);
+    box-shadow: 3px 3px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+  }
+
+  .preview-row {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+    padding: 2px 8px;
+
+    &:nth-child(odd) {
+      background-color: var(--thing-orange);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    label {
+      font-family: $komika-smallcaps;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #333;
+      margin-bottom: 0;
+      text-align: left;
+    }
+
+    .effective-rank,
+    .required-color {
+      text-align: right;
+    }
+  }
+
+  .effective-rank {
+    font-family: $komika-smallcaps;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 2px 10px;
+    background: #e0e0e0;
+    border-radius: 3px;
+  }
+
+  .required-color {
+    font-family: $komika-smallcaps;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 3px;
+    text-transform: uppercase;
+
+    &.feat-green {
+      background: var(--hulk-green);
+      color: var(--lizard-green);
+    }
+
+    &.feat-yellow {
+      background: var(--wasp-yellow);
+      color: black;
+      border: 1px solid #ccac00;
+    }
+
+    &.feat-red {
+      background: var(--gwen-pink);
+      color: var(--spider-red);
+    }
+
+    &.feat-impossible {
+      background: var(--venom-black);
+      color: white;
+    }
+  }
+
+  .shift-warning {
+    margin-top: 8px;
+    padding: 4px 8px;
+    background: var(--wasp-yellow);
+    color: #856404;
+    border: 1px solid #ffc107;
+    border-radius: 3px;
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .form-buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-family: $komika-smallcaps;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 13px;
+
+    border: 3px solid var(--border-black);
+    border-radius: 1px;
+    box-shadow: 3px 3px;
+  }
+
+  .roll-feat {
+    background: var(--spider-red);
+    color: white;
+
+    &:hover {
+      background: var(--faserip-red-light);
+    }
+  }
+
+  .cancel {
+    background: #e0e0e0;
+    color: #333;
+
+    &:hover {
+      background: #d0d0d0;
+    }
+  }
+}
