@@ -1,121 +1,192 @@
-// Section Header
+// Mixins and font vars are set up by faserip.scss before this partial is loaded.
+
+@keyframes rattle {
+  0%   { transform: rotate(0deg) translate(1px, 1px); }
+  25%  { transform: rotate(8deg) translate(-1px, -2px); }
+  50%  { transform: rotate(-8deg) translate(2px, 1px); }
+  75%  { transform: rotate(8deg) translate(-1px, 2px); }
+  100% { transform: rotate(0deg) translate(1px, -1px); }
+}
+
+/* ---- Section header (items-header, outside and inside lists) ---- */
 .items-header {
-  height: 28px;
-  margin: 2px 0;
-  padding: 0;
+  display: flex;
+  flex: 0 0 auto;
   align-items: center;
-  background: rgba(0, 0, 0, 0.05);
-  border: $border-groove;
+  height: 28px;
+  padding: 0 6px;
+  background: var(--venom-black);
+  color: white;
+  font-family: $komika-smallcaps;
   font-weight: bold;
-  > * {
-    font-size: 14px;
+  font-style: italic;
+  border: 3px solid var(--border-black);
+  border-bottom: none;
+
+  h3 {
+    flex: 1;
+    margin: 0;
+    font-family: $komika-smallcaps;
+    font-size: 13px;
+    font-weight: bold;
+    font-style: italic;
+    color: white;
     text-align: center;
   }
-  .item-name {
-    font-weight: bold;
-    padding-left: 5px;
-    text-align: left;
+
+  .item-controls {
+    flex: 0;
     display: flex;
-    // font-size: 16px;
+    align-items: center;
+
+    a {
+      color: white;
+      font-size: 11px;
+      padding: 0 4px;
+      white-space: nowrap;
+
+      &:hover {
+        color: var(--wasp-yellow);
+      }
+    }
   }
 }
 
-// -----------------------------------------
-// Items Lists
-// -----------------------------------------
-
+/* ---- Items list ---- */
 .items-list {
   list-style: none;
   margin: 0;
   padding: 0;
   overflow-y: auto;
   scrollbar-width: thin;
-  color: $c-tan;
+  border: 3px solid var(--border-black);
+  box-shadow: 3px 3px;
 
-  // Child lists
-  .item-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  /* Each row is a fixed-height flex row */
+  .item {
+    display: flex;
+    align-items: center;
+    height: 36px;
+    min-height: 36px;
+    max-height: 36px;
+    padding: 0 6px;
+    border-bottom: 1px solid $c-faint;
+    overflow: hidden;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:nth-child(even) {
+      background-color: var(--thing-orange);
+    }
   }
 
-  // Item Name
+  /* Item image — constrained icon on the left */
+  .item-image {
+    flex: 0 0 28px;
+    width: 28px;
+    height: 28px;
+    margin-right: 6px;
+    position: relative;
+
+    img {
+      width: 28px;
+      height: 28px;
+      object-fit: cover;
+      border: none;
+      display: block;
+      filter: invert(1);
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: white;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    &:hover .overlay {
+      opacity: 0.8;
+    }
+  }
+
+  /* Item name (h4 element in the template) */
   .item-name {
-    flex: 2;
+    flex: 1;
     margin: 0;
+    padding: 0;
     overflow: hidden;
+    font-family: $komika-smallcaps;
     font-size: 13px;
-    text-align: left;
-    align-items: center;
-    display: flex;
+    font-weight: bold;
+    color: $c-dark;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--spider-red);
+    }
+
+    /* When item-name wraps h3/h4 tags */
     h3, h4 {
       margin: 0;
       white-space: nowrap;
-      overflow-x: hidden;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 
-  // Control Buttons
+  /* Rank / category / type pill */
+  .item-rank,
+  .item-category,
+  .item-type {
+    flex: 0 0 90px;
+    text-align: center;
+    font-family: $komika-smallcaps;
+    font-size: 11px;
+    font-weight: 700;
+    color: #555;
+  }
+
+  /* Edit / delete icons */
   .item-controls {
+    flex: 0 0 50px;
     display: flex;
-    flex: 0 0 100px;
     justify-content: flex-end;
+    align-items: center;
+    gap: 6px;
+
     a {
       font-size: 12px;
-      text-align: center;
-      margin: 0 6px;
-    }
-  }
+      color: #666;
 
-  // Individual Item
-  .item {
-    align-items: center;
-    padding: 0 2px; // to align with the header border
-    border-bottom: 1px solid $c-faint;
-    &:last-child { border-bottom: none; }
-    .item-name {
-      color: $c-dark;
-      .item-image {
-        flex: 0 0 30px;
-        height: 30px;
-        background-size: 30px;
-        border: none;
-        margin-right: 5px;
+      &:hover {
+        color: var(--spider-red);
+        animation: rattle 0.4s infinite ease-in-out;
       }
+    }
+
+    .item-delete {
+      color: var(--spider-red);
     }
   }
 
   .item-prop {
     text-align: center;
-    border-left: 1px solid #c9c7b8;
-    border-right: 1px solid #c9c7b8;
+    border-left: 1px solid $c-faint;
+    border-right: 1px solid $c-faint;
     font-size: 12px;
-  }
-
-  // Section Header
-  .items-header {
-    height: 28px;
-    margin: 2px 0;
-    padding: 0;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.05);
-    border: $border-groove;
-    font-weight: bold;
-    > * {
-      font-size: 12px;
-      text-align: center;
-    }
-    .item-name {
-      padding-left: 5px;
-      text-align: left;
-      // font-size: 16px;
-    }
   }
 }
 
-// Example style for FASERIP (can be removed if not needed).
 .item-formula {
-  
   flex: 0 0 200px;
   padding: 0 8px;
 }
